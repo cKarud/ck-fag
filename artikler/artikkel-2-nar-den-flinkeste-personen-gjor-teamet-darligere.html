@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Når den flinkeste personen gjør teamet dårligere – Camilla Karud</title>
+  <meta name="description" content="Hva skjer med resten av teamet når alle viktige vurderinger går via samme erfarne person?">
+  <meta name="theme-color" content="#111613">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="nb_NO">
+  <meta property="og:title" content="Når den flinkeste personen gjør teamet dårligere">
+  <meta property="og:description" content="Hva skjer med resten av teamet når alle viktige vurderinger går via samme erfarne person?">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23111613' stroke='%23c4e49a' stroke-width='2'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23c4e49a'%3ECK%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111613; --panel: #171e19; --text: #f1f2e9; --body: #d6dcd2; --muted: #a8b1a7; --faint: #8c968b;
+      --line: rgba(225,235,223,.13); --accent: #c4e49a;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.75 var(--sans); -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, p, ol, ul, blockquote, figure { margin: 0; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+    .skip { position: absolute; left: 20px; top: -100px; z-index: 10; padding: 10px 14px; color: var(--bg); background: var(--accent); }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .kicker { display: block; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top .wrap { min-height: 82px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding-block: 14px; }
+    .name { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 650; letter-spacing: -.02em; font-size: 16px; }
+    .name .mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(196,228,154,.55); border-radius: 50%; color: var(--accent); font: 13px var(--serif); }
+    .back { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .back:hover { color: var(--text); }
+    .head-right { display: inline-flex; align-items: center; gap: 18px; }
+    .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .lang-switch a, .lang-switch span { display: inline-grid; place-items: center; min-width: 38px; min-height: 30px; padding: 0 10px; border-radius: 999px; text-decoration: none; color: var(--muted); }
+    .lang-switch a:hover { color: var(--text); }
+    .lang-switch [aria-current] { background: var(--accent); color: #182216; }
+
+    .article { width: min(720px, calc(100% - 40px)); margin-inline: auto; padding-block: 88px 40px; }
+    .article header .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--muted); font-size: 13px; margin-top: 16px; }
+    .article h1 { margin-top: 22px; font: 400 clamp(40px, 6.4vw, 66px)/1.06 var(--serif); letter-spacing: -.04em; }
+    .article .dek { margin-top: 20px; color: var(--muted); font: italic 400 clamp(19px, 2.4vw, 23px)/1.45 var(--serif); }
+    .body { margin-top: 56px; color: var(--body); }
+    .body p + p, .body p + ul, .body ul + p { margin-top: 1.15em; }
+    .body h2 { margin: 2.4em 0 .8em; color: var(--text); font: 400 clamp(27px, 3.4vw, 34px)/1.2 var(--serif); letter-spacing: -.02em; }
+    .body strong { color: var(--text); font-weight: 600; }
+    .body em { color: var(--text); }
+    .lead { color: var(--text); font-size: 20px; }
+    .series-note { margin-top: 1.6em !important; padding: 16px 20px; border-left: 2px solid var(--accent); background: rgba(196,228,154,.045); color: var(--muted); font-size: 15px; }
+    .loop { margin: 1.3em 0 !important; color: var(--accent); font: 400 clamp(20px, 2.8vw, 26px)/1.4 var(--serif); text-align: center; }
+    .example { margin-top: 1.4em !important; padding: 22px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .example .kicker { margin-bottom: 8px; }
+    .example + p { margin-top: 1.15em; }
+    figure img { cursor: zoom-in; }
+    .lightbox { position: fixed; inset: 0; z-index: 20; display: none; place-items: center; padding: 24px; background: rgba(8,11,9,.92); cursor: zoom-out; }
+    .lightbox.open { display: grid; }
+    .lightbox img { max-width: min(1500px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 6px; }
+    .lightbox button { position: absolute; top: 16px; right: 16px; min-width: 44px; min-height: 44px; border: 1px solid var(--line); border-radius: 50%; background: var(--panel); color: var(--text); font-size: 20px; cursor: pointer; }
+    .pull { margin: 1.6em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: 400 clamp(22px, 3vw, 27px)/1.4 var(--serif); letter-spacing: -.01em; }
+    figure { margin: 2.4em 0 !important; }
+    @media (min-width: 1000px) { figure:not(.tall) { width: 940px; margin-left: calc((720px - 940px) / 2) !important; } }
+    figure.tall img { max-width: 720px; margin-inline: auto; }
+    figure.tall figcaption { text-align: center; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+    figcaption { margin-top: 10px; color: var(--faint); font-size: 14px; }
+    .questions { list-style: none; padding: 0; margin-top: 1.2em; counter-reset: q; border-top: 1px solid var(--line); }
+    .questions li { counter-increment: q; display: grid; grid-template-columns: 38px 1fr; gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--text); font: 400 21px/1.4 var(--serif); }
+    .questions li::before { content: counter(q); color: var(--accent); font: 400 21px/1.4 var(--serif); }
+    .closing-line { margin-top: 1.6em !important; color: var(--text); font: 400 clamp(24px, 3.4vw, 31px)/1.35 var(--serif); letter-spacing: -.015em; }
+
+    .body h3 { margin: 1.9em 0 .6em; color: var(--text); font: 600 19px/1.4 var(--sans); }
+    .body ul, .body ol { padding-left: 1.3em; }
+    .body li + li { margin-top: .45em; }
+    .body .example ul, .body .example ol { margin-top: .6em; }
+    .body .example p + p, .body .example p + ul { margin-top: .7em; }
+    .quote { margin: 1.4em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: italic 400 21px/1.45 var(--serif); }
+    .formula-line { text-align: center; color: var(--accent); font: 400 clamp(22px, 3vw, 28px)/1.3 var(--serif); }
+    .toc { margin-top: 2em; padding: 20px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .toc ol { margin-top: 10px; padding-left: 1.3em; font-size: 16px; }
+    .toc a { color: var(--text); text-underline-offset: 3px; text-decoration-color: rgba(196,228,154,.5); }
+    .toc a:hover { color: var(--accent); }
+    .next { margin-top: 64px; padding-top: 30px; border-top: 1px solid var(--line); }
+    .next a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-top: 12px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; }
+    .next a:hover { border-color: rgba(196,228,154,.43); }
+    .next b { font: 400 21px/1.35 var(--serif); }
+    .next i { color: var(--accent); font-style: normal; }
+    .body h2[id] { scroll-margin-top: 24px; }
+    .more { margin-top: 72px; padding-top: 34px; border-top: 1px solid var(--line); }
+    .more h2 { margin-top: 12px; font: 400 28px/1.2 var(--serif); }
+    .more ul { list-style: none; padding: 0; margin-top: 18px; display: grid; gap: 10px; }
+    .more a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; padding: 16px 18px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; transition: border-color .2s ease; }
+    .more a:hover { border-color: rgba(196,228,154,.43); }
+    .more a span { color: var(--muted); font-size: 14px; display: block; }
+    .more a b { font: 400 19px/1.35 var(--serif); }
+    .more a i { color: var(--accent); font-style: normal; }
+    .sources { margin-top: 56px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .sources h2 { color: var(--text); font: 600 14px/1.4 var(--sans); margin-bottom: 10px; }
+    .sources li + li { margin-top: 6px; }
+    .sources ul { padding-left: 18px; }
+
+    footer { border-top: 1px solid var(--line); margin-top: 80px; }
+    footer .wrap { min-height: 82px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; color: var(--faint); font-size: 13px; }
+    footer a { text-decoration: none; } footer a:hover { color: var(--accent); }
+    @media (max-width: 700px) {
+      body { font-size: 17px; }
+      .wrap { width: calc(100% - 34px); }
+      .article { padding-top: 60px; }
+      .questions li { font-size: 19px; grid-template-columns: 30px 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#innhold">Hopp til innhold</a>
+  <header class="top" id="toppen">
+    <div class="wrap">
+      <a class="name" href="../index.html"><span class="mark" aria-hidden="true">CK</span><span>Camilla Karud</span></a>
+      <span class="head-right"><a class="back" href="../index.html#artikkel-2">← Alle artikler</a><div class="lang-switch" aria-label="Språk"><span aria-current="true">NO</span><a href="../en/articles/when-the-most-skilled-person-makes-the-team-worse.html" hreflang="en" lang="en">EN</a></div></span>
+    </div>
+  </header>
+
+  <main id="innhold">
+    <article class="article"><header>
+        <span class="kicker">Når kompetanse skal bli til verdi · del 2</span>
+        <h1>Når den flinkeste personen gjør teamet dårligere</h1>
+        <div class="meta"><span>Camilla Karud</span><span>Ca. 4 minutters lesing</span></div>
+      </header>
+<div class="body">
+<p class="lead">Noen mennesker kan løse problemer nesten ingen andre i teamet klarer å løse. De ser risiko tidlig, har dyp faglig forståelse og leverer høy kvalitet. Det gjør dem verdifulle. Men det finnes et spørsmål vi sjeldnere stiller når vi vurderer de sterkeste fagpersonene våre: Hva skjer med prestasjonen til menneskene rundt dem?</p>
+<p class="series-note">Denne artikkelen er en del av serien «Når kompetanse skal bli til verdi», der vi utforsker menneskene, relasjonene og systemene bak gode teknologileveranser.</p>
+<h2>Individuell prestasjon er ikke det samme som teamprestasjon</h2>
+<p>En ekspert kan skape stor verdi gjennom det vedkommende leverer selv. Men et team er et system, og måten én person arbeider på påvirker hvordan andre arbeider. Hvis alle viktige beslutninger må kvalitetssikres av samme person, kan andre gradvis bli mer opptatt av å finne det forventede svaret enn av å utvikle egne vurderinger.</p>
+<div class="example"><span class="kicker">Et sammensatt eksempel</span><p>I et team satt én svært erfaren utvikler på mye domenekunnskap. Vedkommende var grundig og opptatt av kvalitet. Over tid begynte andre likevel å avklare stadig flere beslutninger før de gikk videre. Ingen hadde bestemt at det skulle være slik; teamet hadde bare lært at det var tryggere å spørre først. Det kunne lett tolkes som manglende selvstendighet hos resten. Men hva om deler av selvstendigheten faktisk hadde blitt trent bort?</p></div>
+<h2>Når relasjonen forstyrrer prestasjonen</h2>
+<p>Fra mental trening kjenner vi ideen om at kapasiteten et menneske har, og det vedkommende klarer å uttrykke i en situasjon, ikke alltid er det samme. Press og selvfokus kan påvirke oppmerksomheten og prestasjonen. Forskning på prestasjon under press viser nettopp at oppmerksomhetsprosesser kan være en del av forklaringen når prestasjonen faller i krevende situasjoner.</p>
+<p>I arbeid kan en lignende mekanisme være interessant i relasjoner: Du vet egentlig hva du mener, men begynner å tvile når én bestemt person utfordrer deg. Du har mandat, men kjenner behov for å avklare. Du bruker mer kapasitet på hvordan du skal formulere deg enn på selve problemet. Her bruker vi <em>relasjonell interferens</em> som en beskrivelse av mentale og emosjonelle forstyrrelser i prestasjonen som oppstår eller forsterkes i samhandling med andre.</p>
+<h2>Den usynlige kostnaden</h2>
+<p>Teamet kan fortsatt levere. Nettopp derfor er dette vanskelig å oppdage. Arbeid dobbeltsjekkes, beslutninger utsettes og ideer deles først når de er vanskelige å kritisere. Den første kostnaden er ikke nødvendigvis lavere produksjon; den kan være en høyere mental kostnad ved å levere det samme.</p>
+<h2>Fra ekspert til kapasitetsskaper</h2>
+<p>Dette betyr ikke at sterke fagpersoner skal bli mindre tydelige. Team trenger mennesker som stiller krav, oppdager risiko og utfordrer svake løsninger. Men den virkelig sterke fagpersonen klarer også å øke kapasiteten rundt seg: stille spørsmål før svaret gis, dele kontekst, tåle andre forsvarlige løsninger og gradvis redusere støtten når andre utvikler seg.</p>
+<p>Når vi setter sammen team i Liflig, er individuell kompetanse derfor bare én del av bildet. Vi er også opptatt av om mennesker deler kunnskap, skaper selvstendighet og gjør kompetansen til noe teamet eier fremfor én person.</p>
+<p class="closing-line">En sterk lagspiller vurderes ikke bare etter hva personen klarer å levere, men også etter hva menneskene rundt blir i stand til å levere.</p>
+</div>
+<nav class="next" aria-label="Neste artikkel"><span class="kicker">Neste i serien · Del 3</span><a href="artikkel-3-psykologisk-trygghet-er-bra-for-leveransen.html"><b>Psykologisk trygghet er ikke bare bra for menneskene. Det er bra for leveransen.</b><i aria-hidden="true">→</i></a></nav>
+    </article>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Illustrasjon i full størrelse">
+    <button type="button" aria-label="Lukk">×</button>
+    <img alt="">
+  </div>
+  <script>
+    (function () {
+      var box = document.getElementById('lightbox'), big = box.querySelector('img'), last = null;
+      function close() { box.classList.remove('open'); if (last) last.focus(); }
+      document.querySelectorAll('figure img').forEach(function (img) {
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
+        img.title = 'Klikk for å se i full størrelse';
+        function open() { last = img; big.src = img.src; big.alt = img.alt; box.classList.add('open'); box.querySelector('button').focus(); }
+        img.addEventListener('click', open);
+        img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+      });
+      box.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
+    })();
+  </script>
+
+  <footer>
+    <div class="wrap">
+      <span><span style="color:var(--text)">Camilla Karud</span> · Mennesker, teknologi og organisasjon</span>
+      <span><a href="https://www.linkedin.com/in/camilla-karud-91b32740/" target="_blank" rel="noopener">LinkedIn ↗</a> &nbsp;·&nbsp; <a href="../index.html#artikkel-2">← Alle artikler</a></span>
+    </div>
+  </footer>
+</body>
+</html>

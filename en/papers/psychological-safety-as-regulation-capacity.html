@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Psychological safety as regulation capacity – Camilla Karud</title>
+  <meta name="description" content="An analysis of emotional activation and regulation in performance-oriented knowledge organisations, and what it means for leadership and HR.">
+  <meta name="theme-color" content="#111613">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Psychological safety as regulation capacity">
+  <meta property="og:description" content="An analysis of emotional activation and regulation in performance-oriented knowledge organisations, and what it means for leadership and HR.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23111613' stroke='%23c4e49a' stroke-width='2'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23c4e49a'%3ECK%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111613; --panel: #171e19; --text: #f1f2e9; --body: #d6dcd2; --muted: #a8b1a7; --faint: #8c968b;
+      --line: rgba(225,235,223,.13); --accent: #c4e49a;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.75 var(--sans); -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, p, ol, ul, blockquote, figure { margin: 0; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+    .skip { position: absolute; left: 20px; top: -100px; z-index: 10; padding: 10px 14px; color: var(--bg); background: var(--accent); }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .kicker { display: block; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top .wrap { min-height: 82px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding-block: 14px; }
+    .name { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 650; letter-spacing: -.02em; font-size: 16px; }
+    .name .mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(196,228,154,.55); border-radius: 50%; color: var(--accent); font: 13px var(--serif); }
+    .back { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .back:hover { color: var(--text); }
+    .head-right { display: inline-flex; align-items: center; gap: 18px; }
+    .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .lang-switch a, .lang-switch span { display: inline-grid; place-items: center; min-width: 38px; min-height: 30px; padding: 0 10px; border-radius: 999px; text-decoration: none; color: var(--muted); }
+    .lang-switch a:hover { color: var(--text); }
+    .lang-switch [aria-current] { background: var(--accent); color: #182216; }
+
+    .article { width: min(720px, calc(100% - 40px)); margin-inline: auto; padding-block: 88px 40px; }
+    .article header .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--muted); font-size: 13px; margin-top: 16px; }
+    .article h1 { margin-top: 22px; font: 400 clamp(40px, 6.4vw, 66px)/1.06 var(--serif); letter-spacing: -.04em; }
+    .article .dek { margin-top: 20px; color: var(--muted); font: italic 400 clamp(19px, 2.4vw, 23px)/1.45 var(--serif); }
+    .body { margin-top: 56px; color: var(--body); }
+    .body p + p, .body p + ul, .body ul + p { margin-top: 1.15em; }
+    .body h2 { margin: 2.4em 0 .8em; color: var(--text); font: 400 clamp(27px, 3.4vw, 34px)/1.2 var(--serif); letter-spacing: -.02em; }
+    .body strong { color: var(--text); font-weight: 600; }
+    .body em { color: var(--text); }
+    .lead { color: var(--text); font-size: 20px; }
+    .series-note { margin-top: 1.6em !important; padding: 16px 20px; border-left: 2px solid var(--accent); background: rgba(196,228,154,.045); color: var(--muted); font-size: 15px; }
+    .loop { margin: 1.3em 0 !important; color: var(--accent); font: 400 clamp(20px, 2.8vw, 26px)/1.4 var(--serif); text-align: center; }
+    .example { margin-top: 1.4em !important; padding: 22px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .example .kicker { margin-bottom: 8px; }
+    .example + p { margin-top: 1.15em; }
+    figure img { cursor: zoom-in; }
+    .lightbox { position: fixed; inset: 0; z-index: 20; display: none; place-items: center; padding: 24px; background: rgba(8,11,9,.92); cursor: zoom-out; }
+    .lightbox.open { display: grid; }
+    .lightbox img { max-width: min(1500px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 6px; }
+    .lightbox button { position: absolute; top: 16px; right: 16px; min-width: 44px; min-height: 44px; border: 1px solid var(--line); border-radius: 50%; background: var(--panel); color: var(--text); font-size: 20px; cursor: pointer; }
+    .pull { margin: 1.6em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: 400 clamp(22px, 3vw, 27px)/1.4 var(--serif); letter-spacing: -.01em; }
+    figure { margin: 2.4em 0 !important; }
+    @media (min-width: 1000px) { figure:not(.tall) { width: 940px; margin-left: calc((720px - 940px) / 2) !important; } }
+    figure.tall img { max-width: 720px; margin-inline: auto; }
+    figure.tall figcaption { text-align: center; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+    figcaption { margin-top: 10px; color: var(--faint); font-size: 14px; }
+    .questions { list-style: none; padding: 0; margin-top: 1.2em; counter-reset: q; border-top: 1px solid var(--line); }
+    .questions li { counter-increment: q; display: grid; grid-template-columns: 38px 1fr; gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--text); font: 400 21px/1.4 var(--serif); }
+    .questions li::before { content: counter(q); color: var(--accent); font: 400 21px/1.4 var(--serif); }
+    .closing-line { margin-top: 1.6em !important; color: var(--text); font: 400 clamp(24px, 3.4vw, 31px)/1.35 var(--serif); letter-spacing: -.015em; }
+
+    .body h3 { margin: 1.9em 0 .6em; color: var(--text); font: 600 19px/1.4 var(--sans); }
+    .body ul, .body ol { padding-left: 1.3em; }
+    .body li + li { margin-top: .45em; }
+    .body .example ul, .body .example ol { margin-top: .6em; }
+    .body .example p + p, .body .example p + ul { margin-top: .7em; }
+    .quote { margin: 1.4em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: italic 400 21px/1.45 var(--serif); }
+    .formula-line { text-align: center; color: var(--accent); font: 400 clamp(22px, 3vw, 28px)/1.3 var(--serif); }
+    .toc { margin-top: 2em; padding: 20px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .toc ol { margin-top: 10px; padding-left: 1.3em; font-size: 16px; }
+    .toc a { color: var(--text); text-underline-offset: 3px; text-decoration-color: rgba(196,228,154,.5); }
+    .toc a:hover { color: var(--accent); }
+    .next { margin-top: 64px; padding-top: 30px; border-top: 1px solid var(--line); }
+    .next a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-top: 12px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; }
+    .next a:hover { border-color: rgba(196,228,154,.43); }
+    .next b { font: 400 21px/1.35 var(--serif); }
+    .next i { color: var(--accent); font-style: normal; }
+    .body h2[id] { scroll-margin-top: 24px; }
+    .more { margin-top: 72px; padding-top: 34px; border-top: 1px solid var(--line); }
+    .more h2 { margin-top: 12px; font: 400 28px/1.2 var(--serif); }
+    .more ul { list-style: none; padding: 0; margin-top: 18px; display: grid; gap: 10px; }
+    .more a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; padding: 16px 18px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; transition: border-color .2s ease; }
+    .more a:hover { border-color: rgba(196,228,154,.43); }
+    .more a span { color: var(--muted); font-size: 14px; display: block; }
+    .more a b { font: 400 19px/1.35 var(--serif); }
+    .more a i { color: var(--accent); font-style: normal; }
+    .sources { margin-top: 56px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .sources h2 { color: var(--text); font: 600 14px/1.4 var(--sans); margin-bottom: 10px; }
+    .sources li + li { margin-top: 6px; }
+    .sources ul { padding-left: 18px; }
+
+    footer { border-top: 1px solid var(--line); margin-top: 80px; }
+    footer .wrap { min-height: 82px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; color: var(--faint); font-size: 13px; }
+    footer a { text-decoration: none; } footer a:hover { color: var(--accent); }
+    @media (max-width: 700px) {
+      body { font-size: 17px; }
+      .wrap { width: calc(100% - 34px); }
+      .article { padding-top: 60px; }
+      .questions li { font-size: 19px; grid-template-columns: 30px 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#innhold">Skip to content</a>
+  <header class="top" id="toppen">
+    <div class="wrap">
+      <a class="name" href="../index.html"><span class="mark" aria-hidden="true">CK</span><span>Camilla Karud</span></a>
+      <span class="head-right"><a class="back" href="../index.html#fordypning">← Back to deep dives</a><div class="lang-switch" aria-label="Language"><a href="../../fordypningsoppgaver/psykologisk-trygghet-niva-2.html" hreflang="no" lang="no">NO</a><span aria-current="true">EN</span></div></span>
+    </div>
+  </header>
+
+  <main id="innhold">
+    <article class="article">
+<header>
+  <span class="kicker">Deep dive · mental trainer level 2 · 2026</span>
+  <h1>Psychological safety as regulation capacity</h1>
+  <p class="dek">An analysis of emotional activation and regulation in performance-oriented knowledge organisations</p>
+  <div class="meta"><span>Camilla Karud</span><span>Raw Performance</span><span>27 March 2026</span><span>Approx. 35 minute read</span></div>
+</header>
+<div class="body">
+<p class="series-note">Translated from Norwegian. Some figures have been redrawn or described in text for this version, and the personal appendix has been removed.</p>
+<nav class="toc" aria-label="Contents">
+<span class="kicker">Contents</span>
+<ol>
+<li><a href="#k1">Introduction</a></li>
+<li><a href="#k2">Emotions, regulation and mental training</a></li>
+<li><a href="#k3">Emotional activation and interference</a></li>
+<li><a href="#k4">Psychological safety as regulation capacity</a></li>
+<li><a href="#k5">Leadership and regulation</a></li>
+<li><a href="#k6">Discussion</a></li>
+<li><a href="#k7">Conclusion</a></li>
+</ol>
+</nav>
+
+<h2 id="k1">1 Introduction</h2>
+<h3>1.1 Psychological safety in knowledge work</h3>
+<p>Knowledge-intensive organisations are characterised by high complexity, continuous learning and high demands on quality and delivery. The work is often cognitively demanding, socially exposed and time-critical. In such environments, competence is a precondition for performance, but not a guarantee. Even highly competent professionals can perform below their potential if internal and external disturbances are not handled appropriately.</p>
+<p>In performance psychology, performance is often described through a simple model: performance is the result of potential minus interference. Potential represents competence, experience and skills, while interference refers to the mental and emotional disturbances that can reduce the ability to use this potential. In individual performance arenas such as sport or the performing arts, mental training works precisely to reduce interference by developing skills such as focus, tension regulation and conscious inner dialogue (Myhre &amp; Aas, 2025).</p>
+<p>In organisations, however, performance rarely happens in isolation. Work takes place in interaction with others, and many of the most demanding situations involve social evaluation: technical discussions, decision meetings, feedback or the handling of mistakes. In such situations, emotions such as uncertainty, irritation or shame can be activated, which in turn can affect how people think, collaborate and make decisions.</p>
+<p>Research on psychological safety, particularly the work of Amy Edmondson, has shown that the experience of social safety in teams is highly important for learning, collaboration and performance. Edmondson describes psychological safety as a shared belief that it is safe to take interpersonal risks in a group, for example by asking questions, expressing disagreement or admitting mistakes. In teams with high psychological safety, members are more likely to share information, learn from mistakes and participate actively in problem-solving (Edmondson, n.d.).</p>
+<p>At the same time, the concept of psychological safety can sometimes appear unclear or be misunderstood. In performance-oriented environments, it may be interpreted as a wellbeing initiative or as an attempt to reduce demands and friction. This can create an implicit opposition between safety and performance.</p>
+<p>This paper takes a different analytical perspective. Psychological safety is understood here not primarily as an interpersonal climate or a culture initiative, but as a form of collective regulation capacity in the face of performance pressure. The perspective draws on insights from emotion psychology, mental training and organisational research, and argues that performance in knowledge organisations is largely affected by how emotional activation is handled in relational situations.</p>
+<p>From this perspective, leadership becomes particularly central. How leaders respond to mistakes, handle disagreement and meet uncertainty can affect the level of social threat in interaction. Through such relational situations, leaders can either amplify emotional interference or help stabilise the interaction. Relational leadership can therefore be understood as a practical form of regulation competence in organisations.</p>
+<p>The premise of this paper is that psychological safety in knowledge-intensive organisations can be understood as a collective regulation capacity in the face of performance pressure, and that this capacity is largely developed through how leaders handle emotional activation in relational situations.</p>
+
+<h3>1.2 Emotional activation as a performance factor</h3>
+<p>Emotions can be described as a functional information system. All emotions have a function. They continuously provide information about how the individual relates to their surroundings – whether something is threatened, cared for, meaningful or unfair. Emotions consist of a subjective experience, a physiological activation and an impulse to act.</p>
+<p>In performance situations – such as technical decision meetings, code reviews or delivery under time pressure – emotional activation is triggered. Fear can arise from social evaluation. Shame can be activated by mistakes. Anger can be triggered by perceived injustice or broken expectations. Pride can strengthen a sense of mastery. These reactions affect cognitive capacity, focus and the quality of decisions.</p>
+<p>When emotional activation is combined with cognitive distortions – such as all-or-nothing thinking, emotional reasoning or a negative mental filter – disturbances can arise. These disturbances reduce performance by limiting flexibility, learning and information sharing.</p>
+<p>In mental training, performance is described through the formula (Myhre, 2024):</p>
+<p class="formula-line">Performance = Potential − Interference</p>
+<p>Interference can be understood as unregulated emotional activation and rigid inner dialogue. Emotion regulation therefore becomes a central performance competence.</p>
+
+<h3>1.3 From individual to collective regulation</h3>
+<p>Emotion regulation has traditionally been understood as an individual skill. Through conscious work with inner dialogue, cognitive reappraisal and tension regulation, the individual can develop self-regulation – the ability to adjust their own activation and behaviour in demanding situations.</p>
+<p>This understanding is, however, insufficient in organisational contexts. The individual’s opportunities for regulation are largely shaped by the situation they are in. Social threat, hierarchical structures and norms around mistakes affect both the level of activation and how situations are interpreted. Regulation therefore does not happen in isolation, but within frameworks that either amplify or dampen emotional responses.</p>
+<p>In this context, psychological safety can be understood as a collective condition for regulation. By reducing social threat, the level of activation is stabilised and psychological flexibility is maintained. Safety therefore does not mean the absence of pressure, but the organisation’s ability to regulate pressure.</p>
+
+<h3>1.4 The role of HR</h3>
+<p>If psychological safety is understood as regulation capacity, HR takes on a strategic function in shaping the organisation’s conditions for regulation. HR influences how performance is defined, how mistakes are understood, how goals are structured and which norms are established for leadership behaviour.</p>
+<p>Through language, structures and practices, HR can either reinforce social threat or help reduce it. HR thereby indirectly influences the degree of collective interference in the organisation. Work on leadership development, goal structures and feedback practice then becomes not a support function, but a set of deliberate choices that shape how employees regulate themselves.</p>
+<p>The paper therefore examines how principles from emotion psychology and mental training can be integrated strategically into HR work to develop psychological safety as a condition for performance.</p>
+
+<h3>1.5 Scope and structure</h3>
+<p>The paper is grounded in emotion psychology, with particular focus on how emotional activation arises, is regulated and affects performance in social contexts. No empirical data is included, but the analysis is informed by my experience from development work, team coordination, and leadership and HR roles in knowledge-intensive IT organisations.</p>
+<p>The topic also has a personal and professional grounding. Through work with mental training, leadership and human development, I have developed a broader understanding of how emotions, relationships and context affect development, learning and performance. In the original paper, this grounding is set out in an appendix describing my philosophy (not included in this version).</p>
+
+<h2 id="k2">2 Emotions, regulation and mental training</h2>
+<h3>2.1 Emotions as a regulation system</h3>
+<p>In emotion psychology, emotions are not understood as disturbances of rationality, but as an integrated part of the human regulation system. Emotions are described as an information system – a continuous evaluation of the relationship between the individual and their surroundings. This understanding is supported by several traditions in emotion theory, including evolutionary perspectives (Darwin) and cognitive appraisal theories (Lazarus).</p>
+<p>Basic emotions – joy, surprise, sadness, disgust, fear, anger, guilt and shame – are assumed to be universal. They function as rapid signals about what is threatened, valuable or relevant. Fear can signal potential danger, for example, while anger can indicate perceived injustice or a boundary being crossed.</p>
+<p>It is crucial to emphasise that emotions are not in themselves negative or positive. They are functional. What determines whether they promote or inhibit performance is how they are regulated and integrated into behaviour.</p>
+<p>Emotions consist of three components:</p>
+<ol>
+<li><strong>Subjective experience</strong> – how the emotion is experienced mentally.</li>
+<li><strong>Physiological activation</strong> – bodily responses such as a raised pulse, muscle tension or changed breathing.</li>
+<li><strong>Action impulse</strong> – the tendency to act in certain ways (withdrawing, confronting, seeking support).</li>
+</ol>
+<p>In performance contexts, these three components directly affect cognitive capacity. High physiological activation can reduce working memory and flexibility in decision-making. At the same time, moderate activation can increase focus and energy. This is consistent with the principle of the inverted U-curve, where optimal performance occurs at a moderate level of tension. Emotional activation is therefore not a problem in itself, but a question of regulation.</p>
+
+<h3>2.2 Emotion regulation and self-regulation</h3>
+<p>Emotion regulation is about recognising, understanding and influencing one’s own emotions so that they can be handled and expressed appropriately (Myhre, 2018; Gamlesanne, 2026). In this paper, emotion regulation is understood as processes through which the individual influences which emotions arise, when they arise and how they are expressed.</p>
+<p>Regulation can take the form of:</p>
+<ul>
+<li>situation selection (avoiding triggers)</li>
+<li>cognitive reappraisal (an alternative interpretation)</li>
+<li>attention management</li>
+<li>response modulation (breathing, adjusting pace)</li>
+</ul>
+<p>In mental training as understood at Raw Performance, self-regulation is a main goal. Self-regulation is defined as the ability to take control of one’s own behaviour and make choices that support maximum performance. Tools such as inner dialogue, thought records, the traffic-light model and SOAL are structured methods for increasing awareness and reducing automatic, dysfunctional responses.</p>
+<p>Work with cognitive distortions is particularly relevant. Mental shortcuts such as all-or-nothing thinking, emotional reasoning and a negative mental filter can lead to rigid thought patterns and a reduced ability to see situations from several perspectives. When such patterns are made conscious and challenged, the capacity for cognitive reappraisal is strengthened. Self-regulation can therefore be understood as a reduction of interference in performance.</p>
+
+<h3>2.3 Performance and interference</h3>
+<p>In mental training, performance is described through the formula (Myhre, 2024): Performance = Potential − Interference. Potential includes competence, experience, skills and capacity. Interference includes distractions, doubt, fear, negative inner dialogue and unregulated emotional activation.</p>
+<p>In knowledge organisations, interference is often emotional and cognitive rather than physical. Fear of social evaluation can reduce the willingness to share ideas. Shame about mistakes can lead to silence. Anger can escalate conflict.</p>
+<p>Mental training seeks to reduce interference by developing mental skills: focus, self-confidence, tension regulation, motivation and willpower. Tension regulation is particularly relevant. The ability to regulate activation both up and down, depending on the demands of the situation, is crucial for optimal performance. Too much activation can make it harder to think clearly, while too little can mean low energy and motivation. Regulation is therefore not only a way of handling emotions, but a precondition for performing well under pressure.</p>
+
+<h3>2.4 Regulation techniques</h3>
+<p>If performance is understood as realising potential minus interference, the question becomes how interference can be reduced in practice. Mental training uses various techniques aimed at strengthening self-regulation. What matters most, however, is not the techniques themselves, but how they affect thought processes, emotional activation and behaviour in performance situations.</p>
+<p><strong>Inner dialogue and interpretation.</strong> Inner dialogue can be understood as the ongoing self-talk the individual engages in when facing challenges. A negative or unhelpful inner dialogue can amplify emotional activation and contribute to self-reinforcing interference, particularly in socially exposed situations. The PPP technique (personal, positive and present tense) can analytically be understood as a form of cognitive restructuring. By formulating self-statements that express mastery and agency, both expectations and interpretations are affected. This can reduce catastrophising and strengthen perceived self-efficacy, helping to stabilise the level of activation and maintain room for action under pressure. At the same time, the quality of inner dialogue is affected by context. In environments with high social threat, it can be hard to maintain a helpful inner dialogue, because external signals pull in the opposite direction.</p>
+<p><strong>Thought records.</strong> A thought record can be understood as a structured tool for gaining an overview of the connection between situation, interpretation and emotional response. Distinguishing clearly between what actually happens and how it is interpreted reduces the risk of emotional reasoning and all-or-nothing thinking. This can be understood as a form of cognitive reappraisal. When alternative and more nuanced interpretations are established, the intensity of emotional activation can decrease, interference is reduced and the quality of decisions is maintained. At organisational level, such structured reflection can help normalise reassessment rather than fixed positions.</p>
+<p><strong>Tension regulation.</strong> Emotional activation also has a physiological side. High activation can narrow attention and make flexible thinking harder. Tension regulation, for example through conscious breathing or muscle relaxation, targets this part of the response. By affecting the autonomic nervous system, the level of activation can be brought back to a more appropriate level, in line with the inverted U-curve. This shows that regulation is not only about thoughts, but also about the body. In performance contexts, physiological stabilisation can be a precondition for assessing situations clearly and acting appropriately.</p>
+<p><strong>Regulated response in teams.</strong> Simple regulation frameworks, such as establishing a clear pause between activation and response, can function as a break. Such pauses interrupt automatic reaction patterns and reduce the likelihood of escalation in socially exposed situations. When pauses like these become normal in teams, regulation can move from being an individual skill to a shared practice. This forms an important link between individual regulation and collective regulation capacity.</p>
+<p><strong>Summary.</strong> These techniques show how individuals can reduce interference through conscious regulation of thoughts, emotions and bodily activation. At the same time, their effect depends on regulation being given room to work. In environments marked by high social threat, self-regulation can become demanding and unstable. Regulation must therefore be understood both as an individual skill and as a question of organisational conditions. This is where psychological safety becomes decisive.</p>
+
+<h3>2.5 Psychological safety</h3>
+<p>Research on psychological safety, particularly the work of Amy Edmondson, shows that the experience of social safety in teams is especially important in work that requires collaboration, learning and handling complexity. In such contexts, it is crucial that employees share information, ask questions and challenge assumptions. If the risk of negative social evaluation is experienced as high, this can lead to silence or defensive behaviour. Psychological safety can therefore be understood as a central precondition for learning in teams.</p>
+<blockquote class="quote">“Psychological safety is a belief that one will not be punished or humiliated for speaking up with ideas, questions, concerns, or mistakes.” (Edmondson, n.d.)</blockquote>
+<p>Psychological safety has traditionally been understood as an interpersonal climate or a group-level phenomenon. In this paper, the concept is analysed further through a regulation perspective. When perceived social risk is reduced, the emotional activation linked to being evaluated by others is also reduced. Psychological safety can therefore be understood as a collective capacity to regulate emotional activation in situations of performance pressure.</p>
+<p>When social threat in the team is lower, the activation of emotions such as shame and fear is also reduced. This can contribute to more flexible thinking and a more learning-oriented approach to challenges and mistakes. Psychological safety can thus be understood as a contextual factor that affects which regulation options are available in a group. From this perspective, safety does not mean an absence of demands or discomfort, but a reduction of social threat as an interfering factor in performance and learning.</p>
+<figure>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQwIDg5NiIgd2lkdGg9IjE0NDAiIGhlaWdodD0iODk2IiBmb250LWZhbWlseT0iSGVsdmV0aWNhLCBBcmlhbCwgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZiI+PGRlZnM+PG1hcmtlciBpZD0iYSIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wLDAgTDEwLDUgTDAsMTAgeiIgZmlsbD0iI2E4YjFhNyIvPjwvbWFya2VyPjwvZGVmcz48cmVjdCB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI4OTYiIGZpbGw9IiMxNzFlMTkiLz48dGV4dCB4PSI3MCIgeT0iODAiIGZvbnQtc2l6ZT0iMzYiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJzdGFydCIgPlBzeWNob2xvZ2ljYWwgc2FmZXR5IGFuZCBwZXJmb3JtYW5jZSBzdGFuZGFyZHM8L3RleHQ+PHRleHQgeD0iNzAiIHk9IjEyMiIgZm9udC1zaXplPSIyMiIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+QWZ0ZXIgQW15IEVkbW9uZHNvbjwvdGV4dD48cmVjdCB4PSIyMjAiIHk9IjE3MCIgd2lkdGg9IjU2MCIgaGVpZ2h0PSIzMDAiIHJ4PSIxNCIgZmlsbD0iIzE3MWUxOSIgc3Ryb2tlPSIjM2E0YTNmIiBzdHJva2Utd2lkdGg9IjIuNSIvPjx0ZXh0IHg9IjUwMC4wIiB5PSIyOTYuMCIgZm9udC1zaXplPSIzMiIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkNvbWZvcnQgem9uZTwvdGV4dD48dGV4dCB4PSI1MDAuMCIgeT0iMzQyLjAiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5PcGVuIGFuZCBjb2xsZWdpYWwsIGJ1dDwvdGV4dD48dGV4dCB4PSI1MDAuMCIgeT0iMzcyLjAiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5ub3QgY2hhbGxlbmdlZDwvdGV4dD48cmVjdCB4PSI3OTYiIHk9IjE3MCIgd2lkdGg9IjU2MCIgaGVpZ2h0PSIzMDAiIHJ4PSIxNCIgZmlsbD0iIzIyMzAyMCIgc3Ryb2tlPSIjYzRlNDlhIiBzdHJva2Utd2lkdGg9IjIuNSIvPjx0ZXh0IHg9IjEwNzYuMCIgeT0iMjk2LjAiIGZvbnQtc2l6ZT0iMzIiIGZpbGw9IiNjNGU0OWEiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5MZWFybmluZyB6b25lPC90ZXh0Pjx0ZXh0IHg9IjEwNzYuMCIgeT0iMzQyLjAiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Db2xsYWJvcmF0aW9uIGFuZCBsZWFybmluZzwvdGV4dD48dGV4dCB4PSIxMDc2LjAiIHk9IjM3Mi4wIiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+aW4gc2VydmljZSBvZiBoaWdoIHBlcmZvcm1hbmNlPC90ZXh0PjxyZWN0IHg9IjIyMCIgeT0iNDg2IiB3aWR0aD0iNTYwIiBoZWlnaHQ9IjMwMCIgcng9IjE0IiBmaWxsPSIjMTcxZTE5IiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHRleHQgeD0iNTAwLjAiIHk9IjYxMi4wIiBmb250LXNpemU9IjMyIiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+QXBhdGh5IHpvbmU8L3RleHQ+PHRleHQgeD0iNTAwLjAiIHk9IjY1OC4wIiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+UHJlc2VudCwgYnV0IGNob29zaW5nPC90ZXh0Pjx0ZXh0IHg9IjUwMC4wIiB5PSI2ODguMCIgZm9udC1zaXplPSIyMiIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPnNlbGYtcHJvdGVjdGlvbiBvdmVyIGVmZm9ydDwvdGV4dD48cmVjdCB4PSI3OTYiIHk9IjQ4NiIgd2lkdGg9IjU2MCIgaGVpZ2h0PSIzMDAiIHJ4PSIxNCIgZmlsbD0iIzJlMjMxZCIgc3Ryb2tlPSIjZTNhMzdmIiBzdHJva2Utd2lkdGg9IjIuNSIvPjx0ZXh0IHg9IjEwNzYuMCIgeT0iNjEyLjAiIGZvbnQtc2l6ZT0iMzIiIGZpbGw9IiNlM2EzN2YiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5BbnhpZXR5IHpvbmU8L3RleHQ+PHRleHQgeD0iMTA3Ni4wIiB5PSI2NTguMCIgZm9udC1zaXplPSIyMiIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlJlbHVjdGFudCB0byBvZmZlciBpZGVhcyw8L3RleHQ+PHRleHQgeD0iMTA3Ni4wIiB5PSI2ODguMCIgZm9udC1zaXplPSIyMiIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPnRyeSBuZXcgdGhpbmdzIG9yIGFzayBmb3IgaGVscDwvdGV4dD48bGluZSB4MT0iMjIwIiB5MT0iODI2IiB4Mj0iMTM1NiIgeTI9IjgyNiIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjIuNSIgbWFya2VyLWVuZD0idXJsKCNhKSIvPjx0ZXh0IHg9IjIyMCIgeT0iODY0IiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiID5QZXJmb3JtYW5jZSBzdGFuZGFyZHM6IGxvdyDihpIgaGlnaDwvdGV4dD48bGluZSB4MT0iMTgwIiB5MT0iNzg2IiB4Mj0iMTgwIiB5Mj0iMTcwIiBzdHJva2U9IiNhOGIxYTciIHN0cm9rZS13aWR0aD0iMi41IiBtYXJrZXItZW5kPSJ1cmwoI2EpIi8+PHRleHQgeD0iMTYwIiB5PSI0NzgiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIHRyYW5zZm9ybT0icm90YXRlKC05MCAxNjAgNDc4KSI+UHN5Y2hvbG9naWNhbCBzYWZldHk6IGxvdyDihpIgaGlnaDwvdGV4dD48L3N2Zz4=" alt="Two-by-two matrix after Amy Edmondson. Low safety and low standards gives the apathy zone. High safety and low standards gives the comfort zone. Low safety and high standards gives the anxiety zone. High safety and high standards gives the learning zone." width="1440" height="878">
+  <figcaption>Figure 2.1: The relationship between psychological safety and performance standards, after Amy Edmondson. Redrawn for this version.</figcaption>
+</figure>
+
+<h3>2.6 The RAW model</h3>
+<p>To structure how regulation capacity can be understood and developed, the RAW model can be used as a pedagogical framework. The model illustrates a layered understanding in which philosophy forms the foundation, basic techniques function as trainable tools, and mental skills represent capacities developed through systematic work. Together, these form the basis for self-regulation in demanding situations, which in turn affects performance and results. In this paper, the point is not to use the model as a performance model in a narrow sense, but as an analytical aid for showing how individual regulation meets organisational conditions. This is developed further in chapter 4.</p>
+
+<h3>2.7 Motivation and inner drive</h3>
+<p>In mental training, motivation is described as “the key to change”. Self-determination theory highlights three basic needs: autonomy, competence (mastery) and relatedness. Intrinsic motivation arises when these needs are met. Psychological safety can be linked particularly to competence and relatedness. When individuals experience that they can contribute without risking social exclusion, both learning and engagement are strengthened.</p>
+<p>Motivation is closely linked to emotions. Experiencing mastery creates joy and pride. Experiencing rejection can create shame or sadness. Regulation therefore also affects motivation.</p>
+
+<h3>2.8 Communication and perception</h3>
+<p>The communication model (perception → interpretation → experience → action) illustrates how emotional activation arises through interpretation. Perception is about what we notice in a situation, and how we understand what is happening. It is affected, among other things, by attention and how we listen. Even at this level, different people can perceive the same situation differently.</p>
+<p>What is perceived is then interpreted through inner dialogue and thought patterns, creates an emotional experience and affects further action. This underlines the importance of being able to reassess one’s own interpretations. At the same time, both perception and interpretation are shaped by context. Feedback structures and language norms in the organisation affect what is noticed and how situations are understood, and therefore also the level of emotional activation.</p>
+
+<h3>2.9 Summary of theory</h3>
+<p>The theory indicates that emotions are a natural and functional part of performance, that unregulated activation can create interference, that self-regulation helps reduce interference, and that psychological safety affects which regulation options are available. This forms the basis for the further analysis of psychological safety as collective regulation capacity.</p>
+
+<h2 id="k3">3 Emotional activation and interference</h2>
+<h3>3.1 Performance pressure in knowledge work</h3>
+<p>IT organisations are characterised by a high degree of complexity, rapid technological development and strong delivery demands. The work is cognitively demanding and marked by continuous problem-solving under uncertainty. In addition, the work is socially exposed. Code reviews, technical discussions and project meetings involve continuous evaluation – both formal and informal.</p>
+<p>This combination creates emotional activation. Even experienced developers and leaders feel fear, uncertainty, irritation or pride in such situations. The challenge is not that these emotions arise, but how they affect regulation and the quality of decisions.</p>
+
+<h3>3.2 From situation to interference</h3>
+<p>The mechanism can be illustrated through the communication model: perception → interpretation → experience → action. Take a developer presenting a solution in a meeting, where a colleague asks a critical question.</p>
+<div class="example"><span class="kicker">Example</span>
+<ul>
+<li><strong>Perception:</strong> The question is registered.</li>
+<li><strong>Interpretation:</strong> “This means I have done a bad job.”</li>
+<li><strong>Experience:</strong> Shame or irritation.</li>
+<li><strong>Action:</strong> Withdraws or becomes defensive.</li>
+</ul></div>
+<p>It is not the question itself, but the interpretation and the emotional activation that reduce performance. Cognitive distortions amplify this (Myhre, 2018):</p>
+<ul>
+<li><strong>All-or-nothing thinking:</strong> “If this isn’t perfect, it’s a failure.”</li>
+<li><strong>Emotional reasoning:</strong> “I feel inadequate, so I am.”</li>
+<li><strong>Negative mental filter:</strong> focusing on the criticism, not the whole.</li>
+</ul>
+<p>Left unregulated, this can reduce information sharing, creativity and collaboration. The mechanism becomes particularly clear in situations involving social evaluation in everyday work.</p>
+
+<h3>3.3 Code review as social evaluation</h3>
+<p>Code reviews are a particularly clear form of social evaluation in technical environments. When a developer opens a pull request, colleagues are invited to comment on and assess the solution. The intention is quality assurance, but it also involves a public assessment of the work.</p>
+<p>When comments are interpreted as criticism of one’s own competence, emotions such as shame or irritation are activated. This leads to defensiveness and a reduced willingness to share unfinished solutions. The result can be less openness and learning. In teams with high psychological safety, such situations are more often interpreted as shared problem-solving. Comments are understood as contributions to quality rather than personal criticism.</p>
+
+<h3>3.4 Production incidents and shame</h3>
+<p>Production incidents are another kind of performance situation with high emotional activation. When an error causes downtime or affects customers, responsibility often becomes visible to both colleagues and management. Such incidents can trigger strong feelings of shame, stress or guilt.</p>
+<p>In environments marked by high social threat, this can lead to defensiveness, blame and withholding of information. In teams with high psychological safety, such incidents are often handled differently. Post-mortems and retrospectives are used to understand systemic causes of errors, rather than to assign blame. This can help reduce shame and support open information sharing.</p>
+
+<h3>3.5 When it gets personal</h3>
+<p>Technical discussions about architecture or implementation can also activate strong emotions. When developers identify with their own solutions, criticism can feel personal. Without regulation, such discussions can escalate into fixed positions and conflict, reducing perspective-taking and making it harder to find good solutions. In teams with high regulation capacity, disagreement can instead be handled without the relationship breaking down. When different perspectives are explored with curiosity, discussions can lead to better technical decisions and more robust solutions.</p>
+
+<h3>3.6 The inverted U-curve</h3>
+<p>The inverted U-curve illustrates that performance increases with activation up to an optimal point, before declining when tension becomes too high.</p>
+<figure>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzAwIDc2MCIgd2lkdGg9IjEzMDAiIGhlaWdodD0iNzYwIiBmb250LWZhbWlseT0iSGVsdmV0aWNhLCBBcmlhbCwgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZiI+PGRlZnM+PG1hcmtlciBpZD0iYSIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wLDAgTDEwLDUgTDAsMTAgeiIgZmlsbD0iI2E4YjFhNyIvPjwvbWFya2VyPjwvZGVmcz48cmVjdCB3aWR0aD0iMTMwMCIgaGVpZ2h0PSI3NjAiIGZpbGw9IiMxNzFlMTkiLz48dGV4dCB4PSI3MCIgeT0iODAiIGZvbnQtc2l6ZT0iMzYiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJzdGFydCIgPlRoZSBpbnZlcnRlZCBVLWN1cnZlPC90ZXh0Pjx0ZXh0IHg9IjcwIiB5PSIxMjIiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJzdGFydCIgPlBlcmZvcm1hbmNlIHJpc2VzIHdpdGggYWN0aXZhdGlvbiB1cCB0byBhbiBvcHRpbWFsIHBvaW50LCB0aGVuIGZhbGxzPC90ZXh0PjxsaW5lIHgxPSIxNjAiIHkxPSI2NDAiIHgyPSIxMjAwIiB5Mj0iNjQwIiBzdHJva2U9IiNhOGIxYTciIHN0cm9rZS13aWR0aD0iMi41IiBtYXJrZXItZW5kPSJ1cmwoI2EpIi8+PGxpbmUgeDE9IjE2MCIgeTE9IjY0MCIgeDI9IjE2MCIgeTI9IjIxMCIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjIuNSIgbWFya2VyLWVuZD0idXJsKCNhKSIvPjx0ZXh0IHg9IjEyMDAiIHk9IjY4MCIgZm9udC1zaXplPSIyMiIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9ImVuZCIgPkFjdGl2YXRpb248L3RleHQ+PHRleHQgeD0iMTQwIiB5PSIyMjAiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJlbmQiID5QZXJmb3JtYW5jZTwvdGV4dD48cmVjdCB4PSI1MzguNCIgeT0iMjEwIiB3aWR0aD0iMjYzLjIwMDAwMDAwMDAwMDA1IiBoZWlnaHQ9IjQyNiIgZmlsbD0iIzIyMzAyMCIvPjxwb2x5bGluZSBwb2ludHM9IjIwMC4wLDYwOC4xIDIwOS40LDYwNy42IDIxOC44LDYwNy4xIDIyOC4yLDYwNi41IDIzNy42LDYwNS43IDI0Ny4wLDYwNC44IDI1Ni40LDYwMy44IDI2NS44LDYwMi41IDI3NS4yLDYwMS4xIDI4NC42LDU5OS41IDI5NC4wLDU5Ny41IDMwMy40LDU5NS4zIDMxMi44LDU5Mi44IDMyMi4yLDU4OS45IDMzMS42LDU4Ni42IDM0MS4wLDU4Mi45IDM1MC40LDU3OC44IDM1OS44LDU3NC4yIDM2OS4yLDU2OS4wIDM3OC42LDU2My4zIDM4OC4wLDU1Ny4wIDM5Ny40LDU1MC4yIDQwNi44LDU0Mi43IDQxNi4yLDUzNC42IDQyNS42LDUyNS45IDQzNS4wLDUxNi41IDQ0NC40LDUwNi42IDQ1My44LDQ5Ni4wIDQ2My4yLDQ4NC45IDQ3Mi42LDQ3My4zIDQ4Mi4wLDQ2MS4yIDQ5MS40LDQ0OC43IDUwMC44LDQzNS45IDUxMC4yLDQyMi45IDUxOS42LDQwOS43IDUyOS4wLDM5Ni40IDUzOC40LDM4My4yIDU0Ny44LDM3MC4yIDU1Ny4yLDM1Ny41IDU2Ni42LDM0NS4yIDU3Ni4wLDMzMy41IDU4NS40LDMyMi40IDU5NC44LDMxMi4xIDYwNC4yLDMwMi43IDYxMy42LDI5NC40IDYyMy4wLDI4Ny4xIDYzMi40LDI4MS4xIDY0MS44LDI3Ni4zIDY1MS4yLDI3Mi44IDY2MC42LDI3MC43IDY3MC4wLDI3MC4wIDY3OS40LDI3MC43IDY4OC44LDI3Mi44IDY5OC4yLDI3Ni4zIDcwNy42LDI4MS4xIDcxNy4wLDI4Ny4xIDcyNi40LDI5NC40IDczNS44LDMwMi43IDc0NS4yLDMxMi4xIDc1NC42LDMyMi40IDc2NC4wLDMzMy41IDc3My40LDM0NS4yIDc4Mi44LDM1Ny41IDc5Mi4yLDM3MC4yIDgwMS42LDM4My4yIDgxMS4wLDM5Ni40IDgyMC40LDQwOS43IDgyOS44LDQyMi45IDgzOS4yLDQzNS45IDg0OC42LDQ0OC43IDg1OC4wLDQ2MS4yIDg2Ny40LDQ3My4zIDg3Ni44LDQ4NC45IDg4Ni4yLDQ5Ni4wIDg5NS42LDUwNi42IDkwNS4wLDUxNi41IDkxNC40LDUyNS45IDkyMy44LDUzNC42IDkzMy4yLDU0Mi43IDk0Mi42LDU1MC4yIDk1Mi4wLDU1Ny4wIDk2MS40LDU2My4zIDk3MC44LDU2OS4wIDk4MC4yLDU3NC4yIDk4OS42LDU3OC44IDk5OS4wLDU4Mi45IDEwMDguNCw1ODYuNiAxMDE3LjgsNTg5LjkgMTAyNy4yLDU5Mi44IDEwMzYuNiw1OTUuMyAxMDQ2LjAsNTk3LjUgMTA1NS40LDU5OS41IDEwNjQuOCw2MDEuMSAxMDc0LjIsNjAyLjUgMTA4My42LDYwMy44IDEwOTMuMCw2MDQuOCAxMTAyLjQsNjA1LjcgMTExMS44LDYwNi41IDExMjEuMiw2MDcuMSAxMTMwLjYsNjA3LjYgMTE0MC4wLDYwOC4xIiBmaWxsPSJub25lIiBzdHJva2U9IiNjNGU0OWEiIHN0cm9rZS13aWR0aD0iNCIvPjx0ZXh0IHg9IjY3MC4wIiB5PSIyNTAiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiNjNGU0OWEiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5PcHRpbWFsIHRlbnNpb248L3RleHQ+PHRleHQgeD0iMjEwIiB5PSI0OTAiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJzdGFydCIgPlRvbyBsaXR0bGU6IGxvdyBlbmVyZ3k8L3RleHQ+PHRleHQgeD0iMTE2MCIgeT0iNDkwIiBmb250LXNpemU9IjIxIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0iZW5kIiA+VG9vIG11Y2g6IHR1bm5lbCB2aXNpb248L3RleHQ+PC9zdmc+" alt="An inverted U-shaped curve. Performance rises with activation up to an optimal level of tension in the middle, then falls. Too little activation gives low energy, too much gives tunnel vision." width="1300" height="760">
+  <figcaption>Figure 3.1: The inverted U-curve. Redrawn for this version.</figcaption>
+</figure>
+<p>Moderate activation strengthens focus and efficiency, while over-activation can lead to tunnel vision, reduced creativity and poor judgement. Tension regulation therefore becomes a crucial skill. Individual techniques such as breathing, adjusting pace and mental stop strategies reduce over-activation. At the same time, regulation is challenged in environments with persistent social threat. This shows why collective regulation capacity is decisive.</p>
+
+<h3>3.7 Inner dialogue and patterns</h3>
+<p>Inner dialogue plays a central role in how situations are interpreted. An inner dialogue marked by self-criticism and catastrophising amplifies emotional activation – for example: “They’re going to see that I’m not good enough.” The PPP technique represents a conscious attempt to change this dialogue. Even so, the quality of inner dialogue is affected by organisational culture. In environments where mistakes are met with blame or ridicule, a negative inner dialogue arises more easily. Inner dialogue is therefore not only an individual phenomenon, but indirectly shaped by the system.</p>
+
+<h3>3.8 Anger and conflict</h3>
+<p>Anger is an activating emotion that can provide energy and clarity, but without regulation it can contribute to escalation. In technical discussions, anger can arise when criticism feels personal, and can function as a secondary emotion covering shame or fear. Regulated, the same energy can be used constructively – to clarify disagreement and improve solutions.</p>
+
+<h3>3.9 Interference in context</h3>
+<p>In IT organisations, interference is rarely caused by a lack of competence, but by how emotional activation and thought patterns affect us in the situation. Why do some teams handle this constructively, while others develop silence or fixed patterns? Research on psychological safety offers a possible answer. In what follows, psychological safety is analysed as a collective regulation capacity – a capacity that is reduced when social threat increases.</p>
+
+<h2 id="k4">4 Psychological safety as regulation capacity</h2>
+<p>As shown in chapter 3, shame and fear in performance environments are often expressed as silence, defensiveness or over-caution. These reactions can be understood as expressions of high social threat, which in turn reduces the group’s overall regulation capacity. Psychological safety is analysed here as a collective regulation capacity. The relationship can be illustrated through the following model:</p>
+<figure class="tall">
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAwIDE0ODAiIHdpZHRoPSIxNDAwIiBoZWlnaHQ9IjE0ODAiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EsIEFyaWFsLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmIj4KPGRlZnM+CjxtYXJrZXIgaWQ9ImFoIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNhOGIxYTciLz48L21hcmtlcj4KPG1hcmtlciBpZD0iYWhnIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNjNGU0OWEiLz48L21hcmtlcj4KPG1hcmtlciBpZD0iYWhyIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNlM2EzN2YiLz48L21hcmtlcj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIxNDgwIiBmaWxsPSIjMTcxZTE5Ii8+Cjx0ZXh0IHg9IjgwIiB5PSI5MCIgZm9udC1zaXplPSI0MCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+UHN5Y2hvbG9naWNhbCBzYWZldHkgYXMgcmVndWxhdGlvbiBjYXBhY2l0eTwvdGV4dD4KPHRleHQgeD0iODAiIHk9IjEzNSIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+SG93IHNvY2lhbCBldmFsdWF0aW9uIGNhbiBsZWFkIHRvIHNpbGVuY2Ug4oCTIG9yIHRvIG9wZW5uZXNzIGFuZCBmbG93PC90ZXh0Pgo8cmVjdCB4PSIzODAuMCIgeT0iMTkwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjExMiIgcng9IjE0IiBmaWxsPSIjMTcxZTE5IiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjcwMC4wIiB5PSIyMzciIGZvbnQtc2l6ZT0iMjkiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5QZXJmb3JtYW5jZSBzaXR1YXRpb248L3RleHQ+Cjx0ZXh0IHg9IjcwMC4wIiB5PSIyNzQiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5NZWV0aW5ncywgY29kZSByZXZpZXdzLCBkZWNpc2lvbnM8L3RleHQ+CjxsaW5lIHgxPSI3MDAuMCIgeTE9IjMwNiIgeDI9IjcwMC4wIiB5Mj0iMzUyIiBzdHJva2U9IiNhOGIxYTciIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaCkiLz4KPHJlY3QgeD0iMzgwLjAiIHk9IjM2MCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNCIgZmlsbD0iIzE3MWUxOSIgc3Ryb2tlPSIjM2E0YTNmIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSI3MDAuMCIgeT0iNDA3IiBmb250LXNpemU9IjI5IiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+U29jaWFsIGV2YWx1YXRpb248L3RleHQ+Cjx0ZXh0IHg9IjcwMC4wIiB5PSI0NDQiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5PdXIgd29yayBhbmQganVkZ2VtZW50IGJlY29tZSB2aXNpYmxlPC90ZXh0Pgo8bGluZSB4MT0iNzAwLjAiIHkxPSI0NzYiIHgyPSI3MDAuMCIgeTI9IjUyMiIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWgpIi8+CjxyZWN0IHg9IjM4MC4wIiB5PSI1MzAiIHdpZHRoPSI2NDAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMxNzFlMTkiIHN0cm9rZT0iIzNhNGEzZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iNzAwLjAiIHk9IjU3NyIgZm9udC1zaXplPSIyOSIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkVtb3Rpb25hbCBhY3RpdmF0aW9uPC90ZXh0Pgo8dGV4dCB4PSI3MDAuMCIgeT0iNjE0IiBmb250LXNpemU9IjIxIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+VW5jZXJ0YWludHksIGZlYXIsIHNoYW1lLCBpcnJpdGF0aW9uPC90ZXh0Pgo8bGluZSB4MT0iNzAwLjAiIHkxPSI2NDYiIHgyPSI3MDAuMCIgeTI9IjY5MiIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWgpIi8+CjxyZWN0IHg9IjM4MC4wIiB5PSI3MDAiIHdpZHRoPSI2NDAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMyMjMwMjAiIHN0cm9rZT0iI2M0ZTQ5YSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iNzAwLjAiIHk9Ijc0NyIgZm9udC1zaXplPSIyOSIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlJlZ3VsYXRpb248L3RleHQ+Cjx0ZXh0IHg9IjcwMC4wIiB5PSI3ODQiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Ib3cgdGhlIGFjdGl2YXRpb24gaXMgaGFuZGxlZCDigJMgYWxvbmUgYW5kIHRvZ2V0aGVyPC90ZXh0Pgo8cGF0aCBkPSJNNzAwLjAsODE2IEw3MDAuMCw4NDggTDM2MCw4NDggTDM2MCw5MTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2UzYTM3ZiIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2FocikiLz4KPHBhdGggZD0iTTcwMC4wLDg0OCBMMTA0MCw4NDggTDEwNDAsOTE0IiBmaWxsPSJub25lIiBzdHJva2U9IiNjNGU0OWEiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaGcpIi8+CjxyZWN0IHg9IjEwMC4wIiB5PSI5MjIiIHdpZHRoPSI1MjAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMyZTIzMWQiIHN0cm9rZT0iI2UzYTM3ZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iMzYwIiB5PSI5NjkiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5IaWdoIHNvY2lhbCB0aHJlYXQ8L3RleHQ+Cjx0ZXh0IHg9IjM2MCIgeT0iMTAwNiIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlNpbGVuY2UsIGRlZmVuc2l2ZW5lc3MsIG92ZXItY2F1dGlvbjwvdGV4dD4KPGxpbmUgeDE9IjM2MCIgeTE9IjEwMzgiIHgyPSIzNjAiIHkyPSIxMDg0IiBzdHJva2U9IiNlM2EzN2YiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaHIpIi8+CjxyZWN0IHg9IjEwMC4wIiB5PSIxMDkyIiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjExMiIgcng9IjE0IiBmaWxsPSIjMmUyMzFkIiBzdHJva2U9IiNlM2EzN2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjM2MCIgeT0iMTEzOSIgZm9udC1zaXplPSIyOCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkluY3JlYXNlZCBpbnRlcmZlcmVuY2U8L3RleHQ+Cjx0ZXh0IHg9IjM2MCIgeT0iMTE3NiIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlR1bm5lbCB2aXNpb24sIHN0cmVzcywgbGVzcyBzaGFyaW5nPC90ZXh0Pgo8bGluZSB4MT0iMzYwIiB5MT0iMTIwOCIgeDI9IjM2MCIgeTI9IjEyNTQiIHN0cm9rZT0iI2UzYTM3ZiIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2FocikiLz4KPHJlY3QgeD0iMTAwLjAiIHk9IjEyNjIiIHdpZHRoPSI1MjAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiNlM2EzN2YiIHN0cm9rZT0iI2UzYTM3ZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iMzYwIiB5PSIxMzA5IiBmb250LXNpemU9IjI4IiBmaWxsPSIjMTgyMjE2IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+TG93ZXIgcGVyZm9ybWFuY2U8L3RleHQ+Cjx0ZXh0IHg9IjM2MCIgeT0iMTM0NiIgZm9udC1zaXplPSIyMSIgZmlsbD0iIzJjM2EyNiIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkNvbXBldGVuY2UgYmVjb21lcyBsZXNzIGF2YWlsYWJsZTwvdGV4dD4KPHJlY3QgeD0iNzgwLjAiIHk9IjkyMiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNCIgZmlsbD0iIzIyMzAyMCIgc3Ryb2tlPSIjYzRlNDlhIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSIxMDQwIiB5PSI5NjkiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Qc3ljaG9sb2dpY2FsIHNhZmV0eTwvdGV4dD4KPHRleHQgeD0iMTA0MCIgeT0iMTAwNiIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPk9wZW5uZXNzLCBjdXJpb3NpdHksIHN1cHBvcnQ8L3RleHQ+CjxsaW5lIHgxPSIxMDQwIiB5MT0iMTAzOCIgeDI9IjEwNDAiIHkyPSIxMDg0IiBzdHJva2U9IiNjNGU0OWEiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaGcpIi8+CjxyZWN0IHg9Ijc4MC4wIiB5PSIxMDkyIiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjExMiIgcng9IjE0IiBmaWxsPSIjMjIzMDIwIiBzdHJva2U9IiNjNGU0OWEiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjEwNDAiIHk9IjExMzkiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5SZWR1Y2VkIGludGVyZmVyZW5jZTwvdGV4dD4KPHRleHQgeD0iMTA0MCIgeT0iMTE3NiIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkNsYXJpdHksIGZsZXhpYmxlIHRoaW5raW5nLCBmbG93PC90ZXh0Pgo8bGluZSB4MT0iMTA0MCIgeTE9IjEyMDgiIHgyPSIxMDQwIiB5Mj0iMTI1NCIgc3Ryb2tlPSIjYzRlNDlhIiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWhnKSIvPgo8cmVjdCB4PSI3ODAuMCIgeT0iMTI2MiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNCIgZmlsbD0iI2M0ZTQ5YSIgc3Ryb2tlPSIjYzRlNDlhIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSIxMDQwIiB5PSIxMzA5IiBmb250LXNpemU9IjI4IiBmaWxsPSIjMTgyMjE2IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+QmV0dGVyIHBlcmZvcm1hbmNlPC90ZXh0Pgo8dGV4dCB4PSIxMDQwIiB5PSIxMzQ2IiBmb250LXNpemU9IjIxIiBmaWxsPSIjMmMzYTI2IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+TW9yZSBvZiB0aGUgY29tcGV0ZW5jZSBnZXRzIHVzZWQ8L3RleHQ+Cjx0ZXh0IHg9IjgwIiB5PSIxNDMwIiBmb250LXNpemU9IjIxIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIGZvbnQtc3R5bGU9Iml0YWxpYyI+UGVyZm9ybWFuY2UgPSBwb3RlbnRpYWwg4oiSIGludGVyZmVyZW5jZS4gU2FmZXR5IGRvZXNuJ3QgY2hhbmdlIHRoZSBwb3RlbnRpYWwsIG9ubHkgaG93IG11Y2ggb2YgaXQgYmVjb21lcyBhdmFpbGFibGUuPC90ZXh0Pgo8L3N2Zz4=" alt="Flow diagram: A performance situation leads to social evaluation, then emotional activation and regulation. With high social threat, the result is silence and defensiveness, increased interference and lower performance. With psychological safety, the result is openness and support, reduced interference and better performance." width="1400" height="1480">
+  <figcaption>Figure 4.1: Psychological safety as regulation capacity in performance situations.</figcaption>
+</figure>
+<p>The model shows how social evaluation affects emotional activation, regulation and further action. High social threat can lead to defensiveness, silence and increased interference, while psychological safety can reduce social threat and so make more appropriate regulation and better performance possible. The central elements are developed further below, with particular emphasis on how psychological safety affects regulation capacity in teams.</p>
+
+<h3>4.1 From safety to regulation</h3>
+<p>Psychological safety is traditionally understood as an interpersonal climate – a shared belief that it is safe to take interpersonal risks in a group, as Amy Edmondson describes (Edmondson, n.d.). Where Edmondson describes safety as an interpersonal climate, it is understood here as a regulation capacity – a capacity that affects emotional activation and therefore performance.</p>
+<p>Otherwise, the concept can remain at a descriptive level: “It’s safe here” or “It’s not safe here”. Such an understanding says little about what actually makes safety affect performance. Psychological safety can more precisely be understood as a context that reduces social threat and makes regulation possible.</p>
+<p>When social threat is reduced, the activation of shame and fear is also reduced. This has direct consequences for cognitive flexibility, information sharing and learning. Safety therefore becomes not primarily an emotional climate, but a condition for regulation.</p>
+
+<h3>4.2 Social threat and interference</h3>
+<p>In performance environments, social evaluation is a constant factor. When employees experience high social threat, the threat response is activated. This leads people to withdraw from discussions, become defensive, share less about mistakes and uncertainty, and become more cautious and less willing to take initiative. From a performance perspective, this represents considerable interference. Psychological safety reduces social threat and therefore interference, making it easier to take part, share uncertainty and handle challenges.</p>
+
+<h3>4.3 Regulation as something we create together</h3>
+<p>Individual regulation is a skill. But regulation does not happen in isolation; it is affected by context – including norms, leadership and feedback. Collective regulation capacity means that the team as a whole can handle emotional activation without it escalating into defensiveness or silence. This shows in how the team handles disagreement, mistakes and uncertainty. At the same time, strong emotions can be contained without direction and progress being lost. In this way, emotional intelligence becomes a collective resource, not only an individual one.</p>
+
+<h3>4.4 Safety ≠ comfort</h3>
+<p>A central misunderstanding is that psychological safety means the absence of discomfort. In performance environments, discomfort is unavoidable. Complex problem-solving, innovation and quality assurance require friction. The difference between comfort and safety can be understood as a difference in both risk and activation. Comfort means low risk and little friction, while safety means being able to stay with discomfort without losing regulation. Safety is therefore not about avoiding discomfort, but about being able to stay with it without losing regulation capacity. This makes it possible to combine high demands with learning.</p>
+
+<h3>4.5 Safety and performance (P = P − I)</h3>
+<p>When psychological safety is linked to the performance formula, the mechanism becomes clear. In IT organisations, potential is often high, in terms of competence, experience and problem-solving ability. At the same time, interference can be considerable, through fear, shame and negative thought patterns, among other things. Psychological safety can reduce this interference by dampening social threat. Performance can then increase without the potential necessarily changing. In other words, performance can be improved by reducing interference.</p>
+
+<h3>4.6 Safety and intrinsic motivation</h3>
+<p>Self-determination theory highlights the needs for autonomy, competence and relatedness. Psychological safety particularly supports the needs for competence and relatedness. When employees can take part without fear, responsibility and contribution increase. This strengthens intrinsic motivation, which in turn affects sustained effort and quality.</p>
+<p>So far, the paper has shown how emotional activation can affect action, attention and interaction, and how various mental techniques can support regulation. To bring these perspectives together, it can be useful to start from a framework showing how regulation is built up across several levels.</p>
+
+<h3>4.7 The RAW model</h3>
+<p>The RAW model can be used as a framework for understanding how regulation capacity develops over time. It shows that the ability to handle emotional activation does not arise spontaneously in demanding situations, but builds on an interplay between basic understanding, concrete techniques and developed skills (Myhre, 2024).</p>
+<div class="example"><span class="kicker">The RAW model in brief</span>
+<p>The model (© C. Ystenes, Raw Performance) is built in layers, from the bottom up:</p>
+<ul>
+<li><strong>Philosophy</strong> as the foundation.</li>
+<li><strong>Basic mental techniques:</strong> goal-setting, visualisation, inner dialogue and relaxation.</li>
+<li><strong>Mental skills:</strong> self-confidence, tension regulation, focus, willpower and motivation.</li>
+<li><strong>Self-regulation</strong> in the arena, based on the needs of the situation.</li>
+<li><strong>Performance</strong> and, at the top, <strong>results</strong>.</li>
+</ul>
+<p>Emotions and coaching tools run alongside the whole model. The original figure is not reproduced in this version.</p></div>
+<p>In this paper, the model is particularly relevant because it makes clear that regulation is not only an individual capacity. Although techniques such as inner dialogue, tension regulation and goal-setting can strengthen the individual’s ability to handle pressure, the availability of these skills is affected by the context in which they are used.</p>
+<p>In environments marked by high social threat, activation can become so high that access to one’s own regulation resources is reduced. Conversely, an environment with high psychological safety can support regulation by reducing unnecessary activation and giving more room for action. The model can therefore be understood as a bridge between individual mental training and collective regulation capacity. It illustrates how inner resources are built, but also why they cannot be understood independently of the organisational environment they are part of. Regulation is not only about what the individual can do, but about which conditions the organisation creates for regulation to actually be possible.</p>
+
+<h3>4.8 Definition</h3>
+<p class="pull">Psychological safety can therefore be defined as a collective capacity to regulate emotional activation under performance pressure.</p>
+<p>Understood in this way, psychological safety is not only an interpersonal climate, but a condition for regulation in the organisation. It affects how available self-regulation actually is in situations marked by social exposure, uncertainty and risk.</p>
+
+<h2 id="k5">5 Leadership and regulation</h2>
+<h3>5.1 Regulation as a leadership competence</h3>
+<p>Emotional regulation is often understood as an individual skill. The analysis so far has, however, shown that self-regulation in organisational settings is always shaped by its context. It is affected by the degree of social threat, by relational patterns and by the regulation conditions the environment provides. From this perspective, regulation also becomes a central leadership competence. Leaders affect not only their own reactions, but also how emotional activation develops in the group. How leaders react to mistakes, criticism and disagreement can either increase or reduce social threat in the team.</p>
+<p>When emotional activation escalates in a group, it can lead to defensiveness, conflict or withdrawal. If leaders are able to regulate both their own and the group’s activation, disagreement can instead be handled without the relationship breaking down. Regulation thereby becomes a precondition for maintaining reflection, learning and decision quality in situations with a high performance load. From this perspective, regulation can be understood as a professional leadership skill – a competence that makes it possible to handle complex relational situations without emotional activation reducing the group’s overall capacity.</p>
+
+<h3>5.2 Relational leadership and regulation</h3>
+<p>Relational leadership is about how leaders build and maintain relationships through communication, presence and trust. In this paper, relational leadership is understood not primarily as a wellbeing measure, but as a mechanism that affects regulation in interaction. When people feel listened to and understood, the experience of social threat is reduced. This directly affects how emotions are activated and regulated in a group. Relational skills can therefore be understood as practical tools for regulation. Examples include:</p>
+<ul>
+<li><strong>Focused listening.</strong> When leaders listen with genuine attention, they signal respect and interest. This can reduce defensiveness and open up for more nuanced dialogue.</li>
+<li><strong>Open and exploratory questions.</strong> Questions that invite reflection rather than defence can help stabilise emotional activation in discussions.</li>
+<li><strong>Paraphrasing and summarising.</strong> By restating what others have said in their own words, leaders can contribute to shared understanding and reduce misunderstandings.</li>
+<li><strong>Perspective-taking.</strong> Trying to understand the situation from others’ perspective can reduce the risk of misinterpretation and escalating conflict.</li>
+</ul>
+<p>Through relational skills like these, leaders can influence how emotional activation develops in interaction. Relational leadership can therefore be understood as regulation competence in practice.</p>
+
+<h3>5.3 The leader’s role</h3>
+<p>If psychological safety is understood as collective regulation capacity, leaders play a central role in shaping the level of regulation in a group. This happens through small but significant actions in everyday work, particularly in situations involving social evaluation. Typical examples are when an employee makes a mistake, when decisions are challenged, when disagreement arises in meetings, or when someone expresses uncertainty. In such situations, the leader’s response can either increase or reduce social threat.</p>
+<p>A leader who reacts with irritation or rejection can amplify emotional activation in the group. A leader who meets the situation with curiosity and calm can help stabilise the interaction. Collective regulation capacity is therefore not developed primarily through structured initiatives, but through how leaders handle relational situations in daily work.</p>
+
+<h3>5.4 HR and the regulation environment</h3>
+<p>Although regulation is largely exercised through leadership, HR can play an important role in developing structures and practices that support regulation capacity in the organisation. This can mean developing leadership competence, establishing arenas for reflection, developing a language for learning and mistakes, and contributing to more balanced goal structures. In this context, HR becomes not primarily a support function for wellbeing, but an actor that helps develop the organisational framework for regulation.</p>
+<p>At the same time, it is important to stress that psychological safety cannot be created through HR initiatives alone. It develops largely through leaders’ daily interaction with employees. HR’s role can therefore be understood as making sure leaders have the competence, structures and support to exercise regulation competence in practice. HR influences, among other things:</p>
+<ol>
+<li><strong>How performance is defined.</strong> If performance is measured solely through outcome goals, social threat can increase. A balanced use of dream goals, outcome goals, performance goals and process goals can reduce unnecessary pressure and encourage learning.</li>
+<li><strong>Feedback practice.</strong> The “feedback sandwich” can reduce the activation of shame by framing areas for improvement constructively.</li>
+<li><strong>Leadership development.</strong> Training in emotional intelligence and regulation tools strengthens leaders’ ability to contain others’ emotions without losing direction.</li>
+<li><strong>Onboarding.</strong> New employees can be introduced to the organisation’s regulation norms and language for emotions.</li>
+<li><strong>Structures for reflection.</strong> A “board meeting with yourself” and structured reflection meetings can be integrated into performance conversations.</li>
+</ol>
+<p>Through these mechanisms, HR affects the degree of collective interference.</p>
+
+<h3>5.5 Regulation as part of the leadership role</h3>
+<p>In many technical environments, professionalism is associated primarily with rationality and professional competence. Emotions may be seen as something private or irrelevant to work. This paper argues for a different perspective. In complex knowledge organisations, the ability to handle emotional activation is an important part of professional competence. Leaders who can regulate both their own and others’ reactions can contribute to more stable decision processes, better collaboration and greater learning capacity.</p>
+<p>Relational competence can therefore be understood as a central part of modern leadership. Not because relationships are the goal in themselves, but because the quality of relationships affects how people think, learn and perform under pressure. When regulation is integrated as part of the professional leadership standard, psychological safety can develop as a natural consequence of how the organisation works – rather than as a separate culture initiative.</p>
+
+<h2 id="k6">6 Discussion</h2>
+<h3>6.1 Can regulation become a new performance pressure?</h3>
+<p>One possible criticism of this paper is that it risks turning emotion regulation into a new performance demand. If regulation is understood as a skill expected of everyone, an implicit norm can arise that one should always handle one’s emotions professionally and efficiently. This can lead to a more hidden form of emotional performance pressure, where strong reactions are seen as unprofessional or undesirable. From that perspective, mental training can become a tool for adapting to the system rather than a support for development. To avoid this, regulation must be understood as capacity, not constant control. Emotional regulation does not mean suppressing emotions, but awareness and flexibility. There must also be room for failed regulation and learning.</p>
+
+<h3>6.2 Individualising responsibility</h3>
+<p>A central challenge concerns how responsibility for regulation is understood. If psychological safety is described as regulation capacity, responsibility can easily shift towards the individual: “You need to regulate yourself.” This is particularly problematic in environments marked by persistently high social threat, for example through unclear leadership, inconsistent feedback or unpredictable reactions. In such contexts, it is not primarily the individual’s skills that fail, but the conditions for regulation.</p>
+<p>Emotion regulation does not happen independently of context. Persistently high activation can reduce the ability to regulate flexibly, even among competent employees. The paper therefore argues that regulation should not be individualised, but understood as a responsibility of the system. HR can contribute here by reducing collective interference through structures, language and norms.</p>
+
+<h3>6.3 The risk of too little performance pressure</h3>
+<p>Another objection may be that a strong emphasis on safety and emotions can lead to lower demands and a reduced focus on performance. This assumes, however, that safety and demands are in opposition. The analysis in this paper shows the opposite: without regulation capacity, high demands will increase interference and reduce quality. Safety must therefore be understood as a condition for maintaining high standards over time. Regulation makes confrontation, clear feedback and ambitious goals possible without escalation.</p>
+
+<h3>6.4 Power and hierarchy</h3>
+<p>Psychological safety is affected by power relations. In hierarchical structures, there can be greater risk attached to expressing uncertainty or disagreement. Regulation capacity must therefore be modelled by leaders. If leaders themselves react defensively, social threat will increase regardless of stated values. HR’s role here is to clarify expectations of leadership behaviour and to develop emotional intelligence as part of leadership competence.</p>
+
+<h3>6.5 Limitations of mental training in organisations</h3>
+<p>Mental training has strong roots in an individual focus. Transferring it to the organisational level requires care. Organisations are complex systems affected by financial constraints, strategy, resource allocation and cultural history. Regulation cannot compensate for structural shortcomings. It is therefore important to understand mental training as a supplement to, not a replacement for, clear strategy and structure.</p>
+
+<h3>6.6 Sustainable performance</h3>
+<p>A central point in this paper is that regulation capacity affects not only short-term performance, but also sustainability over time. Persistently high social threat can over time lead to emotional exhaustion, reduced motivation, less flexible thinking and higher turnover. A regulation culture, on the other hand, can help stabilise the level of tension and support intrinsic motivation, for example through the experience of mastery and belonging.</p>
+
+<h3>6.7 Summary of discussion</h3>
+<p>The discussion shows that regulation must not become a new performance pressure, and that responsibility must be balanced between individual and system. Psychological safety must be combined with clear demands, and leadership emerges as decisive for how regulation is actually exercised in practice. At the same time, mental training has clear limitations, particularly in contexts marked by persistent social threat.</p>
+<p>Despite these challenges, this perspective provides a useful starting point for understanding how emotions and performance are connected in knowledge organisations. Regulation is not a cure-all, and structural conditions and power relations limit what mental training can compensate for. At the same time, the analysis indicates that organisations can influence performance not only through competence development, but by reducing interference. From this perspective, psychological safety is understood not primarily as an interpersonal climate, but as a collective capacity to regulate emotional activation in situations of social evaluation. In knowledge organisations, where performance often takes place in socially exposed situations, such regulation capacity can contribute to better use of existing competence.</p>
+
+<h2 id="k7">7 Conclusion</h2>
+<p>Performance in knowledge-intensive organisations is not determined solely by individual competence, but by the system’s ability to handle emotional activation under pressure. The paper has shown how emotions, and particularly the regulation of emotions, are crucial for performance in knowledge organisations.</p>
+<p>A central finding is that this regulation capacity is largely shaped at the top of the organisation. Leadership teams and boards set, both explicitly and implicitly, the level of tension, the norms for mistakes and the framework for learning. Psychological safety therefore cannot be understood as an initiative at individual or team level alone, but as a system responsibility that must be anchored in leadership and governance.</p>
+<p>Mental training provides effective tools for individual regulation, but only when these are integrated into structures, language and expectations at organisational level can performance potential be realised over time. In this context, HR takes on a strategic role as a designer of regulation architecture – not as a support function, but as a contributor to a sustainable performance culture.</p>
+<p class="closing-line">The question, then, is not whether organisations have competence, but whether they manage to create the conditions that make it available when it matters.</p>
+</div>
+<section class="sources" aria-labelledby="kilder-tittel">
+<h2 id="kilder-tittel">References</h2>
+<ul>
+<li>Edmondson, A. C. (n.d.). <i>Psychological Safety.</i> amycedmondson.com/category/psychological-safety. Retrieved 19 March 2026.</li>
+<li>Gamlesanne, A.-H. (2026). Presentations from course in mental training.</li>
+<li>Myhre, C. Y. (2018). <i>Mental styrketrening</i> [Mental strength training]. Aschehoug.</li>
+<li>Myhre, C. Y. (2024). Presentations from course in mental training.</li>
+<li>Myhre, C. Y. &amp; Aas, K. A. (2025). <i>Prestasjonsledelse</i> [Performance leadership]. Aschehoug.</li>
+</ul>
+</section>
+    </article>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Illustration in full size">
+    <button type="button" aria-label="Close">×</button>
+    <img alt="">
+  </div>
+  <script>
+    (function () {
+      var box = document.getElementById('lightbox'), big = box.querySelector('img'), last = null;
+      function close() { box.classList.remove('open'); if (last) last.focus(); }
+      document.querySelectorAll('figure img').forEach(function (img) {
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
+        img.title = 'Click to view full size';
+        function open() { last = img; big.src = img.src; big.alt = img.alt; box.classList.add('open'); box.querySelector('button').focus(); }
+        img.addEventListener('click', open);
+        img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+      });
+      box.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
+    })();
+  </script>
+
+  <footer>
+    <div class="wrap">
+      <span><span style="color:var(--text)">Camilla Karud</span> · People, technology and organisation</span>
+      <span><a href="https://www.linkedin.com/in/camilla-karud-91b32740/" target="_blank" rel="noopener">LinkedIn ↗</a> &nbsp;·&nbsp; <a href="../index.html#fordypning">← Back to deep dives</a></span>
+    </div>
+  </footer>
+</body>
+</html>

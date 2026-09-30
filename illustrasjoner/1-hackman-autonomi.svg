@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 970" width="1600" height="970" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6b61"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f6b45"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9b5a3c"/></marker>
+</defs>
+<rect width="1600" height="970" fill="#ffffff"/>
+<text x="80" y="90" font-size="40" fill="#1f2a24" font-weight="700" text-anchor="start" >Hvem har ansvaret for hva?</text>
+<text x="80" y="135" font-size="24" fill="#5b6b61" font-weight="400" text-anchor="start" >Fire nivåer av teamautonomi, etter Hackman (2002)</text>
+<text x="570" y="264.0" font-size="25" fill="#1f2a24" font-weight="500" text-anchor="end" >Sette retningen</text>
+<rect x="601" y="201" width="216" height="108" rx="10" fill="#f3f4f1" stroke="#c9d3cb" stroke-width="2" stroke-dasharray="7 6"/>
+<rect x="833" y="201" width="216" height="108" rx="10" fill="#f3f4f1" stroke="#c9d3cb" stroke-width="2" stroke-dasharray="7 6"/>
+<rect x="1065" y="201" width="216" height="108" rx="10" fill="#f3f4f1" stroke="#c9d3cb" stroke-width="2" stroke-dasharray="7 6"/>
+<rect x="1296" y="200" width="218" height="110" rx="10" fill="#2f6b45"/>
+<text x="570" y="388.0" font-size="25" fill="#1f2a24" font-weight="500" text-anchor="end" >Utforme teamet og rammene</text>
+<rect x="601" y="325" width="216" height="108" rx="10" fill="#f3f4f1" stroke="#c9d3cb" stroke-width="2" stroke-dasharray="7 6"/>
+<rect x="833" y="325" width="216" height="108" rx="10" fill="#f3f4f1" stroke="#c9d3cb" stroke-width="2" stroke-dasharray="7 6"/>
+<rect x="1064" y="324" width="218" height="110" rx="10" fill="#2f6b45"/>
+<rect x="1296" y="324" width="218" height="110" rx="10" fill="#2f6b45"/>
+<text x="570" y="512.0" font-size="25" fill="#1f2a24" font-weight="500" text-anchor="end" >Følge med på og justere arbeidsmåten</text>
+<rect x="601" y="449" width="216" height="108" rx="10" fill="#f3f4f1" stroke="#c9d3cb" stroke-width="2" stroke-dasharray="7 6"/>
+<rect x="832" y="448" width="218" height="110" rx="10" fill="#2f6b45"/>
+<rect x="1064" y="448" width="218" height="110" rx="10" fill="#2f6b45"/>
+<rect x="1296" y="448" width="218" height="110" rx="10" fill="#2f6b45"/>
+<text x="570" y="636.0" font-size="25" fill="#1f2a24" font-weight="500" text-anchor="end" >Utføre oppgaven</text>
+<rect x="600" y="572" width="218" height="110" rx="10" fill="#2f6b45"/>
+<rect x="832" y="572" width="218" height="110" rx="10" fill="#2f6b45"/>
+<rect x="1064" y="572" width="218" height="110" rx="10" fill="#2f6b45"/>
+<rect x="1296" y="572" width="218" height="110" rx="10" fill="#2f6b45"/>
+<text x="709.0" y="730" font-size="25" fill="#1f2a24" font-weight="700" text-anchor="middle" >Lederstyrt</text>
+<text x="709.0" y="762" font-size="21" fill="#5b6b61" font-weight="400" text-anchor="middle" >team</text>
+<text x="941.0" y="730" font-size="25" fill="#1f2a24" font-weight="700" text-anchor="middle" >Selvstyrt</text>
+<text x="941.0" y="762" font-size="21" fill="#5b6b61" font-weight="400" text-anchor="middle" >team</text>
+<text x="1173.0" y="730" font-size="25" fill="#1f2a24" font-weight="700" text-anchor="middle" >Selvutformende</text>
+<text x="1173.0" y="762" font-size="21" fill="#5b6b61" font-weight="400" text-anchor="middle" >team</text>
+<text x="1405.0" y="730" font-size="25" fill="#1f2a24" font-weight="700" text-anchor="middle" >Selvbestemmende</text>
+<text x="1405.0" y="762" font-size="21" fill="#5b6b61" font-weight="400" text-anchor="middle" >team</text>
+<line x1="600" y1="806" x2="1508" y2="806" stroke="#5b6b61" stroke-width="2.5" marker-end="url(#ah)"/>
+<text x="600" y="842" font-size="21" fill="#5b6b61" font-weight="400" text-anchor="start" >Mer ansvar hos teamet</text>
+<rect x="80" y="882" width="30" height="30" rx="6" fill="#2f6b45"/>
+<text x="125" y="905" font-size="23" fill="#1f2a24" font-weight="400" text-anchor="start" >Teamet har ansvaret</text>
+<rect x="420" y="882" width="30" height="30" rx="6" fill="#f3f4f1" stroke="#c9d3cb" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="465" y="905" font-size="23" fill="#1f2a24" font-weight="400" text-anchor="start" >Ledelsen eller organisasjonen har ansvaret</text>
+<text x="1514" y="905" font-size="25" fill="#2f6b45" font-weight="700" text-anchor="end" font-style="italic">Hvor står deres team?</text>
+</svg>

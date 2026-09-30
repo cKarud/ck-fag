@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1480" width="1400" height="1480" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a8b1a7"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c4e49a"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e3a37f"/></marker>
+</defs>
+<rect width="1400" height="1480" fill="#171e19"/>
+<text x="80" y="90" font-size="40" fill="#f1f2e9" font-weight="700" text-anchor="start" >Psykologisk trygghet som reguleringskapasitet</text>
+<text x="80" y="135" font-size="24" fill="#a8b1a7" font-weight="400" text-anchor="start" >Hvordan sosial evaluering kan gi taushet – eller åpenhet og flyt</text>
+<rect x="380.0" y="190" width="640" height="112" rx="14" fill="#171e19" stroke="#3a4a3f" stroke-width="2.5"/>
+<text x="700.0" y="237" font-size="29" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Prestasjonssituasjon</text>
+<text x="700.0" y="274" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Møter, kodegjennomgang, beslutninger</text>
+<line x1="700.0" y1="306" x2="700.0" y2="352" stroke="#a8b1a7" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="380.0" y="360" width="640" height="112" rx="14" fill="#171e19" stroke="#3a4a3f" stroke-width="2.5"/>
+<text x="700.0" y="407" font-size="29" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Sosial evaluering</text>
+<text x="700.0" y="444" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Arbeidet og vurderingene våre blir synlige</text>
+<line x1="700.0" y1="476" x2="700.0" y2="522" stroke="#a8b1a7" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="380.0" y="530" width="640" height="112" rx="14" fill="#171e19" stroke="#3a4a3f" stroke-width="2.5"/>
+<text x="700.0" y="577" font-size="29" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Emosjonell aktivering</text>
+<text x="700.0" y="614" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Usikkerhet, frykt, skam, irritasjon</text>
+<line x1="700.0" y1="646" x2="700.0" y2="692" stroke="#a8b1a7" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="380.0" y="700" width="640" height="112" rx="14" fill="#223020" stroke="#c4e49a" stroke-width="2.5"/>
+<text x="700.0" y="747" font-size="29" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Regulering</text>
+<text x="700.0" y="784" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Hvordan aktiveringen blir håndtert – alene og sammen</text>
+<path d="M700.0,816 L700.0,848 L360,848 L360,914" fill="none" stroke="#e3a37f" stroke-width="3" marker-end="url(#ahr)"/>
+<path d="M700.0,848 L1040,848 L1040,914" fill="none" stroke="#c4e49a" stroke-width="3" marker-end="url(#ahg)"/>
+<rect x="100.0" y="922" width="520" height="112" rx="14" fill="#2e231d" stroke="#e3a37f" stroke-width="2.5"/>
+<text x="360" y="969" font-size="28" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Høy sosial trussel</text>
+<text x="360" y="1006" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Taushet, defensivitet, overforsiktighet</text>
+<line x1="360" y1="1038" x2="360" y2="1084" stroke="#e3a37f" stroke-width="3" marker-end="url(#ahr)"/>
+<rect x="100.0" y="1092" width="520" height="112" rx="14" fill="#2e231d" stroke="#e3a37f" stroke-width="2.5"/>
+<text x="360" y="1139" font-size="28" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Økt interferens</text>
+<text x="360" y="1176" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Tunnelsyn, stress, mindre deling</text>
+<line x1="360" y1="1208" x2="360" y2="1254" stroke="#e3a37f" stroke-width="3" marker-end="url(#ahr)"/>
+<rect x="100.0" y="1262" width="520" height="112" rx="14" fill="#e3a37f" stroke="#e3a37f" stroke-width="2.5"/>
+<text x="360" y="1309" font-size="28" fill="#182216" font-weight="700" text-anchor="middle" >Lavere prestasjon</text>
+<text x="360" y="1346" font-size="21" fill="#2c3a26" font-weight="400" text-anchor="middle" >Kompetansen blir mindre tilgjengelig</text>
+<rect x="780.0" y="922" width="520" height="112" rx="14" fill="#223020" stroke="#c4e49a" stroke-width="2.5"/>
+<text x="1040" y="969" font-size="28" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Psykologisk trygghet</text>
+<text x="1040" y="1006" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Åpenhet, nysgjerrighet, støtte</text>
+<line x1="1040" y1="1038" x2="1040" y2="1084" stroke="#c4e49a" stroke-width="3" marker-end="url(#ahg)"/>
+<rect x="780.0" y="1092" width="520" height="112" rx="14" fill="#223020" stroke="#c4e49a" stroke-width="2.5"/>
+<text x="1040" y="1139" font-size="28" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Redusert interferens</text>
+<text x="1040" y="1176" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Klarhet, fleksibel tenkning, flyt</text>
+<line x1="1040" y1="1208" x2="1040" y2="1254" stroke="#c4e49a" stroke-width="3" marker-end="url(#ahg)"/>
+<rect x="780.0" y="1262" width="520" height="112" rx="14" fill="#c4e49a" stroke="#c4e49a" stroke-width="2.5"/>
+<text x="1040" y="1309" font-size="28" fill="#182216" font-weight="700" text-anchor="middle" >Bedre prestasjon</text>
+<text x="1040" y="1346" font-size="21" fill="#2c3a26" font-weight="400" text-anchor="middle" >Mer av kompetansen blir brukt</text>
+<text x="80" y="1430" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="start" font-style="italic">Prestasjon = potensial − interferens. Trygghet endrer ikke potensialet, men hvor mye av det som blir tilgjengelig.</text>
+</svg>

@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indre dialog – Camilla Karud</title>
+  <meta name="description" content="Fordypningsoppgave om imposter-syndromet og indre dialog, med praktiske verktøy fra mental trening: de tre D-ene, tankerekkeskjema, STOPP-metoden, ABC-E og SMARTE mål.">
+  <meta name="theme-color" content="#111613">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="nb_NO">
+  <meta property="og:title" content="Indre dialog">
+  <meta property="og:description" content="Fordypningsoppgave om imposter-syndromet og indre dialog, med praktiske verktøy fra mental trening: de tre D-ene, tankerekkeskjema, STOPP-metoden, ABC-E og SMARTE mål.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23111613' stroke='%23c4e49a' stroke-width='2'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23c4e49a'%3ECK%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111613; --panel: #171e19; --text: #f1f2e9; --body: #d6dcd2; --muted: #a8b1a7; --faint: #8c968b;
+      --line: rgba(225,235,223,.13); --accent: #c4e49a;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.75 var(--sans); -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, p, ol, ul, blockquote, figure { margin: 0; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+    .skip { position: absolute; left: 20px; top: -100px; z-index: 10; padding: 10px 14px; color: var(--bg); background: var(--accent); }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .kicker { display: block; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top .wrap { min-height: 82px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding-block: 14px; }
+    .name { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 650; letter-spacing: -.02em; font-size: 16px; }
+    .name .mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(196,228,154,.55); border-radius: 50%; color: var(--accent); font: 13px var(--serif); }
+    .back { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .back:hover { color: var(--text); }
+    .head-right { display: inline-flex; align-items: center; gap: 18px; }
+    .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .lang-switch a, .lang-switch span { display: inline-grid; place-items: center; min-width: 38px; min-height: 30px; padding: 0 10px; border-radius: 999px; text-decoration: none; color: var(--muted); }
+    .lang-switch a:hover { color: var(--text); }
+    .lang-switch [aria-current] { background: var(--accent); color: #182216; }
+
+    .article { width: min(720px, calc(100% - 40px)); margin-inline: auto; padding-block: 88px 40px; }
+    .article header .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--muted); font-size: 13px; margin-top: 16px; }
+    .article h1 { margin-top: 22px; font: 400 clamp(40px, 6.4vw, 66px)/1.06 var(--serif); letter-spacing: -.04em; }
+    .article .dek { margin-top: 20px; color: var(--muted); font: italic 400 clamp(19px, 2.4vw, 23px)/1.45 var(--serif); }
+    .body { margin-top: 56px; color: var(--body); }
+    .body p + p, .body p + ul, .body ul + p { margin-top: 1.15em; }
+    .body h2 { margin: 2.4em 0 .8em; color: var(--text); font: 400 clamp(27px, 3.4vw, 34px)/1.2 var(--serif); letter-spacing: -.02em; }
+    .body strong { color: var(--text); font-weight: 600; }
+    .body em { color: var(--text); }
+    .lead { color: var(--text); font-size: 20px; }
+    .series-note { margin-top: 1.6em !important; padding: 16px 20px; border-left: 2px solid var(--accent); background: rgba(196,228,154,.045); color: var(--muted); font-size: 15px; }
+    .loop { margin: 1.3em 0 !important; color: var(--accent); font: 400 clamp(20px, 2.8vw, 26px)/1.4 var(--serif); text-align: center; }
+    .example { margin-top: 1.4em !important; padding: 22px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .example .kicker { margin-bottom: 8px; }
+    .example + p { margin-top: 1.15em; }
+    figure img { cursor: zoom-in; }
+    .lightbox { position: fixed; inset: 0; z-index: 20; display: none; place-items: center; padding: 24px; background: rgba(8,11,9,.92); cursor: zoom-out; }
+    .lightbox.open { display: grid; }
+    .lightbox img { max-width: min(1500px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 6px; }
+    .lightbox button { position: absolute; top: 16px; right: 16px; min-width: 44px; min-height: 44px; border: 1px solid var(--line); border-radius: 50%; background: var(--panel); color: var(--text); font-size: 20px; cursor: pointer; }
+    .pull { margin: 1.6em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: 400 clamp(22px, 3vw, 27px)/1.4 var(--serif); letter-spacing: -.01em; }
+    figure { margin: 2.4em 0 !important; }
+    @media (min-width: 1000px) { figure:not(.tall) { width: 940px; margin-left: calc((720px - 940px) / 2) !important; } }
+    figure.tall img { max-width: 720px; margin-inline: auto; }
+    figure.tall figcaption { text-align: center; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+    figcaption { margin-top: 10px; color: var(--faint); font-size: 14px; }
+    .questions { list-style: none; padding: 0; margin-top: 1.2em; counter-reset: q; border-top: 1px solid var(--line); }
+    .questions li { counter-increment: q; display: grid; grid-template-columns: 38px 1fr; gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--text); font: 400 21px/1.4 var(--serif); }
+    .questions li::before { content: counter(q); color: var(--accent); font: 400 21px/1.4 var(--serif); }
+    .closing-line { margin-top: 1.6em !important; color: var(--text); font: 400 clamp(24px, 3.4vw, 31px)/1.35 var(--serif); letter-spacing: -.015em; }
+
+    .body h3 { margin: 1.9em 0 .6em; color: var(--text); font: 600 19px/1.4 var(--sans); }
+    .body ul, .body ol { padding-left: 1.3em; }
+    .body li + li { margin-top: .45em; }
+    .body .example ul, .body .example ol { margin-top: .6em; }
+    .body .example p + p, .body .example p + ul { margin-top: .7em; }
+    .quote { margin: 1.4em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: italic 400 21px/1.45 var(--serif); }
+    .formula-line { text-align: center; color: var(--accent); font: 400 clamp(22px, 3vw, 28px)/1.3 var(--serif); }
+    .toc { margin-top: 2em; padding: 20px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .toc ol { margin-top: 10px; padding-left: 1.3em; font-size: 16px; }
+    .toc a { color: var(--text); text-underline-offset: 3px; text-decoration-color: rgba(196,228,154,.5); }
+    .toc a:hover { color: var(--accent); }
+    .next { margin-top: 64px; padding-top: 30px; border-top: 1px solid var(--line); }
+    .next a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-top: 12px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; }
+    .next a:hover { border-color: rgba(196,228,154,.43); }
+    .next b { font: 400 21px/1.35 var(--serif); }
+    .next i { color: var(--accent); font-style: normal; }
+    .body h2[id] { scroll-margin-top: 24px; }
+    .more { margin-top: 72px; padding-top: 34px; border-top: 1px solid var(--line); }
+    .more h2 { margin-top: 12px; font: 400 28px/1.2 var(--serif); }
+    .more ul { list-style: none; padding: 0; margin-top: 18px; display: grid; gap: 10px; }
+    .more a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; padding: 16px 18px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; transition: border-color .2s ease; }
+    .more a:hover { border-color: rgba(196,228,154,.43); }
+    .more a span { color: var(--muted); font-size: 14px; display: block; }
+    .more a b { font: 400 19px/1.35 var(--serif); }
+    .more a i { color: var(--accent); font-style: normal; }
+    .sources { margin-top: 56px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .sources h2 { color: var(--text); font: 600 14px/1.4 var(--sans); margin-bottom: 10px; }
+    .sources li + li { margin-top: 6px; }
+    .sources ul { padding-left: 18px; }
+
+    footer { border-top: 1px solid var(--line); margin-top: 80px; }
+    footer .wrap { min-height: 82px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; color: var(--faint); font-size: 13px; }
+    footer a { text-decoration: none; } footer a:hover { color: var(--accent); }
+    @media (max-width: 700px) {
+      body { font-size: 17px; }
+      .wrap { width: calc(100% - 34px); }
+      .article { padding-top: 60px; }
+      .questions li { font-size: 19px; grid-template-columns: 30px 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#innhold">Hopp til innhold</a>
+  <header class="top" id="toppen">
+    <div class="wrap">
+      <a class="name" href="../index.html"><span class="mark" aria-hidden="true">CK</span><span>Camilla Karud</span></a>
+      <span class="head-right"><a class="back" href="../index.html#fordypning">← Tilbake til fordypning</a><div class="lang-switch" aria-label="Språk"><span aria-current="true">NO</span><a href="../en/papers/inner-dialogue.html" hreflang="en" lang="en">EN</a></div></span>
+    </div>
+  </header>
+
+  <main id="innhold">
+    <article class="article">
+<header>
+  <span class="kicker">Fordypning · mental trener nivå 1 · 2024</span>
+  <h1>Indre dialog</h1>
+  <p class="dek">Hvordan kan vi bruke indre dialog til å overvinne imposter-syndromet?</p>
+  <div class="meta"><span>Camilla Karud</span><span>Raw Performance, Skøyen</span><span>Levert 14. juni 2024</span><span>Ca. 15 minutters lesing</span></div>
+</header>
+<div class="body">
+<p class="series-note">Denne oppgaven er gjennomført som en del av studiet ved Raw Performance, 2024. Dette innebærer ikke at Raw Performance går god for de metoder som er anvendt, de resultater som er fremkommet, eller de konklusjoner som er trukket.</p>
+
+<p class="lead">I dagens samfunn, hvor sammenligning med andre gjennom sosiale medier er vanlig og kravet om å prestere på alle arenaer er høyt, er det lett å sette usedvanlig høye krav til seg selv.</p>
+<p>Sosiale medier kan forsterke en perfeksjonistisk kultur hvor det er et konstant press om å fremstå perfekt. Dette kan øke stress og angst over å ikke være «god nok» uansett hvor mye suksess man oppnår, noe som er kjernen i imposter-syndromet.</p>
+<p>Hvordan kan man overvinne dette syndromet? Innen mental trening er det flere gode metoder for å forbedre denne situasjonen. I denne oppgaven skal vi utforske hva som kjennetegner noen med imposter-syndromet, hva indre dialog er, og hvordan vi kan bruke denne teknikken for å minske de negative tankene og følelsen av å være en imposter og kanskje til og med fjerne det helt fra tankene.</p>
+<p>Ved å forstå mekanismene bak imposter-syndromet og implementere effektive teknikker for å forbedre vår indre dialog, kan vi alle bevege oss mot en sunnere mental helse og et mer tilfredsstillende liv.</p>
+
+<h2>Kjennetegn på imposter-syndromet</h2>
+<p>Imposter-syndromet, også kjent som bedragersyndromet, er en psykologisk tilstand hvor en person, til tross for tydelige bevis på sin kompetanse og suksess, føler seg som en bedrager. De fleste kjenner på en eller annen form for imposter-syndromet ved hver statusendring vi foretar oss, enten det er på jobb, i en ny stilling, eller privat som for eksempel ved å bli forelder. Dette er helt naturlig, for du er en «imposter» i den forstand at du er en nybegynner som ikke vet hva du holder på med (Peterson, 2022).</p>
+<blockquote class="quote">«All great men are play actors of their own ideal.» (Friedrich Nietzsche)</blockquote>
+<p>Personer som lider av imposter-syndromet har en tendens til å tro at deres prestasjoner er resultatet av flaks eller andre eksterne faktorer, snarere enn deres egen dyktighet og innsats. Denne følelsen av utilstrekkelighet fører til en konstant frykt for å bli avslørt som udugelige eller bedragerske, til tross for at de gang på gang viser sin verdi. Som en konsekvens av dette føler de seg ofte ukomfortable med å vise frem sine oppnåelser og suksesser, da de frykter at dette vil føre til at andre oppdager «sannheten» om deres påståtte inkompetanse.</p>
+<p>Individer som lider mest av imposter-syndromet deler vanligvis noen av de karakteristiske trekkene i deres mentale ferdigheter. Deres selvtillit er ofte lav, noe som fører til at de nedvurderer egne evner og prestasjoner, og tviler på om de virkelig fortjener den suksessen de oppnår. Selv etter å ha mottatt positive tilbakemeldinger fra andre, vedvarer tvilen om egen verdi. Mange av disse individene er perfeksjonister og legger derfor uforholdsmessig mye vekt på detaljer, noe som kan hindre dem i å se det større bildet. Den negative indre dialogen de opplever, forstyrrer også deres fokus på oppgavene, da mye av den mentale energien deres går med til bekymring over egen oppfattet inkompetanse.</p>
+<p>Selv om de har en høy viljestyrke når det gjelder å jobbe hardt og oppnå mål, føler de seg samtidig utmattet og overveldet på grunn av det konstante presset for å bevise seg selv. Mange kompenserer ved å jobbe ekstra hardt for å motbevise sin indre følelse av utilstrekkelighet, noe som kan resultere i utbrenthet. Deres motivasjon er ofte drevet av frykt for å bli avslørt som en bedrager heller enn av en genuin indre drivkraft. De kan være mer motivert av ønsket om å unngå feil enn av ønsket om å oppnå suksess. Selv etter å ha oppnådd noe, føler de ofte ikke en dyp eller varig tilfredshet, fordi de tilskriver suksessen til flaks eller eksterne faktorer.</p>
+<p>På grunn av det konstante indre presset og den stadige selvkritikken opplever personer med imposter-syndromet ofte store vanskeligheter med å slappe av. De føler en kontinuerlig trang til å prestere mer og finner sjelden full tilfredsstillelse i å ta pauser. Den vedvarende frykten for å bli avslørt som en bedrager kan føre til økte nivåer av stress og angst, noe som ytterligere hindrer deres evne til avspenning.</p>
+<p>Det er imidlertid ikke bare negative sider ved å føle på imposter-syndromet. En positiv side ved denne følelsen er at den ofte reflekterer et sterkt ønske om å gjøre det bra og en dyp respekt for andres prestasjoner. Når man føler seg som en bedrager, kan det indikere at man bryr seg svært mye om kvaliteten på sitt eget arbeid og setter stor pris på det andre har oppnådd. Dette kan motivere til kontinuerlig personlig og profesjonell vekst.</p>
+<p>Men hva skiller egentlig disse individene fra de som ikke opplever denne følelsen i like stor grad? Vi har alle forskjellige forutsetninger, men det er vår reaksjon på situasjoner som virkelig skiller oss fra hverandre. Suksessrike mennesker, de som ofte når sine mål, viser en unik evne til å distansere sin identitet fra de utfordringene de møter. De knytter seg mer til selve prosessen enn til prestasjonene. Disse individene er ikke redd for å be om hjelp eller å vise seg sårbare og uvitende. Dette tanke- og handlingsmønsteret kalles ofte growth mindset. De er mer opptatt av langsiktig læring og utvikling enn øyeblikkelige resultater. Men hva med de som har et mer fixed mindset? Ved å fokusere på å endre sin indre dialog og aktivt jobbe med å endre perspektiver, kan selv de med et fixed mindset lære å omfavne vekst og forbedring (Dweck).</p>
+
+<h2>Indre dialog</h2>
+<p>Ved å ta utgangspunkt i den indre dialogen og jobbe kontinuerlig med den, kan du stå mer stødig i fremtidige situasjoner. Indre dialog refererer til den pågående samtalen vi har med oss selv i tankene våre. Denne dialogen kan være enten positiv eller negativ, og den påvirker hvordan vi ser på oss selv og våre omgivelser. En positiv indre dialog kan gi oss støtte og motivasjon, mens en negativ indre dialog kan være nedbrytende, og føre til blant annet økt stress og lav selvtillit. Ved å bli bevisst på vår egen indre dialog og aktivt jobbe med å endre den, kan vi påvirke vår mentale helse positivt og forbedre hvordan vi opplever oss selv i møte med utfordringer (Myhre, 2018, s. 90).</p>
+
+<h2>Metoder for å forbedre indre dialog og deres bidrag til ferdighetsutvikling</h2>
+<p>Å jobbe med den indre dialogen er en kraftfull metode for å redusere følelsen av å være en bedrager.</p>
+
+<h3>De tre D-ene</h3>
+<p>De tre D-ene er en av metodene man kan benytte seg av. Metoden består av tre trinn: distraksjon, distansering og diskusjon (Myhre, 2023, s. 120).</p>
+<ol>
+<li><strong>Distraksjon:</strong> Målet med distraksjon er å skifte fokus fra negative tanker til positive distraksjoner for å bryte det negative tankemønsteret.</li>
+<li><strong>Distansering:</strong> Det er viktig å minne deg selv på at tanker bare er tanker, ikke fakta. Du har muligheten til å forme og endre tankene dine. Ved å distansere deg selv fra de negative tankene, kan du begynne å utfordre dem og se dem mer objektivt.</li>
+<li><strong>Diskusjon:</strong> Engasjer deg i en indre dialog for å utfordre de negative tankene og erstatte dem med mer konstruktive tanker.</li>
+</ol>
+<div class="example"><span class="kicker">Eksempel på anvendelse</span>
+<p><strong>Situasjon:</strong> Du sitter fast med en oppgave på jobben og trenger hjelp fra en kollega, men du tør ikke spørre.</p>
+<ul>
+<li><strong>Distraksjon:</strong> Føler du deg overveldet? Ta en kort pause og gå en tur rundt bygningen, lytt til favorittlåten din, eller se en inspirerende video. Dette kan bryte det negative tankemønsteret og gi deg et pusterom.</li>
+<li><strong>Distansering:</strong> Når tanken «De vil tro jeg er inkompetent» dukker opp, minn deg selv på at det er en tanke, ikke et faktum. Se for deg at tanken er en sky som flyter forbi. Du trenger ikke å holde fast ved den.</li>
+<li><strong>Diskusjon:</strong> Utfordre den negative tanken ved å stille deg selv spørsmål som: «Hva ville jeg sagt til en kollega som hadde det samme problemet?» eller «Hva er det verste som kan skje?» Deretter formulerer du en mer positiv tanke, som «Å spørre om hjelp viser at jeg er engasjert og vil lære.»</li>
+</ul></div>
+
+<h3>Tankerekkeskjema</h3>
+<p>I tillegg til denne metoden kan du også benytte deg av et tankerekkeskjema (Myhre, 2024), som følger disse stegene:</p>
+<ol>
+<li><strong>Situasjon:</strong> Identifiser en konkret hendelse som utløser en ubehagelig følelse, minne eller fysiske symptomer.</li>
+<li><strong>Automatisk tanke:</strong> Skriv ned den første tanken som dukker opp like før følelsen oppstår.</li>
+<li><strong>Følelse:</strong> Bestem styrken på følelsen du opplever når denne tanken kommer, og gi den en vurdering fra 0–100 %.</li>
+<li><strong>Revurdering:</strong> Utforsk alternative og mer realistiske tolkninger av situasjonen, og vurder hvor mye du tror på disse alternative tolkningene fra 0–100 %.</li>
+<li><strong>Utfallet:</strong> Gå tilbake til den opprinnelige tanken din. Hvor mye tror du på den nå, og hvilken styrke har følelsen du sitter igjen med?</li>
+</ol>
+<div class="example"><span class="kicker">Eksempel på anvendelse</span>
+<ul>
+<li><strong>Situasjon:</strong> Du har nylig blitt tildelt et viktig prosjekt på jobben som du skal presentere for ledelsen. Du føler deg overveldet og begynner å tvile på dine evner.</li>
+<li><strong>Automatisk tanke:</strong> «Jeg kommer til å feile, og alle vil innse at jeg ikke er kvalifisert for denne jobben.»</li>
+<li><strong>Følelse:</strong> Sterk følelse av angst og usikkerhet. Vurdering: 85 %.</li>
+<li><strong>Revurdering:</strong> «Jeg ble tildelt dette prosjektet fordi ledelsen har tro på mine evner og kompetanse» (80 %). «Jeg har hatt suksess med lignende oppgaver tidligere» (75 %). «Det er naturlig å føle seg nervøs før en viktig presentasjon, men det betyr ikke at jeg ikke er kvalifisert» (70 %).</li>
+<li><strong>Utfallet:</strong> Hvor mye tror du på den opprinnelige tanken nå? 30 %. Følelsen av angst og usikkerhet har nå blitt redusert. Vurdering: 40 %.</li>
+</ul></div>
+<p>Gjennom å bruke tankerekkeskjemaet har du gått fra en intens følelse av angst og tvil (85 %) til en betydelig redusert følelse (40 %). Ved å utforske og revurdere dine automatiske tanker med mer realistiske og positive perspektiver, kan du effektivt utfordre imposter-syndromet og styrke din selvtillit. Denne prosessen hjelper deg med å innse at din opprinnelige tanke var urimelig, og at det er sterke bevis for dine evner og tidligere suksesser.</p>
+
+<h3>STOPP-metoden</h3>
+<p>Hvis du befinner deg i en situasjon hvor du ikke har tid til å sette deg ned og fullføre et omfattende tankerekkeskjema, kan STOPP-metoden (Myhre, 2024) være et nyttig alternativ. STOPP-metoden består av fem steg:</p>
+<ol><li>Stopp</li><li>Trekk pusten</li><li>Observer</li><li>Perspektiv</li><li>Praksis som virker</li></ol>
+<p>Når du opplever en følelsesmessig aktivering, kan det være nødvendig med en kort pause for å samle tankene. Ved å bruke STOPP-metoden kan du ta et øyeblikk til å se situasjonen fra ulike perspektiver og handle mer rasjonelt.</p>
+<div class="example"><span class="kicker">Eksempel på anvendelse</span>
+<p><strong>Situasjon:</strong> Du er invitert til å holde en presentasjon på en stor konferanse. Du føler deg nervøs og usikker på dine evner til å imponere publikum.</p>
+<ul>
+<li><strong>Stopp:</strong> Når du føler at nervøsiteten bygger seg opp, stopp opp og vær oppmerksom på følelsen.</li>
+<li><strong>Trekk pusten:</strong> Ta noen dype åndedrag for å roe ned nervene.</li>
+<li><strong>Observer:</strong> Legg merke til tankene dine («Jeg er ikke kvalifisert»), følelsene (nervøs, engstelig) og de fysiske reaksjonene (svetting, skjelving, rask hjerterytme). Merk også at du føler trang til å trekke deg.</li>
+<li><strong>Perspektiv:</strong> Minn deg selv på at du ble valgt til denne oppgaven på grunn av dine ferdigheter og erfaringer. Tenk på tidligere vellykkede presentasjoner. Hva ville du sagt til en venn i denne situasjonen?</li>
+<li><strong>Praksis som virker:</strong> Fortsett å forberede deg grundig, øv presentasjonen foran et støttende publikum, og bruk positive selvbekreftelser for å styrke selvtilliten din.</li>
+</ul></div>
+<p>Ved å bruke STOPP-metoden har du klart å håndtere den umiddelbare følelsen av imposter-syndromet knyttet til å holde en presentasjon på en konferanse. Denne metoden hjelper deg med å ta en pause, reflektere over situasjonen, se den fra et annet perspektiv, og deretter handle på en måte som er konstruktiv og støttende. Dette bidrar til å redusere angst og usikkerhet, og fremmer en mer positiv og produktiv tilnærming til utfordringen.</p>
+
+<h3>ABC-E-metoden</h3>
+<p>De fleste som opplever imposter-syndrom har ofte sterke negative overbevisninger som påvirker dem dypt. Disse overbevisningene kan manifestere seg som tanker som: «Jeg kommer ikke til å klare det», «Hvis jeg ikke gjør alt perfekt, vil folk tro at jeg er inkompetent», «Alle andre er bedre enn meg», eller «De sier bare fine ting for å være høflige. De mener det egentlig ikke.» Når man lærer å gjenkjenne disse negative tankemønstrene, åpner det også for muligheten til å utfordre dem.</p>
+<p>En effektiv metode for å fremme en mer positiv og konstruktiv tankegang i utfordrende situasjoner er ABC-E-metoden (Myhre, 2023, s. 96). Denne metoden består av fire trinn:</p>
+<ul>
+<li><strong>A (Aktiverende hendelse):</strong> Dette er situasjonen eller hendelsen som utløser en bestemt reaksjon eller følelse.</li>
+<li><strong>B (Tanker og overbevisninger):</strong> Dette omfatter de tankene og overbevisningene man har om den aktiverende hendelsen. Disse tankene kan være både rasjonelle og irrasjonelle, og de påvirker hvordan man føler og reagerer på situasjonen.</li>
+<li><strong>C (Konsekvenser):</strong> Dette er resultatene av ens tanker og overbevisninger. Konsekvensene kan være både emosjonelle (som angst, frustrasjon eller glede) og atferdsmessige (som å unngå situasjonen eller handle med selvtillit). Negative tanker kan føre til stress og redusert prestasjon, mens positive eller konstruktive tanker kan bidra til bedre håndtering av situasjonen og høyere prestasjon.</li>
+<li><strong>E (Evaluering):</strong> Dette trinnet innebærer å evaluere og utfordre de negative tankene og overbevisningene. Ved å stille seg selv spørsmål som «Er dette en realistisk tanke?» eller «Hva er bevisene for og imot denne tanken?», kan man få et mer balansert perspektiv. Man vurderer også om tankene er hensiktsmessige og om de hjelper en til å nå sine mål.</li>
+</ul>
+<div class="example"><span class="kicker">Eksempel på anvendelse</span>
+<ul>
+<li><strong>A:</strong> Du har blitt bedt om å lede et møte med en viktig kunde.</li>
+<li><strong>B:</strong> «Jeg har aldri ledet et så viktig møte før. Hva om jeg ikke klarer det? De vil tro at jeg ikke er kompetent.»</li>
+<li><strong>C:</strong> Emosjonelt føler du angst og stress. Atferdsmessig vurderer du å be noen andre ta over møtet, eller du overforbereder deg til et punkt hvor det blir kontraproduktivt.</li>
+<li><strong>E:</strong> Er dette en realistisk tanke? «Har jeg virkelig aldri ledet et viktig møte før? Jeg har hatt suksess med lignende oppgaver tidligere.» Bevis for tanken: «Jeg føler meg nervøs og usikker fordi det er en ny situasjon.» Bevis mot tanken: «Jeg har fått denne oppgaven fordi mine overordnede stoler på mine ferdigheter. Jeg har ledet møter før og fått gode tilbakemeldinger.» Er denne tanken hjelpsom? «Nei, den forsterker bare min usikkerhet. Det vil være mer konstruktivt å fokusere på min tidligere suksess og bruke det som motivasjon.»</li>
+</ul></div>
+<p>Ved å bruke ABC-E-metoden kan du identifisere og utfordre de negative overbevisningene som ofte følger med imposter-syndromet. Ved å evaluere og omstrukturere disse tankene kan du utvikle en mer realistisk og positiv selvoppfatning. Dette kan hjelpe deg å håndtere utfordrende situasjoner på en mer konstruktiv måte, redusere angst, og øke din selvtillit og prestasjonsevne.</p>
+
+<h3>SMARTE mål</h3>
+<p>En annen teknikk som kan brukes i kombinasjon med indre dialog er målsetting. Ved å bruke SMARTE mål (Myhre, 2018, s. 80) kan man konkretisere suksess og redusere følelsen av at suksesser er tilfeldige. SMARTE mål er en effektiv metode for å formulere mål på en måte som gjør dem mer oppnåelige og håndterbare. Dette kan bidra til å redusere følelsen av utilstrekkelighet som ofte følger med imposter-syndromet. De skal være spesifikke, målbare, attraktive, relevante og tidsbestemte. Det er også viktig å evaluere og justere fortløpende.</p>
+<p>Ved å bruke SMARTE mål kan du konkretisere suksess og gi deg selv en klar retning, noe som kan være spesielt nyttig for å bekjempe følelsen av utilstrekkelighet som følger med imposter-syndromet.</p>
+
+<h3>Avspenning</h3>
+<p>Når man befinner seg i situasjoner hvor man føler seg utilstrekkelig, er det vanlig å oppleve stress. Pulsen øker, nervøsiteten melder seg, og man kan merke at fokuset og hukommelsen svikter. Dette kan også føre til andre fysiske reaksjoner i kroppen. I slike øyeblikk kan det være gunstig å benytte seg av ulike grunnleggende teknikker for å først roe ned kroppen, før man fortsetter å arbeide med sin indre dialog. Dette kan inkludere avspenningsøvelser som mindfulness, pusteøvelser, visualisering eller, hvis tiden tillater det, yoga eller å skifte fokus og engasjere seg i andre aktiviteter man liker (også kjent som change-metoden) (Myhre, 2018, s. 106).</p>
+<p>Ved å bryte spenningsmønsteret vil man kunne hente seg inn igjen og få ny energi. Avspenning bidrar til forbedret konsentrasjon og hukommelse, senket puls, økt blodsirkulasjon i kroppen, og en dypere og roligere pust. Man vil også oppleve å være mer til stede og fokusert på det som skjer rundt seg.</p>
+
+<h3>Visualisering</h3>
+<p>Det er også anbefalt å bruke visualisering som en metode for å påvirke den indre dialogen. Ved å visualisere suksess og ønskede utfall kan man fremme positive tanker og følelser som styrker den indre dialogen. Det vil i tillegg hjelpe med å bygge selvtillit og redusere angst knyttet til prestasjoner (Myhre, 2018, s. 81).</p>
+
+<h2>Bidrag til ferdighetsutvikling</h2>
+<p>Ved å ta i bruk disse teknikkene kan individer som føler mye på imposter-syndromet endre sin indre dialog til å bli mer støttende og oppmuntrende, og dermed bevege seg mot en sunnere mental helse og et mer tilfredsstillende liv. Det er viktig å være tålmodig og kontinuerlig jobbe med disse strategiene for å skape en varig endring i hvordan man ser på seg selv og sine prestasjoner. Gjennom denne helhetlige tilnærmingen kan man bygge opp en sterkere følelse av selvverdi, økt selvtillit og en mer realistisk oppfatning av egne evner, noe som til slutt kan bidra til å overvinne imposter-syndromet.</p>
+<ul>
+<li><strong>Selvtillit:</strong> Å arbeide med indre dialog, SMARTE mål og ABC-E-metoden bidrar til økt selvtillit ved å utfordre og erstatte negative tanker med positive og realistiske vurderinger av egne ferdigheter og prestasjoner.</li>
+<li><strong>Fokus:</strong> Avspenningsøvelser og visualisering forbedrer fokus ved å redusere stress og øke tilstedeværelse, noe som gjør det lettere å konsentrere seg om oppgaver og mål.</li>
+<li><strong>Motivasjon:</strong> Å sette attraktive og relevante SMARTE mål gir en tydelig retning og mening, noe som øker motivasjonen for å jobbe mot målene.</li>
+<li><strong>Viljestyrke:</strong> Regelmessig bruk av teknikker som diskusjon og evaluering styrker viljestyrken ved å oppmuntre til en kontinuerlig innsats for å overvinne negative tanker og opprettholde en positiv indre dialog.</li>
+<li><strong>Spenningsregulering:</strong> Metoder som STOPP, mindfulness og pusteøvelser hjelper med å regulere kroppens stressnivå, noe som bidrar til å opprettholde en balansert og rolig tilstand under pressede situasjoner.</li>
+</ul>
+</div>
+<section class="sources" aria-labelledby="kilder-tittel">
+<h2 id="kilder-tittel">Referanser</h2>
+<ul>
+<li>Dweck, C. S. <i>Carol Dweck: A Summary of Growth and Fixed Mindsets.</i> fs.blog/carol-dweck-mindset. Aksessert 2. juni 2024.</li>
+<li>Myhre, C. Y. (2018). <i>Mental styrketrening.</i> Aschehoug.</li>
+<li>Myhre, C. Y. (2023). <i>Stå støtt!</i> Aschehoug.</li>
+<li>Myhre, C. Y. (2024). Presentasjoner fra kurs i mentaltrening.</li>
+<li>Nietzsche, F. (1844–1900).</li>
+<li>Peterson, J. (2022). Foredrag på YouTube. Aksessert 2. juni 2024.</li>
+</ul>
+</section>
+    </article>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Illustrasjon i full størrelse">
+    <button type="button" aria-label="Lukk">×</button>
+    <img alt="">
+  </div>
+  <script>
+    (function () {
+      var box = document.getElementById('lightbox'), big = box.querySelector('img'), last = null;
+      function close() { box.classList.remove('open'); if (last) last.focus(); }
+      document.querySelectorAll('figure img').forEach(function (img) {
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
+        img.title = 'Klikk for å se i full størrelse';
+        function open() { last = img; big.src = img.src; big.alt = img.alt; box.classList.add('open'); box.querySelector('button').focus(); }
+        img.addEventListener('click', open);
+        img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+      });
+      box.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
+    })();
+  </script>
+
+  <footer>
+    <div class="wrap">
+      <span><span style="color:var(--text)">Camilla Karud</span> · Mennesker, teknologi og organisasjon</span>
+      <span><a href="https://www.linkedin.com/in/camilla-karud-91b32740/" target="_blank" rel="noopener">LinkedIn ↗</a> &nbsp;·&nbsp; <a href="../index.html#fordypning">← Tilbake til fordypning</a></span>
+    </div>
+  </footer>
+</body>
+</html>

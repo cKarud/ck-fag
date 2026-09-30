@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Når teamet lærer å lede seg selv – Camilla Karud</title>
+  <meta name="description" content="Hvorfor noen team utvikler reell autonomi, mens andre forblir avhengige av styring. Om selvregulerende team, psykologisk trygghet og lederens paradoks.">
+  <meta name="theme-color" content="#111613">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="nb_NO">
+  <meta property="og:title" content="Når teamet lærer å lede seg selv">
+  <meta property="og:description" content="Hvorfor trenger noen team mer styring enn andre, selv med bedre forutsetninger? Om selvregulerende team, trygghet og lederens paradoks.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23111613' stroke='%23c4e49a' stroke-width='2'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23c4e49a'%3ECK%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111613; --panel: #171e19; --text: #f1f2e9; --body: #d6dcd2; --muted: #a8b1a7; --faint: #8c968b;
+      --line: rgba(225,235,223,.13); --accent: #c4e49a;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.75 var(--sans); -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, p, ol, ul, blockquote, figure { margin: 0; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+    .skip { position: absolute; left: 20px; top: -100px; z-index: 10; padding: 10px 14px; color: var(--bg); background: var(--accent); }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .kicker { display: block; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top .wrap { min-height: 82px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding-block: 14px; }
+    .name { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 650; letter-spacing: -.02em; font-size: 16px; }
+    .name .mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(196,228,154,.55); border-radius: 50%; color: var(--accent); font: 13px var(--serif); }
+    .back { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .back:hover { color: var(--text); }
+    .head-right { display: inline-flex; align-items: center; gap: 18px; }
+    .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .lang-switch a, .lang-switch span { display: inline-grid; place-items: center; min-width: 38px; min-height: 30px; padding: 0 10px; border-radius: 999px; text-decoration: none; color: var(--muted); }
+    .lang-switch a:hover { color: var(--text); }
+    .lang-switch [aria-current] { background: var(--accent); color: #182216; }
+
+    .article { width: min(720px, calc(100% - 40px)); margin-inline: auto; padding-block: 88px 40px; }
+    .article header .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--muted); font-size: 13px; margin-top: 16px; }
+    .article h1 { margin-top: 22px; font: 400 clamp(40px, 6.4vw, 66px)/1.06 var(--serif); letter-spacing: -.04em; }
+    .article .dek { margin-top: 20px; color: var(--muted); font: italic 400 clamp(19px, 2.4vw, 23px)/1.45 var(--serif); }
+    .body { margin-top: 56px; color: var(--body); }
+    .body p + p, .body p + ul, .body ul + p { margin-top: 1.15em; }
+    .body h2 { margin: 2.4em 0 .8em; color: var(--text); font: 400 clamp(27px, 3.4vw, 34px)/1.2 var(--serif); letter-spacing: -.02em; }
+    .body strong { color: var(--text); font-weight: 600; }
+    .body em { color: var(--text); }
+    .lead { color: var(--text); font-size: 20px; }
+    .series-note { margin-top: 1.6em !important; padding: 16px 20px; border-left: 2px solid var(--accent); background: rgba(196,228,154,.045); color: var(--muted); font-size: 15px; }
+    .loop { margin: 1.3em 0 !important; color: var(--accent); font: 400 clamp(20px, 2.8vw, 26px)/1.4 var(--serif); text-align: center; }
+    .example { margin-top: 1.4em !important; padding: 22px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .example .kicker { margin-bottom: 8px; }
+    .example + p { margin-top: 1.15em; }
+    figure img { cursor: zoom-in; }
+    .lightbox { position: fixed; inset: 0; z-index: 20; display: none; place-items: center; padding: 24px; background: rgba(8,11,9,.92); cursor: zoom-out; }
+    .lightbox.open { display: grid; }
+    .lightbox img { max-width: min(1500px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 6px; }
+    .lightbox button { position: absolute; top: 16px; right: 16px; min-width: 44px; min-height: 44px; border: 1px solid var(--line); border-radius: 50%; background: var(--panel); color: var(--text); font-size: 20px; cursor: pointer; }
+    .pull { margin: 1.6em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: 400 clamp(22px, 3vw, 27px)/1.4 var(--serif); letter-spacing: -.01em; }
+    figure { margin: 2.4em 0 !important; }
+    @media (min-width: 1000px) { figure:not(.tall) { width: 940px; margin-left: calc((720px - 940px) / 2) !important; } }
+    figure.tall img { max-width: 720px; margin-inline: auto; }
+    figure.tall figcaption { text-align: center; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+    figcaption { margin-top: 10px; color: var(--faint); font-size: 14px; }
+    .questions { list-style: none; padding: 0; margin-top: 1.2em; counter-reset: q; border-top: 1px solid var(--line); }
+    .questions li { counter-increment: q; display: grid; grid-template-columns: 38px 1fr; gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--text); font: 400 21px/1.4 var(--serif); }
+    .questions li::before { content: counter(q); color: var(--accent); font: 400 21px/1.4 var(--serif); }
+    .closing-line { margin-top: 1.6em !important; color: var(--text); font: 400 clamp(24px, 3.4vw, 31px)/1.35 var(--serif); letter-spacing: -.015em; }
+
+    .next { margin-top: 64px; padding-top: 30px; border-top: 1px solid var(--line); }
+    .next a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-top: 12px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; }
+    .next a:hover { border-color: rgba(196,228,154,.43); }
+    .next b { font: 400 21px/1.35 var(--serif); }
+    .next i { color: var(--accent); font-style: normal; }
+    .more { margin-top: 72px; padding-top: 34px; border-top: 1px solid var(--line); }
+    .more h2 { margin-top: 12px; font: 400 28px/1.2 var(--serif); }
+    .more ul { list-style: none; padding: 0; margin-top: 18px; display: grid; gap: 10px; }
+    .more a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; padding: 16px 18px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; transition: border-color .2s ease; }
+    .more a:hover { border-color: rgba(196,228,154,.43); }
+    .more a span { color: var(--muted); font-size: 14px; display: block; }
+    .more a b { font: 400 19px/1.35 var(--serif); }
+    .more a i { color: var(--accent); font-style: normal; }
+    .sources { margin-top: 56px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .sources h2 { color: var(--text); font: 600 14px/1.4 var(--sans); margin-bottom: 10px; }
+    .sources li + li { margin-top: 6px; }
+    .sources ul { padding-left: 18px; }
+
+    footer { border-top: 1px solid var(--line); margin-top: 80px; }
+    footer .wrap { min-height: 82px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; color: var(--faint); font-size: 13px; }
+    footer a { text-decoration: none; } footer a:hover { color: var(--accent); }
+    @media (max-width: 700px) {
+      body { font-size: 17px; }
+      .wrap { width: calc(100% - 34px); }
+      .article { padding-top: 60px; }
+      .questions li { font-size: 19px; grid-template-columns: 30px 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#innhold">Hopp til innhold</a>
+  <header class="top" id="toppen">
+    <div class="wrap">
+      <a class="name" href="../index.html"><span class="mark" aria-hidden="true">CK</span><span>Camilla Karud</span></a>
+      <span class="head-right"><a class="back" href="../index.html#artikkel-6">← Alle artikler</a><div class="lang-switch" aria-label="Språk"><span aria-current="true">NO</span><a href="../en/articles/when-teams-learn-to-lead-themselves.html" hreflang="en" lang="en">EN</a></div></span>
+    </div>
+  </header>
+
+  <main id="innhold">
+    <article class="article">
+      <header>
+        <span class="kicker">Når kompetanse skal bli til verdi · del 6</span>
+        <h1>Når teamet lærer å lede seg selv</h1>
+        <p class="dek">Hvorfor noen team utvikler reell autonomi, mens andre forblir avhengige av styring</p>
+        <div class="meta"><span>Camilla Karud</span><span>Ca. 8 minutters lesing</span></div>
+      </header>
+
+      <div class="body">
+        <p class="lead">Noen team ser ut til å få det til. De håndterer flere kunder, stramme frister og begrensede rammer. Menneskene i teamet har ulik erfaring og ulike livssituasjoner. Prioriteringene endrer seg, og ting går galt. Likevel beveger teamet seg fremover.</p>
+        <p>De fordeler ansvar, justerer når forutsetningene endrer seg og tar de vanskelige samtalene, uten at noen utenfra må fortelle dem hva de skal gjøre.</p>
+        <p>Andre team har bedre forutsetninger på papiret: mer erfaring, flere folk, større handlingsrom og tettere oppfølging fra ledelsen. Likevel trenger de mer styring. Hvorfor?</p>
+        <p>Kanskje leter vi etter svaret på feil sted. Autonomi handler ikke bare om hvor dyktige menneskene er, eller hvor mye handlingsrom de har fått. Det handler også om hva som skjer mellom dem, og om teamets evne til å regulere seg selv når virkeligheten ikke følger planen.</p>
+        <p class="series-note">Denne artikkelen er en del av serien «Når kompetanse skal bli til verdi», der vi utforsker menneskene, relasjonene og systemene bak gode teknologileveranser.</p>
+
+        <h2>Autonomi er ikke fravær av ledelse</h2>
+        <p>Når vi snakker om autonome team, er det lett å tenke på frihet. Teamet får mandat, ledelsen trekker seg tilbake, og beslutningene flyttes nærmere dem som kjenner problemet. Men autonomi uten retning er ikke nødvendigvis autonomi. Det kan like gjerne være fravær av ledelse.</p>
+        <p>Richard Hackman, en av pionerene innen forskning på team, beskrev autonomi som et spørsmål om hvilke deler av arbeidet teamet selv styrer. Det kan være å utføre oppgaven, å følge med på og justere egen arbeidsmåte, å utforme teamet eller å sette retningen. Forskere ved SINTEF og i Sverige og Finland brukte denne inndelingen i to store programvareorganisasjoner i telekombransjen, og fant at teamene bare var delvis selvstyrte. Det er ikke nødvendigvis galt, men det krever at alle vet hvor grensene går.</p>
+        <figure>
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDk3MCIgd2lkdGg9IjE2MDAiIGhlaWdodD0iOTcwIiBmb250LWZhbWlseT0iSGVsdmV0aWNhLCBBcmlhbCwgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZiI+CjxkZWZzPgo8bWFya2VyIGlkPSJhaCIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8tc3RhcnQtcmV2ZXJzZSI+PHBhdGggZD0iTTAsMCBMMTAsNSBMMCwxMCB6IiBmaWxsPSIjYThiMWE3Ii8+PC9tYXJrZXI+CjxtYXJrZXIgaWQ9ImFoZyIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8tc3RhcnQtcmV2ZXJzZSI+PHBhdGggZD0iTTAsMCBMMTAsNSBMMCwxMCB6IiBmaWxsPSIjYzRlNDlhIi8+PC9tYXJrZXI+CjxtYXJrZXIgaWQ9ImFociIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8tc3RhcnQtcmV2ZXJzZSI+PHBhdGggZD0iTTAsMCBMMTAsNSBMMCwxMCB6IiBmaWxsPSIjZTNhMzdmIi8+PC9tYXJrZXI+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iOTcwIiBmaWxsPSIjMTcxZTE5Ii8+Cjx0ZXh0IHg9IjgwIiB5PSI5MCIgZm9udC1zaXplPSI0MCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+SHZlbSBoYXIgYW5zdmFyZXQgZm9yIGh2YT88L3RleHQ+Cjx0ZXh0IHg9IjgwIiB5PSIxMzUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJzdGFydCIgPkZpcmUgbml2w6VlciBhdiB0ZWFtYXV0b25vbWksIGV0dGVyIEhhY2ttYW4gKDIwMDIpPC90ZXh0Pgo8dGV4dCB4PSI1NzAiIHk9IjI2NC4wIiBmb250LXNpemU9IjI1IiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNTAwIiB0ZXh0LWFuY2hvcj0iZW5kIiA+U2V0dGUgcmV0bmluZ2VuPC90ZXh0Pgo8cmVjdCB4PSI2MDEiIHk9IjIwMSIgd2lkdGg9IjIxNiIgaGVpZ2h0PSIxMDgiIHJ4PSIxMCIgZmlsbD0iIzFjMjQxZiIgc3Ryb2tlPSIjM2E0YTNmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjcgNiIvPgo8cmVjdCB4PSI4MzMiIHk9IjIwMSIgd2lkdGg9IjIxNiIgaGVpZ2h0PSIxMDgiIHJ4PSIxMCIgZmlsbD0iIzFjMjQxZiIgc3Ryb2tlPSIjM2E0YTNmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjcgNiIvPgo8cmVjdCB4PSIxMDY1IiB5PSIyMDEiIHdpZHRoPSIyMTYiIGhlaWdodD0iMTA4IiByeD0iMTAiIGZpbGw9IiMxYzI0MWYiIHN0cm9rZT0iIzNhNGEzZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSI3IDYiLz4KPHJlY3QgeD0iMTI5NiIgeT0iMjAwIiB3aWR0aD0iMjE4IiBoZWlnaHQ9IjExMCIgcng9IjEwIiBmaWxsPSIjYzRlNDlhIi8+Cjx0ZXh0IHg9IjU3MCIgeT0iMzg4LjAiIGZvbnQtc2l6ZT0iMjUiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI1MDAiIHRleHQtYW5jaG9yPSJlbmQiID5VdGZvcm1lIHRlYW1ldCBvZyByYW1tZW5lPC90ZXh0Pgo8cmVjdCB4PSI2MDEiIHk9IjMyNSIgd2lkdGg9IjIxNiIgaGVpZ2h0PSIxMDgiIHJ4PSIxMCIgZmlsbD0iIzFjMjQxZiIgc3Ryb2tlPSIjM2E0YTNmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjcgNiIvPgo8cmVjdCB4PSI4MzMiIHk9IjMyNSIgd2lkdGg9IjIxNiIgaGVpZ2h0PSIxMDgiIHJ4PSIxMCIgZmlsbD0iIzFjMjQxZiIgc3Ryb2tlPSIjM2E0YTNmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjcgNiIvPgo8cmVjdCB4PSIxMDY0IiB5PSIzMjQiIHdpZHRoPSIyMTgiIGhlaWdodD0iMTEwIiByeD0iMTAiIGZpbGw9IiNjNGU0OWEiLz4KPHJlY3QgeD0iMTI5NiIgeT0iMzI0IiB3aWR0aD0iMjE4IiBoZWlnaHQ9IjExMCIgcng9IjEwIiBmaWxsPSIjYzRlNDlhIi8+Cjx0ZXh0IHg9IjU3MCIgeT0iNTEyLjAiIGZvbnQtc2l6ZT0iMjUiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI1MDAiIHRleHQtYW5jaG9yPSJlbmQiID5Gw7hsZ2UgbWVkIHDDpSBvZyBqdXN0ZXJlIGFyYmVpZHNtw6V0ZW48L3RleHQ+CjxyZWN0IHg9IjYwMSIgeT0iNDQ5IiB3aWR0aD0iMjE2IiBoZWlnaHQ9IjEwOCIgcng9IjEwIiBmaWxsPSIjMWMyNDFmIiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iNyA2Ii8+CjxyZWN0IHg9IjgzMiIgeT0iNDQ4IiB3aWR0aD0iMjE4IiBoZWlnaHQ9IjExMCIgcng9IjEwIiBmaWxsPSIjYzRlNDlhIi8+CjxyZWN0IHg9IjEwNjQiIHk9IjQ0OCIgd2lkdGg9IjIxOCIgaGVpZ2h0PSIxMTAiIHJ4PSIxMCIgZmlsbD0iI2M0ZTQ5YSIvPgo8cmVjdCB4PSIxMjk2IiB5PSI0NDgiIHdpZHRoPSIyMTgiIGhlaWdodD0iMTEwIiByeD0iMTAiIGZpbGw9IiNjNGU0OWEiLz4KPHRleHQgeD0iNTcwIiB5PSI2MzYuMCIgZm9udC1zaXplPSIyNSIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjUwMCIgdGV4dC1hbmNob3I9ImVuZCIgPlV0ZsO4cmUgb3BwZ2F2ZW48L3RleHQ+CjxyZWN0IHg9IjYwMCIgeT0iNTcyIiB3aWR0aD0iMjE4IiBoZWlnaHQ9IjExMCIgcng9IjEwIiBmaWxsPSIjYzRlNDlhIi8+CjxyZWN0IHg9IjgzMiIgeT0iNTcyIiB3aWR0aD0iMjE4IiBoZWlnaHQ9IjExMCIgcng9IjEwIiBmaWxsPSIjYzRlNDlhIi8+CjxyZWN0IHg9IjEwNjQiIHk9IjU3MiIgd2lkdGg9IjIxOCIgaGVpZ2h0PSIxMTAiIHJ4PSIxMCIgZmlsbD0iI2M0ZTQ5YSIvPgo8cmVjdCB4PSIxMjk2IiB5PSI1NzIiIHdpZHRoPSIyMTgiIGhlaWdodD0iMTEwIiByeD0iMTAiIGZpbGw9IiNjNGU0OWEiLz4KPHRleHQgeD0iNzA5LjAiIHk9IjczMCIgZm9udC1zaXplPSIyNSIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkxlZGVyc3R5cnQ8L3RleHQ+Cjx0ZXh0IHg9IjcwOS4wIiB5PSI3NjIiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID50ZWFtPC90ZXh0Pgo8dGV4dCB4PSI5NDEuMCIgeT0iNzMwIiBmb250LXNpemU9IjI1IiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+U2VsdnN0eXJ0PC90ZXh0Pgo8dGV4dCB4PSI5NDEuMCIgeT0iNzYyIiBmb250LXNpemU9IjIxIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+dGVhbTwvdGV4dD4KPHRleHQgeD0iMTE3My4wIiB5PSI3MzAiIGZvbnQtc2l6ZT0iMjUiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5TZWx2dXRmb3JtZW5kZTwvdGV4dD4KPHRleHQgeD0iMTE3My4wIiB5PSI3NjIiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID50ZWFtPC90ZXh0Pgo8dGV4dCB4PSIxNDA1LjAiIHk9IjczMCIgZm9udC1zaXplPSIyNSIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlNlbHZiZXN0ZW1tZW5kZTwvdGV4dD4KPHRleHQgeD0iMTQwNS4wIiB5PSI3NjIiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID50ZWFtPC90ZXh0Pgo8bGluZSB4MT0iNjAwIiB5MT0iODA2IiB4Mj0iMTUwOCIgeTI9IjgwNiIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjIuNSIgbWFya2VyLWVuZD0idXJsKCNhaCkiLz4KPHRleHQgeD0iNjAwIiB5PSI4NDIiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJzdGFydCIgPk1lciBhbnN2YXIgaG9zIHRlYW1ldDwvdGV4dD4KPHJlY3QgeD0iODAiIHk9Ijg4MiIgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiByeD0iNiIgZmlsbD0iI2M0ZTQ5YSIvPgo8dGV4dCB4PSIxMjUiIHk9IjkwNSIgZm9udC1zaXplPSIyMyIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+VGVhbWV0IGhhciBhbnN2YXJldDwvdGV4dD4KPHJlY3QgeD0iNDIwIiB5PSI4ODIiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgcng9IjYiIGZpbGw9IiMxYzI0MWYiIHN0cm9rZT0iIzNhNGEzZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSI1IDQiLz4KPHRleHQgeD0iNDY1IiB5PSI5MDUiIGZvbnQtc2l6ZT0iMjMiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJzdGFydCIgPkxlZGVsc2VuIGVsbGVyIG9yZ2FuaXNhc2pvbmVuIGhhciBhbnN2YXJldDwvdGV4dD4KPHRleHQgeD0iMTUxNCIgeT0iOTA1IiBmb250LXNpemU9IjI1IiBmaWxsPSIjYzRlNDlhIiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LXN0eWxlPSJpdGFsaWMiPkh2b3Igc3TDpXIgZGVyZXMgdGVhbT88L3RleHQ+Cjwvc3ZnPg==" alt="Rutenett med fire nivåer av teamautonomi etter Hackman. Et lederstyrt team har bare ansvar for å utføre oppgaven. Et selvstyrt team følger også med på og justerer arbeidsmåten. Et selvutformende team utformer i tillegg teamet og rammene. Et selvbestemmende team setter også retningen." width="1600" height="970">
+          <figcaption>Autonomi er sjelden enten–eller. Mange team har ansvar på noen nivåer, men ikke på andre.</figcaption>
+        </figure>
+        <p>Det interessante er derfor ikke bare hvor mye frihet et team har, men hva det klarer å gjøre med friheten. To team kan få omtrent samme mandat. Det ene begynner å ta beslutninger, avklare forventninger og justere arbeidsmåten etter hvert som det lærer. Det andre fortsetter å spørre: Hva skal vi prioritere? Er dette egentlig vårt ansvar? Kan noen ta en beslutning? Begge har fått autonomi på papiret. Bare det ene har utviklet kapasiteten til å bruke den.</p>
+
+        <h2>Det selvregulerende teamet</h2>
+        <p>Kanskje bør vi derfor snakke mindre om autonome team og mer om selvregulerende team. Et selvregulerende team er ikke et team uten problemer, uenighet eller travle perioder. Det er et team som klarer å legge merke til hva som skjer, forstå hva det betyr, si det høyt og justere arbeidsmåten, uten at noen utenfra må gjøre det for dem.</p>
+        <figure>
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTAwIDExMTAiIHdpZHRoPSIxNTAwIiBoZWlnaHQ9IjExMTAiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EsIEFyaWFsLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmIj4KPGRlZnM+CjxtYXJrZXIgaWQ9ImFoIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNhOGIxYTciLz48L21hcmtlcj4KPG1hcmtlciBpZD0iYWhnIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNjNGU0OWEiLz48L21hcmtlcj4KPG1hcmtlciBpZD0iYWhyIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNlM2EzN2YiLz48L21hcmtlcj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTUwMCIgaGVpZ2h0PSIxMTEwIiBmaWxsPSIjMTcxZTE5Ii8+Cjx0ZXh0IHg9IjgwIiB5PSI5MCIgZm9udC1zaXplPSI0MCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+RGV0IHNlbHZyZWd1bGVyZW5kZSB0ZWFtZXQ8L3RleHQ+Cjx0ZXh0IHg9IjgwIiB5PSIxMzUiIGZvbnQtc2l6ZT0iMjQiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJzdGFydCIgPkVuIGVua2VsIHNpcmtlbCBmb3IgaHZvcmRhbiB0ZWFtIGp1c3RlcmVyIHNlZyBuw6VyIHZpcmtlbGlnaGV0ZW4gaWtrZSBmw7hsZ2VyIHBsYW5lbjwvdGV4dD4KPHBhdGggZD0iTTk0OC42LDMzNi41IEEzMzAsMzMwIDAgMCAxIDEwNjUuNiw1MDMuNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWgpIi8+CjxwYXRoIGQ9Ik0xMDY1LjYsNjk2LjUgQTMzMCwzMzAgMCAwIDEgOTQ4LjYsODYzLjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2E4YjFhNyIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2FoKSIvPgo8cGF0aCBkPSJNNTUxLjQsODYzLjUgQTMzMCwzMzAgMCAwIDEgNDM0LjQsNjk2LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2E4YjFhNyIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2FoKSIvPgo8cGF0aCBkPSJNNDM0LjQsNTAzLjUgQTMzMCwzMzAgMCAwIDEgNTUxLjQsMzM2LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2E4YjFhNyIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2FoKSIvPgo8cmVjdCB4PSI1ODUuMCIgeT0iMjA2LjAiIHdpZHRoPSIzMzAiIGhlaWdodD0iMTI4IiByeD0iMTYiIGZpbGw9IiMxNzFlMTkiIHN0cm9rZT0iIzNhNGEzZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iNzUwLjAiIHk9IjI2Mi4wIiBmb250LXNpemU9IjMwIiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+MS4gTGVnZ2UgbWVya2UgdGlsPC90ZXh0Pgo8dGV4dCB4PSI3NTAuMCIgeT0iMzAyLjAiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc3R5bGU9Iml0YWxpYyI+SHZhIHNramVyIG1lZCBvc3MgbsOlPzwvdGV4dD4KPHJlY3QgeD0iOTE1LjAiIHk9IjUzNi4wIiB3aWR0aD0iMzMwIiBoZWlnaHQ9IjEyOCIgcng9IjE2IiBmaWxsPSIjMTcxZTE5IiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjEwODAuMCIgeT0iNTkyLjAiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID4yLiBGb3JzdMOlPC90ZXh0Pgo8dGV4dCB4PSIxMDgwLjAiIHk9IjYzMi4wIiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXN0eWxlPSJpdGFsaWMiPkh2YSBiZXR5ciBkZXQ/PC90ZXh0Pgo8cmVjdCB4PSI1ODUuMCIgeT0iODY2LjAiIHdpZHRoPSIzMzAiIGhlaWdodD0iMTI4IiByeD0iMTYiIGZpbGw9IiNjNGU0OWEiIHN0cm9rZT0iI2M0ZTQ5YSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iNzUwLjAiIHk9IjkyMi4wIiBmb250LXNpemU9IjMwIiBmaWxsPSIjMTgyMjE2IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+My4gU2kgZGV0IGjDuHl0PC90ZXh0Pgo8dGV4dCB4PSI3NTAuMCIgeT0iOTYyLjAiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiMyYzNhMjYiIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtc3R5bGU9Iml0YWxpYyI+S2FuIHZpIHNuYWtrZSBvbSBkZXQ/PC90ZXh0Pgo8cmVjdCB4PSI2MDAuMCIgeT0iMTAxMi4wIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjQ0IiByeD0iMjIiIGZpbGw9IiMyMjMwMjAiLz4KPHRleHQgeD0iNzUwLjAiIHk9IjEwNDEuMCIgZm9udC1zaXplPSIyMCIgZmlsbD0iI2M0ZTQ5YSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPktyZXZlciBwc3lrb2xvZ2lzayB0cnlnZ2hldDwvdGV4dD4KPHJlY3QgeD0iMjU1LjAiIHk9IjUzNi4wIiB3aWR0aD0iMzMwIiBoZWlnaHQ9IjEyOCIgcng9IjE2IiBmaWxsPSIjMTcxZTE5IiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjQyMC4wIiB5PSI1OTIuMCIgZm9udC1zaXplPSIzMCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPjQuIEp1c3RlcmU8L3RleHQ+Cjx0ZXh0IHg9IjQyMC4wIiB5PSI2MzIuMCIgZm9udC1zaXplPSIyMiIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC1zdHlsZT0iaXRhbGljIj5IdmEgZ2rDuHIgdmkgYW5uZXJsZWRlcz88L3RleHQ+Cjx0ZXh0IHg9Ijc1MCIgeT0iNTkyIiBmb250LXNpemU9IjMyIiBmaWxsPSIjYzRlNDlhIiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+U2VsdnJlZ3VsZXJlbmRlPC90ZXh0Pgo8dGV4dCB4PSI3NTAiIHk9IjYzMiIgZm9udC1zaXplPSIzMiIgZmlsbD0iI2M0ZTQ5YSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPnRlYW08L3RleHQ+Cjwvc3ZnPg==" alt="Sirkel med fire steg: 1. Legge merke til – hva skjer med oss nå? 2. Forstå – hva betyr det? 3. Si det høyt – kan vi snakke om det? Dette steget er fremhevet og merket med at det krever psykologisk trygghet. 4. Justere – hva gjør vi annerledes? Deretter begynner sirkelen på nytt." width="1500" height="1110">
+          <figcaption>Legge merke til, forstå, si det høyt og justere – og så begynne på nytt.</figcaption>
+        </figure>
+        <p>Dette er ikke en etablert forskningsmodell, men en enkel måte å beskrive noe jeg har sett i velfungerende team. Forskningen har likevel et begrep som ligger tett på: <em>teamrefleksivitet</em>, altså i hvilken grad et team jevnlig snakker om hvordan det faktisk jobber sammen. En norsk studie av 43 programvareteam fant at autonomi styrket den psykologiske tryggheten i teamene. Tryggheten hadde igjen en positiv sammenheng med teamenes refleksivitet og en direkte sammenheng med prestasjonen deres. Autonomi, trygghet og evnen til å reflektere over egen praksis ser altså ut til å forsterke hverandre.</p>
+        <div class="example">
+          <span class="kicker">Et sammensatt eksempel</span>
+          <p>Et team hadde tatt på seg litt for mye, og en frist nærmet seg. To personer begynte å jobbe lenger. Én ble stillere i møtene. En annen ble irritert over at ansvaret føltes skjevt fordelt. Teamet leverte, og kunden var fornøyd. Da perioden var over, var alle enige om at den hadde vært hektisk. Så fortsatte de som før.</p>
+        </div>
+        <p>På overflaten så det ut som et autonomt team, for ingen leder måtte gripe inn. Men teamet klarte ikke å regulere det som skjedde. Signalene ble lagt merke til, men ingen sa dem høyt, og ingenting ble justert.</p>
+
+        <h2>Trygghet som noe vi regulerer sammen</h2>
+        <p>I mental trening beskrives prestasjon ofte med en enkel formel: prestasjon er potensial minus interferens. Potensialet er kompetansen, erfaringen og ferdighetene. Interferensen er det som forstyrrer, som tvil, frykt og en indre dialog som trekker i feil retning. I team er mye av forstyrrelsen sosial. Det kan være frykten for å bli vurdert i en kodegjennomgang, skammen etter en produksjonsfeil eller irritasjonen når en faglig diskusjon blir personlig.</p>
+        <p>Den enkelte kan trene på å regulere slike reaksjoner. Men regulering skjer aldri i et vakuum. Hvor lett det er å tenke klart og si det man ser, avhenger av hvor stor den sosiale trusselen oppleves i situasjonen. I min egen fordypning i mental trening har jeg derfor beskrevet psykologisk trygghet som en <em>kollektiv reguleringskapasitet</em>: teamets evne til å håndtere press uten at det ender i taushet, defensivitet eller fastlåste posisjoner.</p>
+        <p class="pull">Det er tryggheten som gjør at teamet fortsatt klarer å legge merke til, forstå og si fra når presset øker.</p>
+        <figure class="tall">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAwIDE0ODAiIHdpZHRoPSIxNDAwIiBoZWlnaHQ9IjE0ODAiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EsIEFyaWFsLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmIj4KPGRlZnM+CjxtYXJrZXIgaWQ9ImFoIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNhOGIxYTciLz48L21hcmtlcj4KPG1hcmtlciBpZD0iYWhnIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNjNGU0OWEiLz48L21hcmtlcj4KPG1hcmtlciBpZD0iYWhyIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNlM2EzN2YiLz48L21hcmtlcj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIxNDgwIiBmaWxsPSIjMTcxZTE5Ii8+Cjx0ZXh0IHg9IjgwIiB5PSI5MCIgZm9udC1zaXplPSI0MCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+UHN5a29sb2dpc2sgdHJ5Z2doZXQgc29tIHJlZ3VsZXJpbmdza2FwYXNpdGV0PC90ZXh0Pgo8dGV4dCB4PSI4MCIgeT0iMTM1IiBmb250LXNpemU9IjI0IiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiID5Idm9yZGFuIHNvc2lhbCBldmFsdWVyaW5nIGthbiBnaSB0YXVzaGV0IOKAkyBlbGxlciDDpXBlbmhldCBvZyBmbHl0PC90ZXh0Pgo8cmVjdCB4PSIzODAuMCIgeT0iMTkwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjExMiIgcng9IjE0IiBmaWxsPSIjMTcxZTE5IiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjcwMC4wIiB5PSIyMzciIGZvbnQtc2l6ZT0iMjkiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5QcmVzdGFzam9uc3NpdHVhc2pvbjwvdGV4dD4KPHRleHQgeD0iNzAwLjAiIHk9IjI3NCIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPk3DuHRlciwga29kZWdqZW5ub21nYW5nLCBiZXNsdXRuaW5nZXI8L3RleHQ+CjxsaW5lIHgxPSI3MDAuMCIgeTE9IjMwNiIgeDI9IjcwMC4wIiB5Mj0iMzUyIiBzdHJva2U9IiNhOGIxYTciIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaCkiLz4KPHJlY3QgeD0iMzgwLjAiIHk9IjM2MCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNCIgZmlsbD0iIzE3MWUxOSIgc3Ryb2tlPSIjM2E0YTNmIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSI3MDAuMCIgeT0iNDA3IiBmb250LXNpemU9IjI5IiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+U29zaWFsIGV2YWx1ZXJpbmc8L3RleHQ+Cjx0ZXh0IHg9IjcwMC4wIiB5PSI0NDQiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5BcmJlaWRldCBvZyB2dXJkZXJpbmdlbmUgdsOlcmUgYmxpciBzeW5saWdlPC90ZXh0Pgo8bGluZSB4MT0iNzAwLjAiIHkxPSI0NzYiIHgyPSI3MDAuMCIgeTI9IjUyMiIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWgpIi8+CjxyZWN0IHg9IjM4MC4wIiB5PSI1MzAiIHdpZHRoPSI2NDAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMxNzFlMTkiIHN0cm9rZT0iIzNhNGEzZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iNzAwLjAiIHk9IjU3NyIgZm9udC1zaXplPSIyOSIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkVtb3Nqb25lbGwgYWt0aXZlcmluZzwvdGV4dD4KPHRleHQgeD0iNzAwLjAiIHk9IjYxNCIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlVzaWtrZXJoZXQsIGZyeWt0LCBza2FtLCBpcnJpdGFzam9uPC90ZXh0Pgo8bGluZSB4MT0iNzAwLjAiIHkxPSI2NDYiIHgyPSI3MDAuMCIgeTI9IjY5MiIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWgpIi8+CjxyZWN0IHg9IjM4MC4wIiB5PSI3MDAiIHdpZHRoPSI2NDAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMyMjMwMjAiIHN0cm9rZT0iI2M0ZTQ5YSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iNzAwLjAiIHk9Ijc0NyIgZm9udC1zaXplPSIyOSIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlJlZ3VsZXJpbmc8L3RleHQ+Cjx0ZXh0IHg9IjcwMC4wIiB5PSI3ODQiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Idm9yZGFuIGFrdGl2ZXJpbmdlbiBibGlyIGjDpW5kdGVydCDigJMgYWxlbmUgb2cgc2FtbWVuPC90ZXh0Pgo8cGF0aCBkPSJNNzAwLjAsODE2IEw3MDAuMCw4NDggTDM2MCw4NDggTDM2MCw5MTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2UzYTM3ZiIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2FocikiLz4KPHBhdGggZD0iTTcwMC4wLDg0OCBMMTA0MCw4NDggTDEwNDAsOTE0IiBmaWxsPSJub25lIiBzdHJva2U9IiNjNGU0OWEiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaGcpIi8+CjxyZWN0IHg9IjEwMC4wIiB5PSI5MjIiIHdpZHRoPSI1MjAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMyZTIzMWQiIHN0cm9rZT0iI2UzYTM3ZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iMzYwIiB5PSI5NjkiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Iw7h5IHNvc2lhbCB0cnVzc2VsPC90ZXh0Pgo8dGV4dCB4PSIzNjAiIHk9IjEwMDYiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5UYXVzaGV0LCBkZWZlbnNpdml0ZXQsIG92ZXJmb3JzaWt0aWdoZXQ8L3RleHQ+CjxsaW5lIHgxPSIzNjAiIHkxPSIxMDM4IiB4Mj0iMzYwIiB5Mj0iMTA4NCIgc3Ryb2tlPSIjZTNhMzdmIiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWhyKSIvPgo8cmVjdCB4PSIxMDAuMCIgeT0iMTA5MiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNCIgZmlsbD0iIzJlMjMxZCIgc3Ryb2tlPSIjZTNhMzdmIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSIzNjAiIHk9IjExMzkiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID7DmGt0IGludGVyZmVyZW5zPC90ZXh0Pgo8dGV4dCB4PSIzNjAiIHk9IjExNzYiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5UdW5uZWxzeW4sIHN0cmVzcywgbWluZHJlIGRlbGluZzwvdGV4dD4KPGxpbmUgeDE9IjM2MCIgeTE9IjEyMDgiIHgyPSIzNjAiIHkyPSIxMjU0IiBzdHJva2U9IiNlM2EzN2YiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaHIpIi8+CjxyZWN0IHg9IjEwMC4wIiB5PSIxMjYyIiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjExMiIgcng9IjE0IiBmaWxsPSIjZTNhMzdmIiBzdHJva2U9IiNlM2EzN2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjM2MCIgeT0iMTMwOSIgZm9udC1zaXplPSIyOCIgZmlsbD0iIzE4MjIxNiIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkxhdmVyZSBwcmVzdGFzam9uPC90ZXh0Pgo8dGV4dCB4PSIzNjAiIHk9IjEzNDYiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiMyYzNhMjYiIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Lb21wZXRhbnNlbiBibGlyIG1pbmRyZSB0aWxnamVuZ2VsaWc8L3RleHQ+CjxyZWN0IHg9Ijc4MC4wIiB5PSI5MjIiIHdpZHRoPSI1MjAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMyMjMwMjAiIHN0cm9rZT0iI2M0ZTQ5YSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iMTA0MCIgeT0iOTY5IiBmb250LXNpemU9IjI4IiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+UHN5a29sb2dpc2sgdHJ5Z2doZXQ8L3RleHQ+Cjx0ZXh0IHg9IjEwNDAiIHk9IjEwMDYiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID7DhXBlbmhldCwgbnlzZ2plcnJpZ2hldCwgc3TDuHR0ZTwvdGV4dD4KPGxpbmUgeDE9IjEwNDAiIHkxPSIxMDM4IiB4Mj0iMTA0MCIgeTI9IjEwODQiIHN0cm9rZT0iI2M0ZTQ5YSIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2FoZykiLz4KPHJlY3QgeD0iNzgwLjAiIHk9IjEwOTIiIHdpZHRoPSI1MjAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMyMjMwMjAiIHN0cm9rZT0iI2M0ZTQ5YSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iMTA0MCIgeT0iMTEzOSIgZm9udC1zaXplPSIyOCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlJlZHVzZXJ0IGludGVyZmVyZW5zPC90ZXh0Pgo8dGV4dCB4PSIxMDQwIiB5PSIxMTc2IiBmb250LXNpemU9IjIxIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+S2xhcmhldCwgZmxla3NpYmVsIHRlbmtuaW5nLCBmbHl0PC90ZXh0Pgo8bGluZSB4MT0iMTA0MCIgeTE9IjEyMDgiIHgyPSIxMDQwIiB5Mj0iMTI1NCIgc3Ryb2tlPSIjYzRlNDlhIiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWhnKSIvPgo8cmVjdCB4PSI3ODAuMCIgeT0iMTI2MiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNCIgZmlsbD0iI2M0ZTQ5YSIgc3Ryb2tlPSIjYzRlNDlhIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSIxMDQwIiB5PSIxMzA5IiBmb250LXNpemU9IjI4IiBmaWxsPSIjMTgyMjE2IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+QmVkcmUgcHJlc3Rhc2pvbjwvdGV4dD4KPHRleHQgeD0iMTA0MCIgeT0iMTM0NiIgZm9udC1zaXplPSIyMSIgZmlsbD0iIzJjM2EyNiIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPk1lciBhdiBrb21wZXRhbnNlbiBibGlyIGJydWt0PC90ZXh0Pgo8dGV4dCB4PSI4MCIgeT0iMTQzMCIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiBmb250LXN0eWxlPSJpdGFsaWMiPlByZXN0YXNqb24gPSBwb3RlbnNpYWwg4oiSIGludGVyZmVyZW5zLiBUcnlnZ2hldCBlbmRyZXIgaWtrZSBwb3RlbnNpYWxldCwgbWVuIGh2b3IgbXllIGF2IGRldCBzb20gYmxpciB0aWxnamVuZ2VsaWcuPC90ZXh0Pgo8L3N2Zz4=" alt="Flytdiagram: En prestasjonssituasjon fører til sosial evaluering, deretter emosjonell aktivering og regulering. Ved høy sosial trussel følger taushet og defensivitet, økt interferens og lavere prestasjon. Ved psykologisk trygghet følger åpenhet og støtte, redusert interferens og bedre prestasjon." width="1400" height="1480">
+          <figcaption>Bygger på figur 4.1 i fordypningsoppgaven «Psykologisk trygghet som reguleringskapasitet» (Karud, 2026).</figcaption>
+        </figure>
+        <p>Trygghet er likevel ikke det samme som komfort. Et team kan ha god stemning og varme relasjoner og samtidig være dårlig til å utfordre hverandre. Selvregulering krever både trygghet og friksjon. Vi må kunne være uenige uten at relasjonen trues, og utfordre en beslutning uten å utfordre personen bak den.</p>
+        <p>Et enkelt grep er å gjøre stoppunktet felles. Når det blir normalt at noen sier «kan vi stoppe litt og se på hva som skjer med oss nå?», går regulering fra å være en individuell ferdighet til å bli en felles praksis.</p>
+        <p>Samtidig er det en fallgruve her. Hvis svaret på et presset team er at hver enkelt må bli flinkere til å håndtere stress, har vi flyttet ansvaret til feil sted. Regulering må ikke bli enda et prestasjonskrav til den enkelte. Den må forstås som et felles ansvar, og i stor grad som et ansvar for dem som setter rammene.</p>
+
+        <h2>Fra «min oppgave» til «vårt ansvar»</h2>
+        <p>I noen team består helheten i praksis av en samling individuelle ansvarsområder. Jeg gjør mitt, du gjør ditt, og når alle har gjort jobben sin, har teamet levert. Det kan fungere godt når verden er forutsigbar. Men når noen blir syke, en kunde endrer prioriteringene eller en oppgave viser seg å være langt vanskeligere enn ventet, blir svakheten synlig.</p>
+        <p>Dette er også et av de tydeligste funnene i norsk forskning på selvstyrte utviklingsteam. I en langvarig feltstudie var svak teamorientering, uklart lederskap og dårlig koordinering, sammen med høyt spesialisert kompetanse og tilsvarende oppdelt arbeid, blant de viktigste hindringene for effektive team. Forskerne understreket at overgangen til selvstyrte team krever en omstilling både hos utviklerne og hos ledelsen.</p>
+        <p>I selvregulerende team følger medlemmene med på helheten. Det betyr ikke at alle skal gjøre alt, for tydelige ansvarsområder er fortsatt viktige. Men spørsmålet endres fra «Har jeg gjort det jeg skal?» til «Har vi det vi trenger for å lykkes?».</p>
+
+        <h2>Når «vi fikser det» blir en risiko</h2>
+        <p>Et team som tar kollektivt ansvar, kan bli svært robust. Når noen har mindre kapasitet, tar andre mer. Når tidsplanen sprekker, mobiliserer teamet. Ledelsen ser et team som fungerer, og kunden ser et team som leverer.</p>
+        <p class="pull">Men når er selvregulering egentlig kollektiv overtilpasning?</p>
+        <p>Team kan kompensere for dårlige rammer lenge før konsekvensene blir synlige utenfra. Hver enkelt beslutning kan være rimelig. Noen jobber litt lenger, en pause droppes, noe internt utsettes. Problemet oppstår når unntakene gradvis blir normalen. Den samme evnen som gjør teamet robust, kan få det til å tåle en uhensiktsmessig situasjon for lenge.</p>
+        <p>Et modent team må derfor også kunne si at dette ikke går innenfor disse rammene, at noe må prioriteres bort, eller at belastningen ikke er bærekraftig. Å eskalere et problem kan være et uttrykk for autonomi, når teamet selv har sett problemet, vurdert handlingsrommet og forstått at løsningen ligger utenfor mandatet. Autonomi betyr ikke å klare alt selv. Det betyr også å vite hva man ikke skal forsøke å løse alene.</p>
+
+        <h2>Lederens paradoks</h2>
+        <p>Hva gjør vi som ledere når teamet strever? Vi hjelper. Vi har erfaring, ser kanskje løsningen raskt, tar en beslutning og rydder en hindring av veien. Problemet forsvinner. Samtidig kan vi ha tatt fra teamet en mulighet til å lære å løse akkurat denne typen problem selv.</p>
+        <p>Over tid kan det skape et mønster. Når noe er uklart, spør teamet lederen. Lederen blir effektiv, og teamet får raske avklaringer, men lærer samtidig hvor beslutningene egentlig hører hjemme. Så opplever lederen at teamet trenger tett oppfølging, og svarer med enda tettere oppfølging. Kanskje trenger teamet oppfølgingen delvis fordi vi har lært det å trenge den.</p>
+        <p>Lederen påvirker også teamets reguleringskapasitet på en mer direkte måte, gjennom små øyeblikk i hverdagen. Det gjelder når noen gjør en feil, når en beslutning blir utfordret, når det oppstår uenighet i et møte, eller når noen sier at de er usikre. Møtes slike øyeblikk med irritasjon, øker den sosiale trusselen. Møtes de med nysgjerrighet og ro, blir det lettere for teamet å fortsette å tenke. Spenningsnivået i et team settes i stor grad ovenfra, også når det ikke er meningen.</p>
+        <p>Det betyr ikke at ledere skal lene seg tilbake og se på at team mislykkes, særlig ikke når en kunde venter eller økonomien er presset. Men vi må skille mellom å støtte teamet og å overta teamets regulering. Noen ganger er det viktigste spørsmålet en leder kan stille: «Hva tenker dere selv at vi bør gjøre?» Ikke for å slippe ansvar, men som et uttrykk for forventningen om at teamet også skal vurdere og eie.</p>
+        <p>Ansvaret går begge veier. Ledelsen må skape reelt handlingsrom, og teamet må ta det i bruk.</p>
+
+        <h2>Autonomi må trenes</h2>
+        <p>I mental trening forventer vi ikke at en ferdighet utvikles fordi noen har fått beskjed om å ha den. Vi trener, under gradvis vanskeligere betingelser, og vi evaluerer og justerer underveis. Teamautonomi fungerer på samme måte.</p>
+        <p>Hvis konflikter alltid håndteres av lederen, får teamet lite trening i konflikt. Hvis prioriteringer alltid kommer ovenfra, utvikler teamet liten prioriteringsevne. Og hvis noen griper inn hver gang teamet er på vei mot en feil, mister det muligheten til å erfare, reflektere og justere. Autonomi er derfor ikke bare et mandat. Det er en kapasitet som utvikles gjennom erfaring, og erfaring betyr at ikke alle beslutninger blir perfekte.</p>
+
+        <h2>Fem spørsmål til ditt eget team</h2>
+        <ol class="questions">
+          <li>Hva håndterer vi i dag selv som vi tidligere trengte hjelp til?</li>
+          <li>Hvilke problemer går igjen uten at vi endrer måten vi arbeider på?</li>
+          <li>Hva snakker vi ikke om, selv om de fleste av oss merker det?</li>
+          <li>Hva skjer med oss når presset øker?</li>
+          <li>Hva trenger vi faktisk fra ledelsen, og hva burde vi slutte å be andre om å løse for oss?</li>
+        </ol>
+
+        <h2>Team som gradvis blir bedre til å lede seg selv</h2>
+        <p>I Liflig jobber teamene ofte tett med kundene, og handlingsrommet formes både av oss og av kunden. Vi tror de beste leveransene kommer fra team som selv følger med på helheten, sier fra tidlig når rammene ikke holder, og ber om hjelp før belastningen blir for stor. Derfor er vi opptatt av å bygge team som over tid blir bedre til å lede seg selv, og ikke bare team som leverer.</p>
+        <p class="closing-line">Kanskje er ikke det mest autonome teamet det som aldri trenger hjelp, men det som vet når det kan finne veien selv, når det må endre kurs, og når det er på tide å be noen andre om hjelp.</p>
+      </div>
+
+      <nav class="next" aria-label="Next"><span class="kicker">Neste i serien · Del 7</span><a href="raskere-hver-for-oss-svakere-sammen.html"><b>Raskere hver for oss, svakere sammen?</b><i aria-hidden="true">→</i></a></nav>
+
+      <section class="more" aria-labelledby="mer-tittel">
+        <span class="kicker">Vil du lese mer?</span>
+        <h2 id="mer-tittel">Fordyp deg videre</h2>
+        <ul>
+          <li><a href="artikkel-3-psykologisk-trygghet-er-bra-for-leveransen.html"><div><span>Om hvorfor trygghet påvirker hvor raskt risiko blir synlig</span><b>Psykologisk trygghet er ikke bare bra for menneskene. Det er bra for leveransen.</b></div><i aria-hidden="true">→</i></a></li>
+          <li><a href="artikkel-2-nar-den-flinkeste-personen-gjor-teamet-darligere.html"><div><span>Om hva som skjer når én person blir knutepunktet i teamet</span><b>Når den flinkeste personen gjør teamet dårligere</b></div><i aria-hidden="true">→</i></a></li>
+          <li><a href="artikkel-5-grensen-vi-ikke-ser-for-vi-har-passert-den.html"><div><span>Om belastning som skjules av god prestasjon</span><b>Grensen vi ikke ser før vi har passert den</b></div><i aria-hidden="true">→</i></a></li>
+          <li><a href="../fordypningsoppgaver/psykologisk-trygghet-niva-2.html"><div><span>Fordypningsoppgave, grundigere teoretisk gjennomgang</span><b>Psykologisk trygghet som reguleringskapasitet</b></div><i aria-hidden="true">→</i></a></li>
+        </ul>
+      </section>
+
+      <section class="sources" aria-labelledby="kilder-tittel">
+        <h2 id="kilder-tittel">Kilder</h2>
+        <ul>
+          <li>Hackman, J. R. (2002). <i>Leading Teams: Setting the Stage for Great Performances.</i> Harvard Business School Press.</li>
+          <li>Karud, C. (2026). <i>Psykologisk trygghet som reguleringskapasitet.</i> Fordypningsoppgave, Raw Performance.</li>
+          <li>Moe, N. B., Dingsøyr, T. &amp; Dybå, T. (2010). A teamwork model for understanding an agile team: A case study of a Scrum project. <i>Information and Software Technology, 52</i>, 480–491.</li>
+          <li>Moe, N. B., Šmite, D., Paasivaara, M. &amp; Lassenius, C. (2021). Finding the sweet spot for organizational control and team autonomy in large-scale agile software development. <i>Empirical Software Engineering, 26</i>(5).</li>
+          <!-- Fyll inn forfatterne på HICSS-studien før publisering -->
+          <li>Psychological Safety in Agile Software Development Teams: Work Design Antecedents and Performance Consequences (2022). <i>Proceedings of the 55th Hawaii International Conference on System Sciences.</i> SINTEF.</li>
+          <li>Myhre, C. Y. &amp; Aas, K. A. (2025). <i>Prestasjonsledelse.</i> Aschehoug.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Illustrasjon i full størrelse">
+    <button type="button" aria-label="Lukk">×</button>
+    <img alt="">
+  </div>
+  <script>
+    (function () {
+      var box = document.getElementById('lightbox'), big = box.querySelector('img'), last = null;
+      function close() { box.classList.remove('open'); if (last) last.focus(); }
+      document.querySelectorAll('figure img').forEach(function (img) {
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
+        img.title = 'Klikk for å se i full størrelse';
+        function open() { last = img; big.src = img.src; big.alt = img.alt; box.classList.add('open'); box.querySelector('button').focus(); }
+        img.addEventListener('click', open);
+        img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+      });
+      box.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
+    })();
+  </script>
+
+  <footer>
+    <div class="wrap">
+      <span><span style="color:var(--text)">Camilla Karud</span> · Mennesker, teknologi og organisasjon</span>
+      <span><a href="https://www.linkedin.com/in/camilla-karud-91b32740/" target="_blank" rel="noopener">LinkedIn ↗</a> &nbsp;·&nbsp; <a href="../index.html#artikler">← Tilbake til artikkelserien</a></span>
+    </div>
+  </footer>
+</body>
+</html>

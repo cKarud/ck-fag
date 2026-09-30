@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1110" width="1500" height="1110" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5b6b61"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#2f6b45"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#9b5a3c"/></marker>
+</defs>
+<rect width="1500" height="1110" fill="#ffffff"/>
+<text x="80" y="90" font-size="40" fill="#1f2a24" font-weight="700" text-anchor="start" >Det selvregulerende teamet</text>
+<text x="80" y="135" font-size="24" fill="#5b6b61" font-weight="400" text-anchor="start" >En enkel sirkel for hvordan team justerer seg når virkeligheten ikke følger planen</text>
+<path d="M948.6,336.5 A330,330 0 0 1 1065.6,503.5" fill="none" stroke="#5b6b61" stroke-width="3" marker-end="url(#ah)"/>
+<path d="M1065.6,696.5 A330,330 0 0 1 948.6,863.5" fill="none" stroke="#5b6b61" stroke-width="3" marker-end="url(#ah)"/>
+<path d="M551.4,863.5 A330,330 0 0 1 434.4,696.5" fill="none" stroke="#5b6b61" stroke-width="3" marker-end="url(#ah)"/>
+<path d="M434.4,503.5 A330,330 0 0 1 551.4,336.5" fill="none" stroke="#5b6b61" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="585.0" y="206.0" width="330" height="128" rx="16" fill="#ffffff" stroke="#c9d3cb" stroke-width="2.5"/>
+<text x="750.0" y="262.0" font-size="30" fill="#1f2a24" font-weight="700" text-anchor="middle" >1. Legge merke til</text>
+<text x="750.0" y="302.0" font-size="22" fill="#5b6b61" font-weight="400" text-anchor="middle" font-style="italic">Hva skjer med oss nå?</text>
+<rect x="915.0" y="536.0" width="330" height="128" rx="16" fill="#ffffff" stroke="#c9d3cb" stroke-width="2.5"/>
+<text x="1080.0" y="592.0" font-size="30" fill="#1f2a24" font-weight="700" text-anchor="middle" >2. Forstå</text>
+<text x="1080.0" y="632.0" font-size="22" fill="#5b6b61" font-weight="400" text-anchor="middle" font-style="italic">Hva betyr det?</text>
+<rect x="585.0" y="866.0" width="330" height="128" rx="16" fill="#2f6b45" stroke="#2f6b45" stroke-width="2.5"/>
+<text x="750.0" y="922.0" font-size="30" fill="#ffffff" font-weight="700" text-anchor="middle" >3. Si det høyt</text>
+<text x="750.0" y="962.0" font-size="22" fill="#e3eedc" font-weight="400" text-anchor="middle" font-style="italic">Kan vi snakke om det?</text>
+<rect x="600.0" y="1012.0" width="300" height="44" rx="22" fill="#e6f1df"/>
+<text x="750.0" y="1041.0" font-size="20" fill="#2f6b45" font-weight="700" text-anchor="middle" >Krever psykologisk trygghet</text>
+<rect x="255.0" y="536.0" width="330" height="128" rx="16" fill="#ffffff" stroke="#c9d3cb" stroke-width="2.5"/>
+<text x="420.0" y="592.0" font-size="30" fill="#1f2a24" font-weight="700" text-anchor="middle" >4. Justere</text>
+<text x="420.0" y="632.0" font-size="22" fill="#5b6b61" font-weight="400" text-anchor="middle" font-style="italic">Hva gjør vi annerledes?</text>
+<text x="750" y="592" font-size="32" fill="#2f6b45" font-weight="700" text-anchor="middle" >Selvregulerende</text>
+<text x="750" y="632" font-size="32" fill="#2f6b45" font-weight="700" text-anchor="middle" >team</text>
+</svg>

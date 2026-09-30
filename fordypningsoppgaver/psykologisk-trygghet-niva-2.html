@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Psykologisk trygghet som reguleringskapasitet – Camilla Karud</title>
+  <meta name="description" content="En analyse av emosjonell aktivering og regulering i prestasjonsorienterte kunnskapsorganisasjoner, og hva det betyr for ledelse og HR.">
+  <meta name="theme-color" content="#111613">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="nb_NO">
+  <meta property="og:title" content="Psykologisk trygghet som reguleringskapasitet">
+  <meta property="og:description" content="En analyse av emosjonell aktivering og regulering i prestasjonsorienterte kunnskapsorganisasjoner, og hva det betyr for ledelse og HR.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23111613' stroke='%23c4e49a' stroke-width='2'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23c4e49a'%3ECK%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111613; --panel: #171e19; --text: #f1f2e9; --body: #d6dcd2; --muted: #a8b1a7; --faint: #8c968b;
+      --line: rgba(225,235,223,.13); --accent: #c4e49a;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.75 var(--sans); -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, p, ol, ul, blockquote, figure { margin: 0; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+    .skip { position: absolute; left: 20px; top: -100px; z-index: 10; padding: 10px 14px; color: var(--bg); background: var(--accent); }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .kicker { display: block; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top .wrap { min-height: 82px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding-block: 14px; }
+    .name { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 650; letter-spacing: -.02em; font-size: 16px; }
+    .name .mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(196,228,154,.55); border-radius: 50%; color: var(--accent); font: 13px var(--serif); }
+    .back { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .back:hover { color: var(--text); }
+    .head-right { display: inline-flex; align-items: center; gap: 18px; }
+    .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .lang-switch a, .lang-switch span { display: inline-grid; place-items: center; min-width: 38px; min-height: 30px; padding: 0 10px; border-radius: 999px; text-decoration: none; color: var(--muted); }
+    .lang-switch a:hover { color: var(--text); }
+    .lang-switch [aria-current] { background: var(--accent); color: #182216; }
+
+    .article { width: min(720px, calc(100% - 40px)); margin-inline: auto; padding-block: 88px 40px; }
+    .article header .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--muted); font-size: 13px; margin-top: 16px; }
+    .article h1 { margin-top: 22px; font: 400 clamp(40px, 6.4vw, 66px)/1.06 var(--serif); letter-spacing: -.04em; }
+    .article .dek { margin-top: 20px; color: var(--muted); font: italic 400 clamp(19px, 2.4vw, 23px)/1.45 var(--serif); }
+    .body { margin-top: 56px; color: var(--body); }
+    .body p + p, .body p + ul, .body ul + p { margin-top: 1.15em; }
+    .body h2 { margin: 2.4em 0 .8em; color: var(--text); font: 400 clamp(27px, 3.4vw, 34px)/1.2 var(--serif); letter-spacing: -.02em; }
+    .body strong { color: var(--text); font-weight: 600; }
+    .body em { color: var(--text); }
+    .lead { color: var(--text); font-size: 20px; }
+    .series-note { margin-top: 1.6em !important; padding: 16px 20px; border-left: 2px solid var(--accent); background: rgba(196,228,154,.045); color: var(--muted); font-size: 15px; }
+    .loop { margin: 1.3em 0 !important; color: var(--accent); font: 400 clamp(20px, 2.8vw, 26px)/1.4 var(--serif); text-align: center; }
+    .example { margin-top: 1.4em !important; padding: 22px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .example .kicker { margin-bottom: 8px; }
+    .example + p { margin-top: 1.15em; }
+    figure img { cursor: zoom-in; }
+    .lightbox { position: fixed; inset: 0; z-index: 20; display: none; place-items: center; padding: 24px; background: rgba(8,11,9,.92); cursor: zoom-out; }
+    .lightbox.open { display: grid; }
+    .lightbox img { max-width: min(1500px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 6px; }
+    .lightbox button { position: absolute; top: 16px; right: 16px; min-width: 44px; min-height: 44px; border: 1px solid var(--line); border-radius: 50%; background: var(--panel); color: var(--text); font-size: 20px; cursor: pointer; }
+    .pull { margin: 1.6em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: 400 clamp(22px, 3vw, 27px)/1.4 var(--serif); letter-spacing: -.01em; }
+    figure { margin: 2.4em 0 !important; }
+    @media (min-width: 1000px) { figure:not(.tall) { width: 940px; margin-left: calc((720px - 940px) / 2) !important; } }
+    figure.tall img { max-width: 720px; margin-inline: auto; }
+    figure.tall figcaption { text-align: center; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+    figcaption { margin-top: 10px; color: var(--faint); font-size: 14px; }
+    .questions { list-style: none; padding: 0; margin-top: 1.2em; counter-reset: q; border-top: 1px solid var(--line); }
+    .questions li { counter-increment: q; display: grid; grid-template-columns: 38px 1fr; gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--text); font: 400 21px/1.4 var(--serif); }
+    .questions li::before { content: counter(q); color: var(--accent); font: 400 21px/1.4 var(--serif); }
+    .closing-line { margin-top: 1.6em !important; color: var(--text); font: 400 clamp(24px, 3.4vw, 31px)/1.35 var(--serif); letter-spacing: -.015em; }
+
+    .body h3 { margin: 1.9em 0 .6em; color: var(--text); font: 600 19px/1.4 var(--sans); }
+    .body ul, .body ol { padding-left: 1.3em; }
+    .body li + li { margin-top: .45em; }
+    .body .example ul, .body .example ol { margin-top: .6em; }
+    .body .example p + p, .body .example p + ul { margin-top: .7em; }
+    .quote { margin: 1.4em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: italic 400 21px/1.45 var(--serif); }
+    .formula-line { text-align: center; color: var(--accent); font: 400 clamp(22px, 3vw, 28px)/1.3 var(--serif); }
+    .toc { margin-top: 2em; padding: 20px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .toc ol { margin-top: 10px; padding-left: 1.3em; font-size: 16px; }
+    .toc a { color: var(--text); text-underline-offset: 3px; text-decoration-color: rgba(196,228,154,.5); }
+    .toc a:hover { color: var(--accent); }
+    .next { margin-top: 64px; padding-top: 30px; border-top: 1px solid var(--line); }
+    .next a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-top: 12px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; }
+    .next a:hover { border-color: rgba(196,228,154,.43); }
+    .next b { font: 400 21px/1.35 var(--serif); }
+    .next i { color: var(--accent); font-style: normal; }
+    .body h2[id] { scroll-margin-top: 24px; }
+    .more { margin-top: 72px; padding-top: 34px; border-top: 1px solid var(--line); }
+    .more h2 { margin-top: 12px; font: 400 28px/1.2 var(--serif); }
+    .more ul { list-style: none; padding: 0; margin-top: 18px; display: grid; gap: 10px; }
+    .more a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; padding: 16px 18px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; transition: border-color .2s ease; }
+    .more a:hover { border-color: rgba(196,228,154,.43); }
+    .more a span { color: var(--muted); font-size: 14px; display: block; }
+    .more a b { font: 400 19px/1.35 var(--serif); }
+    .more a i { color: var(--accent); font-style: normal; }
+    .sources { margin-top: 56px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .sources h2 { color: var(--text); font: 600 14px/1.4 var(--sans); margin-bottom: 10px; }
+    .sources li + li { margin-top: 6px; }
+    .sources ul { padding-left: 18px; }
+
+    footer { border-top: 1px solid var(--line); margin-top: 80px; }
+    footer .wrap { min-height: 82px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; color: var(--faint); font-size: 13px; }
+    footer a { text-decoration: none; } footer a:hover { color: var(--accent); }
+    @media (max-width: 700px) {
+      body { font-size: 17px; }
+      .wrap { width: calc(100% - 34px); }
+      .article { padding-top: 60px; }
+      .questions li { font-size: 19px; grid-template-columns: 30px 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#innhold">Hopp til innhold</a>
+  <header class="top" id="toppen">
+    <div class="wrap">
+      <a class="name" href="../index.html"><span class="mark" aria-hidden="true">CK</span><span>Camilla Karud</span></a>
+      <span class="head-right"><a class="back" href="../index.html#fordypning">← Tilbake til fordypning</a><div class="lang-switch" aria-label="Språk"><span aria-current="true">NO</span><a href="../en/papers/psychological-safety-as-regulation-capacity.html" hreflang="en" lang="en">EN</a></div></span>
+    </div>
+  </header>
+
+  <main id="innhold">
+    <article class="article">
+<header>
+  <span class="kicker">Fordypning · mental trener nivå 2 · 2026</span>
+  <h1>Psykologisk trygghet som reguleringskapasitet</h1>
+  <p class="dek">En analyse av emosjonell aktivering og regulering i prestasjonsorienterte kunnskapsorganisasjoner</p>
+  <div class="meta"><span>Camilla Karud</span><span>Raw Performance</span><span>27. mars 2026</span><span>Ca. 35 minutters lesing</span></div>
+</header>
+<div class="body">
+<p class="series-note">Noen figurer er tegnet på nytt eller beskrevet i tekst i denne versjonen, og det personlige vedlegget er fjernet.</p>
+<nav class="toc" aria-label="Innhold">
+<span class="kicker">Innhold</span>
+<ol>
+<li><a href="#k1">Innledning</a></li>
+<li><a href="#k2">Emosjoner, regulering og mental trening</a></li>
+<li><a href="#k3">Emosjonell aktivering og interferens</a></li>
+<li><a href="#k4">Psykologisk trygghet som reguleringskapasitet</a></li>
+<li><a href="#k5">Ledelse og regulering</a></li>
+<li><a href="#k6">Drøfting</a></li>
+<li><a href="#k7">Avslutning</a></li>
+</ol>
+</nav>
+
+<h2 id="k1">1 Innledning</h2>
+<h3>1.1 Psykologisk trygghet i kunnskapsarbeid</h3>
+<p>Kunnskapsintensive organisasjoner kjennetegnes av høy kompleksitet, kontinuerlig læring og høye krav til kvalitet og leveranse. Arbeidet er ofte kognitivt krevende, sosialt eksponert og tidskritisk. I slike miljøer er kompetanse en forutsetning for prestasjon, men ikke en garanti. Selv høyt kompetente fagpersoner kan prestere under sitt potensial dersom indre og ytre forstyrrelser ikke håndteres hensiktsmessig.</p>
+<p>Innen prestasjonspsykologi beskrives prestasjon ofte gjennom en enkel modell: prestasjon er et resultat av potensial minus interferens. Potensial representerer kompetanse, erfaring og ferdigheter, mens interferens viser til mentale og emosjonelle forstyrrelser som kan redusere evnen til å utnytte dette potensialet. I individuelle prestasjonsarenaer, som idrett eller scenekunst, arbeider mental trening nettopp med å redusere interferens gjennom utvikling av ferdigheter som fokus, spenningsregulering og bevisst indre dialog (Myhre &amp; Aas, 2025).</p>
+<p>I organisasjoner oppstår imidlertid prestasjon sjelden i isolasjon. Arbeid foregår i samhandling med andre, og mange av de mest krevende situasjonene innebærer sosial evaluering. Dette kan være tekniske diskusjoner, beslutningsmøter, tilbakemeldinger eller håndtering av feil. I slike situasjoner kan emosjoner som usikkerhet, irritasjon eller skam aktiveres, noe som igjen kan påvirke hvordan mennesker tenker, samarbeider og tar beslutninger.</p>
+<p>Forskning på psykologisk trygghet, særlig gjennom arbeidet til Amy Edmondson, har vist at opplevelsen av sosial sikkerhet i team har stor betydning for læring, samarbeid og prestasjon. Edmondson beskriver psykologisk trygghet som en delt opplevelse av at det er trygt å ta mellommenneskelig risiko i en gruppe, for eksempel ved å stille spørsmål, uttrykke uenighet eller innrømme feil. I team med høy psykologisk trygghet er det større sannsynlighet for at medlemmer deler informasjon, lærer av feil og deltar aktivt i problemløsning (Edmondson, udatert).</p>
+<p>Samtidig kan begrepet psykologisk trygghet i noen sammenhenger fremstå uklart eller misforstått. I prestasjonsorienterte miljøer kan det tolkes som et trivselstiltak eller som et forsøk på å redusere krav og friksjon. Dette kan skape en implisitt motsetning mellom trygghet og prestasjon.</p>
+<p>Denne oppgaven tar utgangspunkt i et annet analytisk perspektiv. Psykologisk trygghet forstås her ikke primært som et relasjonelt klima eller et kulturtiltak, men som en form for kollektiv reguleringskapasitet i møte med prestasjonspress. Perspektivet bygger på innsikter fra emosjonspsykologi, mental trening og organisasjonsforskning, og argumenterer for at prestasjon i kunnskapsorganisasjoner i stor grad påvirkes av hvordan emosjonell aktivering håndteres i relasjonelle situasjoner.</p>
+<p>I dette perspektivet blir ledelse særlig sentralt. Hvordan ledere responderer på feil, håndterer uenighet og møter usikkerhet kan påvirke graden av sosial trussel i samhandling. Gjennom slike relasjonelle situasjoner kan ledere enten forsterke emosjonell interferens eller bidra til å stabilisere samhandlingen. Relasjonsledelse kan derfor forstås som en praktisk form for reguleringskompetanse i organisasjoner.</p>
+<p>Denne oppgaven tar utgangspunkt i at psykologisk trygghet i kunnskapsintensive organisasjoner kan forstås som en kollektiv reguleringskapasitet i møte med prestasjonspress, og at denne kapasiteten i stor grad utvikles gjennom hvordan ledere håndterer emosjonell aktivering i relasjonelle situasjoner.</p>
+
+<h3>1.2 Emosjonell aktivering som prestasjonsfaktor</h3>
+<p>Følelser kan beskrives som et funksjonelt informasjonssystem. Alle følelser har en funksjon. De gir kontinuerlig informasjon om hvordan individet forholder seg til sine omgivelser – om noe er truet, ivaretatt, meningsfullt eller urettferdig. Emosjoner består av en subjektiv opplevelse, en fysiologisk aktivering og en atferdsimpuls.</p>
+<p>I prestasjonssituasjoner – som tekniske beslutningsmøter, kodegjennomganger eller leveranse under tidspress – utløses emosjonell aktivering. Frykt kan oppstå ved sosial evaluering. Skam kan aktiveres ved feil. Sinne kan trigges ved opplevd urett eller brudd på forventninger. Stolthet kan styrke mestringsfølelse. Disse reaksjonene påvirker kognitiv kapasitet, fokus og beslutningskvalitet.</p>
+<p>Når emosjonell aktivering kombineres med kognitive tankefeller – som alt-eller-intet-tenkning, emosjonell resonnering eller negativt mentalt filter – kan det oppstå forstyrrelser. Forstyrrelser reduserer prestasjon ved å begrense fleksibilitet, læring og informasjonsdeling.</p>
+<p>I mental trening beskrives prestasjon gjennom formelen (Myhre, 2024):</p>
+<p class="formula-line">Prestasjon = Potensial − Interferens</p>
+<p>Forstyrrelser kan forstås som uregulert emosjonell aktivering og rigid indre dialog. Dermed blir emosjonsregulering en sentral prestasjonskompetanse.</p>
+
+<h3>1.3 Fra individuell til kollektiv regulering</h3>
+<p>Emosjonsregulering har tradisjonelt vært forstått som en individuell ferdighet. Gjennom bevisst arbeid med indre dialog, kognitiv revurdering og spenningsregulering kan individet utvikle selvregulering – evnen til å justere egen aktivering og atferd i møte med krevende situasjoner.</p>
+<p>Denne forståelsen er imidlertid utilstrekkelig i organisatoriske kontekster. Individets reguleringsmuligheter formes i stor grad av situasjonen det befinner seg i. Sosial trussel, hierarkiske strukturer og normer for feil påvirker både aktiveringsnivå og tolkning. Regulering skjer derfor ikke isolert, men innenfor rammer som enten forsterker eller demper emosjonell respons.</p>
+<p>Psykologisk trygghet kan i denne sammenhengen forstås som en kollektiv betingelse for regulering. Ved å redusere sosial trussel stabiliseres aktiveringsnivået, og psykologisk fleksibilitet opprettholdes. Trygghet innebærer dermed ikke fravær av press, men organisasjonens evne til å regulere press.</p>
+
+<h3>1.4 HRs rolle</h3>
+<p>Dersom psykologisk trygghet forstås som reguleringskapasitet, får HR en strategisk funksjon i utformingen av organisasjonens reguleringsbetingelser. HR påvirker hvordan prestasjon defineres, hvordan feil forstås, hvordan mål struktureres og hvilke normer som etableres for lederatferd.</p>
+<p>Gjennom språk, strukturer og praksiser kan HR enten forsterke sosial trussel eller bidra til å redusere den. Dermed påvirker HR indirekte graden av kollektiv interferens i organisasjonen. Arbeid med lederutvikling, målstruktur og feedback-praksis blir i denne sammenhengen ikke støttefunksjoner, men bevisste grep som former hvordan ansatte regulerer seg selv.</p>
+<p>Oppgaven undersøker derfor hvordan prinsipper fra emosjonspsykologi og mental trening kan integreres strategisk i HR-arbeid for å utvikle psykologisk trygghet som en prestasjonsbetingelse.</p>
+
+<h3>1.5 Avgrensning og struktur</h3>
+<p>Oppgaven tar utgangspunkt i emosjonspsykologi, med særlig fokus på hvordan emosjonell aktivering oppstår, reguleres og påvirker prestasjon i sosiale kontekster. Empiriske data inngår ikke, men analysen er informert av forfatterens erfaring fra utviklingsarbeid, teamkoordinering og leder- og HR-roller i kunnskapsintensive IT-organisasjoner.</p>
+<p>Temaet har også en personlig og faglig forankring. Gjennom arbeid med mental trening, ledelse og menneskelig utvikling har forfatteren utviklet en bredere forståelse av hvordan følelser, relasjoner og kontekst påvirker utvikling, læring og prestasjon. I den opprinnelige oppgaven synliggjøres denne forankringen i et vedlegg med forfatterens filosofi (ikke med i denne versjonen).</p>
+
+<h2 id="k2">2 Emosjoner, regulering og mental trening</h2>
+<h3>2.1 Emosjoner som reguleringssystem</h3>
+<p>Innen emosjonspsykologi forstås følelser ikke som forstyrrelser av rasjonalitet, men som en integrert del av menneskets reguleringssystem. Emosjoner blir beskrevet som et informasjonssystem – en kontinuerlig evaluering av forholdet mellom individ og omgivelser. Denne forståelsen støttes av flere emosjonsteoretiske tradisjoner, herunder evolusjonsteoretiske perspektiver (Darwin) og kognitive vurderingsteorier (Lazarus).</p>
+<p>Grunnleggende emosjoner – glede, overraskelse, tristhet, avsky, frykt, sinne, skyld og skam – antas å være universelle. De fungerer som raske signaler om hva som er truet, verdifullt eller relevant. Eksempelvis kan frykt signalisere potensiell fare, mens sinne kan indikere opplevd urett eller grenseoverskridelse.</p>
+<p>Det er avgjørende å understreke at emosjoner ikke i seg selv er negative eller positive. De er funksjonelle. Det som avgjør om de fremmer eller hemmer prestasjon, er hvordan de reguleres og integreres i atferd.</p>
+<p>Emosjoner består av tre komponenter:</p>
+<ol>
+<li><strong>Subjektiv opplevelse</strong> – hvordan følelsen oppleves mentalt.</li>
+<li><strong>Fysiologisk aktivering</strong> – kroppslige responser som pulsøkning, muskelspenning eller endret pust.</li>
+<li><strong>Atferdsimpuls</strong> – tendensen til å handle på bestemte måter (trekke seg unna, konfrontere, søke støtte).</li>
+</ol>
+<p>I prestasjonskontekster påvirker disse tre komponentene direkte kognitiv kapasitet. Høy fysiologisk aktivering kan redusere arbeidsminne og beslutningsfleksibilitet. Samtidig kan moderat aktivering øke fokus og energi. Dette samsvarer med prinsippet om den omvendte U-kurven, hvor optimal prestasjon oppstår ved et moderat spenningsnivå. Dermed blir emosjonell aktivering ikke et problem i seg selv, men et reguleringsspørsmål.</p>
+
+<h3>2.2 Emosjonsregulering og selvregulering</h3>
+<p>Emosjonsregulering handler om å gjenkjenne, forstå og påvirke egne følelser, slik at de kan håndteres og uttrykkes på en hensiktsmessig måte (Myhre, 2018; Gamlesanne, 2026). I denne oppgaven forstås emosjonsregulering som prosesser hvor individet påvirker hvilke følelser som oppstår, når de oppstår, og hvordan de uttrykkes.</p>
+<p>Regulering kan være:</p>
+<ul>
+<li>situasjonsvalg (unngå triggere)</li>
+<li>kognitiv revurdering (alternativ tolkning)</li>
+<li>oppmerksomhetsstyring</li>
+<li>responsmodulering (pust, tempojustering)</li>
+</ul>
+<p>I mental trening, slik den forstås i Raw Performance, er selvregulering et hovedmål. Selvregulering defineres som evnen til å ta kontroll over egen atferd og gjøre valg som legger til rette for maksimal prestasjon. Verktøy som indre dialog, tankerekkeskjema, trafikklysmodellen og SOAL representerer strukturerte metoder for å øke bevissthet og redusere automatisk, dysfunksjonell respons.</p>
+<p>Særlig relevant er arbeidet med tankefeller. Mentale snarveier som alt-eller-intet-tenkning, emosjonell resonnering og negativt mentalt filter kan føre til fastlåste tankemønstre og redusert evne til å se situasjoner fra flere perspektiver. Når slike mønstre blir gjort bevisste og utfordret, styrkes evnen til kognitiv revurdering. Selvregulering kan dermed forstås som reduksjon av interferens i prestasjon.</p>
+
+<h3>2.3 Prestasjon og interferens</h3>
+<p>I mental trening beskrives prestasjon gjennom formelen (Myhre, 2024): Prestasjon = Potensial − Interferens. Potensial omfatter kompetanse, erfaring, ferdigheter og kapasitet. Interferens omfatter distraksjoner, tvil, frykt, negativ indre dialog og uregulert emosjonell aktivering.</p>
+<p>I kunnskapsorganisasjoner er interferens ofte emosjonell og kognitiv snarere enn fysisk. For eksempel kan frykt for sosial evaluering redusere vilje til å dele idéer. Skam ved feil kan føre til taushet. Sinne kan eskalere konflikt.</p>
+<p>Mental trening søker å redusere interferens gjennom utvikling av mentale ferdigheter: fokus, selvtillit, spenningsregulering, motivasjon og viljestyrke. Spenningsregulering er særlig relevant. Evnen til å regulere aktivering både opp og ned, avhengig av situasjonens krav, er avgjørende for optimal prestasjon. For høy aktivering kan gjøre det vanskeligere å tenke klart, mens for lav aktivering kan gi lite energi og motivasjon. Dermed er regulering ikke bare en måte å håndtere følelser på, men en forutsetning for å kunne prestere godt under press.</p>
+
+<h3>2.4 Reguleringsteknikker</h3>
+<p>Dersom prestasjon forstås som realisering av potensial minus interferens, blir spørsmålet hvordan interferens kan reduseres i praksis. Innen mental trening benyttes ulike teknikker med mål om å styrke selvregulering. Det avgjørende er imidlertid ikke teknikkene i seg selv, men hvordan de påvirker tankeprosesser, emosjonell aktivering og atferd i prestasjonssituasjoner.</p>
+<p><strong>Indre dialog og tolkning.</strong> Indre dialog kan forstås som den løpende selvkommunikasjonen individet fører i møte med utfordringer. En negativ eller lite hensiktsmessig indre dialog kan forsterke emosjonell aktivering og bidra til selvforsterkende interferens, særlig i sosialt eksponerte situasjoner. PPP-teknikken (personlig, positiv og i presens) kan analytisk forstås som en form for kognitiv restrukturering. Ved å formulere selvutsagn som uttrykker mestring og handlekraft, påvirkes både forventning og tolkning. Dette kan redusere katastrofetenkning og styrke opplevd mestringsevne. Slik bidrar regulering av indre dialog til å stabilisere aktiveringsnivå og opprettholde handlingsrom under press. Samtidig er det viktig å erkjenne at kvaliteten på indre dialog påvirkes av konteksten. I miljøer preget av høy sosial trussel kan det være vanskelig å opprettholde en hensiktsmessig indre dialog, fordi ytre signaler trekker i motsatt retning.</p>
+<p><strong>Tankerekkeskjema.</strong> Tankerekkeskjema kan forstås som et strukturert verktøy for å få oversikt over sammenhengen mellom situasjon, tolkning og emosjonell respons. Når man skiller tydelig mellom hva som faktisk skjer og hvordan det tolkes, reduseres risikoen for emosjonell resonnering og alt-eller-intet-tenkning. Denne prosessen kan forstås som en form for kognitiv revurdering. Når alternative og mer nyanserte tolkninger etableres, kan intensiteten i emosjonell aktivering reduseres. Dermed reduseres interferens, og beslutningskvaliteten opprettholdes. På organisasjonsnivå kan slik strukturert refleksjon bidra til å normalisere revurdering fremfor fastlåste posisjoner.</p>
+<p><strong>Spenningsregulering.</strong> Emosjonell aktivering har også en fysiologisk side. Høy aktivering kan føre til mer begrenset oppmerksomhet og gjøre det vanskeligere å tenke fleksibelt. Spenningsregulering, for eksempel gjennom bevisst pust eller muskulær avspenning, retter seg mot denne delen av responsen. Ved å påvirke det autonome nervesystemet kan aktiveringsnivået bringes tilbake til et mer hensiktsmessig nivå, i tråd med den omvendte U-kurven. Dette viser at regulering ikke bare handler om tanker, men også om kropp. I prestasjonssammenheng betyr dette at fysiologisk stabilisering kan være en forutsetning for å kunne vurdere situasjoner klart og handle hensiktsmessig.</p>
+<p><strong>Regulert respons i team.</strong> Enkle reguleringsrammer, som å etablere et tydelig stoppunkt mellom aktivering og respons, kan fungere som en pause. Slike pauser bryter automatiske reaksjonsmønstre og reduserer sannsynligheten for eskalering i sosialt eksponerte situasjoner. Når denne typen pauser normaliseres i team, kan regulering gå fra å være en individuell ferdighet til å bli en felles praksis. Dette danner et viktig bindeledd mellom individuell regulering og kollektiv reguleringskapasitet.</p>
+<p><strong>Oppsummering.</strong> Disse teknikkene viser hvordan individet kan redusere interferens gjennom bevisst regulering av tanker, følelser og kroppslig aktivering. Samtidig avhenger effekten av at reguleringen får rom til å virke. I miljøer preget av høy sosial trussel kan selvregulering bli krevende og ustabil. Regulering må derfor forstås både som individuell ferdighet og som et spørsmål om organisatoriske betingelser. Det er her psykologisk trygghet blir avgjørende.</p>
+
+<h3>2.5 Psykologisk trygghet</h3>
+<p>Forskning på psykologisk trygghet, særlig gjennom arbeidet til Amy Edmondson, viser at opplevelsen av sosial sikkerhet i team er særlig viktig i arbeid som krever samarbeid, læring og håndtering av kompleksitet. I slike kontekster er det avgjørende at medarbeidere deler informasjon, stiller spørsmål og utfordrer antakelser. Dersom risikoen for negativ sosial evaluering oppleves som høy, kan dette føre til taushet eller defensiv atferd. Psykologisk trygghet kan derfor forstås som en sentral forutsetning for læring i team.</p>
+<blockquote class="quote">«Psychological safety is a belief that one will not be punished or humiliated for speaking up with ideas, questions, concerns, or mistakes.» (Edmondson, udatert)</blockquote>
+<p>Tradisjonelt har psykologisk trygghet blitt forstått som et relasjonelt klima eller et gruppenivåfenomen. I denne oppgaven analyseres begrepet videre gjennom et reguleringsperspektiv. Når opplevd sosial risiko reduseres, reduseres også emosjonell aktivering knyttet til å bli vurdert av andre. Psykologisk trygghet kan dermed forstås som en kollektiv kapasitet til å regulere emosjonell aktivering i situasjoner med prestasjonspress.</p>
+<p>Når sosial trussel i teamet er lavere, reduseres også aktivering av følelser som skam og frykt. Dette kan bidra til mer fleksibel tenkning og en mer læringsorientert tilnærming til utfordringer og feil. Psykologisk trygghet kan dermed forstås som en faktor i konteksten som påvirker hvilke reguleringsmuligheter som er tilgjengelige i en gruppe. I dette perspektivet innebærer trygghet ikke fravær av krav eller ubehag, men en reduksjon av sosial trussel som interferensfaktor i prestasjon og læring.</p>
+<figure>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDQwIDg5NiIgd2lkdGg9IjE0NDAiIGhlaWdodD0iODk2IiBmb250LWZhbWlseT0iSGVsdmV0aWNhLCBBcmlhbCwgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZiI+PGRlZnM+PG1hcmtlciBpZD0iYSIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wLDAgTDEwLDUgTDAsMTAgeiIgZmlsbD0iI2E4YjFhNyIvPjwvbWFya2VyPjwvZGVmcz48cmVjdCB3aWR0aD0iMTQ0MCIgaGVpZ2h0PSI4OTYiIGZpbGw9IiMxNzFlMTkiLz48dGV4dCB4PSI3MCIgeT0iODAiIGZvbnQtc2l6ZT0iMzYiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJzdGFydCIgPlBzeWtvbG9naXNrIHRyeWdnaGV0IG9nIHByZXN0YXNqb25zc3RhbmRhcmRlcjwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMTIyIiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiID5FdHRlciBBbXkgRWRtb25kc29uPC90ZXh0PjxyZWN0IHg9IjIyMCIgeT0iMTcwIiB3aWR0aD0iNTYwIiBoZWlnaHQ9IjMwMCIgcng9IjE0IiBmaWxsPSIjMTcxZTE5IiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHRleHQgeD0iNTAwLjAiIHk9IjI5Ni4wIiBmb250LXNpemU9IjMyIiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+S29tZm9ydHNvbmVuPC90ZXh0Pjx0ZXh0IHg9IjUwMC4wIiB5PSIzNDIuMCIgZm9udC1zaXplPSIyMiIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPsOFcG5lIG9nIGtvbGxlZ2lhbGUsIG1lbjwvdGV4dD48dGV4dCB4PSI1MDAuMCIgeT0iMzcyLjAiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5pa2tlIHV0Zm9yZHJldDwvdGV4dD48cmVjdCB4PSI3OTYiIHk9IjE3MCIgd2lkdGg9IjU2MCIgaGVpZ2h0PSIzMDAiIHJ4PSIxNCIgZmlsbD0iIzIyMzAyMCIgc3Ryb2tlPSIjYzRlNDlhIiBzdHJva2Utd2lkdGg9IjIuNSIvPjx0ZXh0IHg9IjEwNzYuMCIgeT0iMjk2LjAiIGZvbnQtc2l6ZT0iMzIiIGZpbGw9IiNjNGU0OWEiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Mw6ZyaW5nc3NvbmVuPC90ZXh0Pjx0ZXh0IHg9IjEwNzYuMCIgeT0iMzQyLjAiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5TYW1hcmJlaWQgb2cgbMOmcmluZzwvdGV4dD48dGV4dCB4PSIxMDc2LjAiIHk9IjM3Mi4wIiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+aSB0amVuZXN0ZSBmb3IgaMO4eSBwcmVzdGFzam9uPC90ZXh0PjxyZWN0IHg9IjIyMCIgeT0iNDg2IiB3aWR0aD0iNTYwIiBoZWlnaHQ9IjMwMCIgcng9IjE0IiBmaWxsPSIjMTcxZTE5IiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+PHRleHQgeD0iNTAwLjAiIHk9IjYxMi4wIiBmb250LXNpemU9IjMyIiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+QXBhdGlzb25lbjwvdGV4dD48dGV4dCB4PSI1MDAuMCIgeT0iNjU4LjAiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5UaWwgc3RlZGUsIG1lbiB2ZWxnZXI8L3RleHQ+PHRleHQgeD0iNTAwLjAiIHk9IjY4OC4wIiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+c2VsdmJlc2t5dHRlbHNlIGZyZW1mb3IgaW5uc2F0czwvdGV4dD48cmVjdCB4PSI3OTYiIHk9IjQ4NiIgd2lkdGg9IjU2MCIgaGVpZ2h0PSIzMDAiIHJ4PSIxNCIgZmlsbD0iIzJlMjMxZCIgc3Ryb2tlPSIjZTNhMzdmIiBzdHJva2Utd2lkdGg9IjIuNSIvPjx0ZXh0IHg9IjEwNzYuMCIgeT0iNjEyLjAiIGZvbnQtc2l6ZT0iMzIiIGZpbGw9IiNlM2EzN2YiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5BbmdzdHNvbmVuPC90ZXh0Pjx0ZXh0IHg9IjEwNzYuMCIgeT0iNjU4LjAiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Ow7hsZXIgbWVkIMOlIGRlbGUgaWTDqWVyLDwvdGV4dD48dGV4dCB4PSIxMDc2LjAiIHk9IjY4OC4wIiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+cHLDuHZlIG55dHQgZWxsZXIgYmUgb20gaGplbHA8L3RleHQ+PGxpbmUgeDE9IjIyMCIgeTE9IjgyNiIgeDI9IjEzNTYiIHkyPSI4MjYiIHN0cm9rZT0iI2E4YjFhNyIgc3Ryb2tlLXdpZHRoPSIyLjUiIG1hcmtlci1lbmQ9InVybCgjYSkiLz48dGV4dCB4PSIyMjAiIHk9Ijg2NCIgZm9udC1zaXplPSIyMiIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+UHJlc3Rhc2pvbnNzdGFuZGFyZGVyOiBsYXYg4oaSIGjDuHk8L3RleHQ+PGxpbmUgeDE9IjE4MCIgeTE9Ijc4NiIgeDI9IjE4MCIgeTI9IjE3MCIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjIuNSIgbWFya2VyLWVuZD0idXJsKCNhKSIvPjx0ZXh0IHg9IjE2MCIgeT0iNDc4IiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiB0cmFuc2Zvcm09InJvdGF0ZSgtOTAgMTYwIDQ3OCkiPlBzeWtvbG9naXNrIHRyeWdnaGV0OiBsYXYg4oaSIGjDuHk8L3RleHQ+PC9zdmc+" alt="Todelt matrise etter Amy Edmondson. Lav trygghet og lave standarder gir apatisonen. Høy trygghet og lave standarder gir komfortsonen. Lav trygghet og høye standarder gir angstsonen. Høy trygghet og høye standarder gir læringssonen.">
+  <figcaption>Figur 2.1: Sammenhengen mellom psykologisk trygghet og prestasjonsstandarder, etter Amy Edmondson. Tegnet på nytt for denne versjonen.</figcaption>
+</figure>
+
+<h3>2.6 RAW-modellen</h3>
+<p>For å strukturere hvordan reguleringskapasitet kan forstås og utvikles, kan RAW-modellen brukes som et pedagogisk rammeverk. Modellen illustrerer en lagdelt forståelse der filosofi utgjør grunnlaget, basisteknikker fungerer som trenbare verktøy, og mentale ferdigheter representerer kapasiteter som utvikles gjennom systematisk arbeid. Dette danner grunnlag for selvregulering i krevende situasjoner, som igjen påvirker prestasjon og resultater. I denne oppgaven er poenget ikke å bruke modellen som en prestasjonsmodell i snever forstand, men som et analytisk hjelpemiddel for å synliggjøre hvordan individuell regulering møter organisatoriske betingelser. Denne sammenhengen utdypes videre i kapittel 4.</p>
+
+<h3>2.7 Motivasjon og indre drivkraft</h3>
+<p>Motivasjon beskrives i mental trening som «nøkkelen til endring». Selvbestemmelsesteorien fremhever tre grunnleggende behov: autonomi, mestring og tilhørighet. Indre motivasjon oppstår når disse behovene er tilfredsstilt. Psykologisk trygghet kan særlig knyttes til mestring og tilhørighet. Når individer opplever at de kan bidra uten å risikere sosial ekskludering, styrkes både læring og engasjement.</p>
+<p>Motivasjon er tett knyttet til emosjoner. Opplevelse av mestring skaper glede og stolthet. Opplevelse av avvisning kan skape skam eller tristhet. Regulering påvirker dermed også motivasjon.</p>
+
+<h3>2.8 Kommunikasjon og persepsjon</h3>
+<p>Kommunikasjonsmodellen (persepsjon → tolkning → opplevelse → handling) illustrerer hvordan emosjonell aktivering oppstår gjennom tolkning. Persepsjon handler om hva vi legger merke til i en situasjon, og hvordan vi oppfatter det som skjer. Dette påvirkes blant annet av oppmerksomhet og hvordan vi lytter. Allerede på dette nivået kan ulike personer oppfatte samme situasjon forskjellig.</p>
+<p>Det som oppfattes, tolkes videre gjennom indre dialog og tankemønstre, skaper en emosjonell opplevelse og påvirker videre handling. Dette understreker betydningen av å kunne revurdere egne tolkninger. Samtidig formes både persepsjon og tolkning av konteksten. Feedback-strukturer og språklige normer i organisasjonen påvirker hva som legges merke til og hvordan situasjoner forstås, og dermed også nivået av emosjonell aktivering.</p>
+
+<h3>2.9 Oppsummering av teori</h3>
+<p>Teorien peker på at emosjoner er en naturlig og funksjonell del av prestasjon, at uregulert aktivering kan skape interferens, at selvregulering bidrar til å redusere interferens, og at psykologisk trygghet påvirker hvilke reguleringsmuligheter som er tilgjengelige. Dette danner grunnlaget for den videre analysen av psykologisk trygghet som kollektiv reguleringskapasitet.</p>
+
+<h2 id="k3">3 Emosjonell aktivering og interferens</h2>
+<h3>3.1 Prestasjonspress i kunnskapsarbeid</h3>
+<p>IT-organisasjoner kjennetegnes av høy grad av kompleksitet, rask teknologisk utvikling og sterke leveransekrav. Arbeidet er kognitivt krevende og preget av kontinuerlig problemløsning i usikkerhet. I tillegg er arbeidet sosialt eksponert. Kodegjennomganger, tekniske diskusjoner og prosjektmøter innebærer kontinuerlig evaluering – både formell og uformell.</p>
+<p>Denne kombinasjonen skaper emosjonell aktivering. Selv erfarne utviklere og ledere opplever i slike situasjoner frykt, usikkerhet, irritasjon eller stolthet. Utfordringen er ikke at slike følelser oppstår, men hvordan de påvirker regulering og beslutningskvalitet.</p>
+
+<h3>3.2 Fra situasjon til interferens</h3>
+<p>Mekanismen kan illustreres gjennom kommunikasjonsmodellen: persepsjon → tolkning → opplevelse → handling. Et eksempel er en utvikler som presenterer en løsning i et møte, og en kollega stiller et kritisk spørsmål.</p>
+<div class="example"><span class="kicker">Eksempel</span>
+<ul>
+<li><strong>Persepsjon:</strong> Spørsmålet registreres.</li>
+<li><strong>Tolkning:</strong> «Dette betyr at jeg har gjort en dårlig jobb.»</li>
+<li><strong>Opplevelse:</strong> Skam eller irritasjon.</li>
+<li><strong>Handling:</strong> Trekker seg tilbake eller går i forsvar.</li>
+</ul></div>
+<p>Det er ikke spørsmålet i seg selv, men tolkningen og den emosjonelle aktiveringen som reduserer prestasjon. Tankefeller forsterker dette (Myhre, 2018):</p>
+<ul>
+<li><strong>Alt-eller-intet-tenkning:</strong> «Hvis dette ikke er perfekt, er det mislykket.»</li>
+<li><strong>Emosjonell resonnering:</strong> «Jeg føler meg utilstrekkelig, derfor er jeg det.»</li>
+<li><strong>Negativt mentalt filter:</strong> fokus på kritikken, ikke helheten.</li>
+</ul>
+<p>Uregulert kan dette redusere informasjonsdeling, kreativitet og samarbeid. Mekanismen blir særlig tydelig i situasjoner med sosial evaluering i arbeidshverdagen.</p>
+
+<h3>3.3 Code review som sosial evaluering</h3>
+<p>Kodegjennomganger representerer en særlig tydelig form for sosial evaluering i tekniske miljøer. Når en utvikler oppretter en pull request, inviteres kolleger til å kommentere og vurdere løsningen. Intensjonen er kvalitetssikring, men det innebærer samtidig en offentlig vurdering av arbeidet.</p>
+<p>Når kommentarer tolkes som kritikk av egen kompetanse, aktiveres emosjoner som skam eller irritasjon. Dette fører til defensivitet og redusert vilje til å dele uferdige løsninger. Resultatet kan bli mindre åpenhet og læring. I team med høy psykologisk trygghet tolkes slike situasjoner oftere som felles problemløsning. Kommentarer forstås som bidrag til kvalitet, snarere enn som personkritikk.</p>
+
+<h3>3.4 Produksjonsfeil og skam</h3>
+<p>Produksjonsfeil representerer en annen type prestasjonssituasjon med høy emosjonell aktivering. Når en feil fører til nedetid eller påvirker kunder, blir ansvaret ofte synlig for både kolleger og ledelse. Slike hendelser kan utløse sterke følelser av skam, stress eller skyld.</p>
+<p>I miljøer preget av høy sosial trussel kan dette føre til defensivitet, skyldplassering og tilbakeholdelse av informasjon. I team med høy psykologisk trygghet håndteres slike hendelser ofte annerledes. Post mortem-analyser og retrospektiver brukes til å forstå systemiske årsaker til feil, snarere enn å identifisere skyld. Dette kan bidra til å redusere skamaktivering og støtte åpen informasjonsdeling.</p>
+
+<h3>3.5 Når fag blir personlig</h3>
+<p>Tekniske diskusjoner om arkitektur eller implementasjon kan også aktivere sterke emosjoner. Når utviklere identifiserer seg med egne løsninger, kan kritikk oppleves personlig. Uten regulering eskalerer slike diskusjoner til fastlåste posisjoner og konflikt. Dette kan redusere perspektivtaking og gjøre det vanskeligere å finne gode løsninger. I team med høy reguleringskapasitet kan uenighet derimot håndteres uten at relasjonen bryter sammen. Når ulike perspektiver utforskes nysgjerrig, kan diskusjoner bidra til bedre tekniske beslutninger og mer robuste løsninger.</p>
+
+<h3>3.6 Den omvendte U-kurven</h3>
+<p>Den omvendte U-kurven illustrerer at prestasjon øker med aktivering opp til et optimalt punkt, før den reduseres ved for høy spenning.</p>
+<figure>
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMzAwIDc2MCIgd2lkdGg9IjEzMDAiIGhlaWdodD0iNzYwIiBmb250LWZhbWlseT0iSGVsdmV0aWNhLCBBcmlhbCwgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZiI+PGRlZnM+PG1hcmtlciBpZD0iYSIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8iPjxwYXRoIGQ9Ik0wLDAgTDEwLDUgTDAsMTAgeiIgZmlsbD0iI2E4YjFhNyIvPjwvbWFya2VyPjwvZGVmcz48cmVjdCB3aWR0aD0iMTMwMCIgaGVpZ2h0PSI3NjAiIGZpbGw9IiMxNzFlMTkiLz48dGV4dCB4PSI3MCIgeT0iODAiIGZvbnQtc2l6ZT0iMzYiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJzdGFydCIgPkRlbiBvbXZlbmR0ZSBVLWt1cnZlbjwvdGV4dD48dGV4dCB4PSI3MCIgeT0iMTIyIiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiID5QcmVzdGFzam9uZW4gw7hrZXIgbWVkIGFrdGl2ZXJpbmcgb3BwIHRpbCBldCBvcHRpbWFsdCBwdW5rdCwgb2cgZmFsbGVyIGRlcmV0dGVyPC90ZXh0PjxsaW5lIHgxPSIxNjAiIHkxPSI2NDAiIHgyPSIxMjAwIiB5Mj0iNjQwIiBzdHJva2U9IiNhOGIxYTciIHN0cm9rZS13aWR0aD0iMi41IiBtYXJrZXItZW5kPSJ1cmwoI2EpIi8+PGxpbmUgeDE9IjE2MCIgeTE9IjY0MCIgeDI9IjE2MCIgeTI9IjIxMCIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjIuNSIgbWFya2VyLWVuZD0idXJsKCNhKSIvPjx0ZXh0IHg9IjEyMDAiIHk9IjY4MCIgZm9udC1zaXplPSIyMiIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9ImVuZCIgPkFrdGl2ZXJpbmc8L3RleHQ+PHRleHQgeD0iMTQwIiB5PSIyMjAiIGZvbnQtc2l6ZT0iMjIiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJlbmQiID5QcmVzdGFzam9uPC90ZXh0PjxyZWN0IHg9IjUzOC40IiB5PSIyMTAiIHdpZHRoPSIyNjMuMjAwMDAwMDAwMDAwMDUiIGhlaWdodD0iNDI2IiBmaWxsPSIjMjIzMDIwIi8+PHBvbHlsaW5lIHBvaW50cz0iMjAwLjAsNjA4LjEgMjA5LjQsNjA3LjYgMjE4LjgsNjA3LjEgMjI4LjIsNjA2LjUgMjM3LjYsNjA1LjcgMjQ3LjAsNjA0LjggMjU2LjQsNjAzLjggMjY1LjgsNjAyLjUgMjc1LjIsNjAxLjEgMjg0LjYsNTk5LjUgMjk0LjAsNTk3LjUgMzAzLjQsNTk1LjMgMzEyLjgsNTkyLjggMzIyLjIsNTg5LjkgMzMxLjYsNTg2LjYgMzQxLjAsNTgyLjkgMzUwLjQsNTc4LjggMzU5LjgsNTc0LjIgMzY5LjIsNTY5LjAgMzc4LjYsNTYzLjMgMzg4LjAsNTU3LjAgMzk3LjQsNTUwLjIgNDA2LjgsNTQyLjcgNDE2LjIsNTM0LjYgNDI1LjYsNTI1LjkgNDM1LjAsNTE2LjUgNDQ0LjQsNTA2LjYgNDUzLjgsNDk2LjAgNDYzLjIsNDg0LjkgNDcyLjYsNDczLjMgNDgyLjAsNDYxLjIgNDkxLjQsNDQ4LjcgNTAwLjgsNDM1LjkgNTEwLjIsNDIyLjkgNTE5LjYsNDA5LjcgNTI5LjAsMzk2LjQgNTM4LjQsMzgzLjIgNTQ3LjgsMzcwLjIgNTU3LjIsMzU3LjUgNTY2LjYsMzQ1LjIgNTc2LjAsMzMzLjUgNTg1LjQsMzIyLjQgNTk0LjgsMzEyLjEgNjA0LjIsMzAyLjcgNjEzLjYsMjk0LjQgNjIzLjAsMjg3LjEgNjMyLjQsMjgxLjEgNjQxLjgsMjc2LjMgNjUxLjIsMjcyLjggNjYwLjYsMjcwLjcgNjcwLjAsMjcwLjAgNjc5LjQsMjcwLjcgNjg4LjgsMjcyLjggNjk4LjIsMjc2LjMgNzA3LjYsMjgxLjEgNzE3LjAsMjg3LjEgNzI2LjQsMjk0LjQgNzM1LjgsMzAyLjcgNzQ1LjIsMzEyLjEgNzU0LjYsMzIyLjQgNzY0LjAsMzMzLjUgNzczLjQsMzQ1LjIgNzgyLjgsMzU3LjUgNzkyLjIsMzcwLjIgODAxLjYsMzgzLjIgODExLjAsMzk2LjQgODIwLjQsNDA5LjcgODI5LjgsNDIyLjkgODM5LjIsNDM1LjkgODQ4LjYsNDQ4LjcgODU4LjAsNDYxLjIgODY3LjQsNDczLjMgODc2LjgsNDg0LjkgODg2LjIsNDk2LjAgODk1LjYsNTA2LjYgOTA1LjAsNTE2LjUgOTE0LjQsNTI1LjkgOTIzLjgsNTM0LjYgOTMzLjIsNTQyLjcgOTQyLjYsNTUwLjIgOTUyLjAsNTU3LjAgOTYxLjQsNTYzLjMgOTcwLjgsNTY5LjAgOTgwLjIsNTc0LjIgOTg5LjYsNTc4LjggOTk5LjAsNTgyLjkgMTAwOC40LDU4Ni42IDEwMTcuOCw1ODkuOSAxMDI3LjIsNTkyLjggMTAzNi42LDU5NS4zIDEwNDYuMCw1OTcuNSAxMDU1LjQsNTk5LjUgMTA2NC44LDYwMS4xIDEwNzQuMiw2MDIuNSAxMDgzLjYsNjAzLjggMTA5My4wLDYwNC44IDExMDIuNCw2MDUuNyAxMTExLjgsNjA2LjUgMTEyMS4yLDYwNy4xIDExMzAuNiw2MDcuNiAxMTQwLjAsNjA4LjEiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2M0ZTQ5YSIgc3Ryb2tlLXdpZHRoPSI0Ii8+PHRleHQgeD0iNjcwLjAiIHk9IjI1MCIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2M0ZTQ5YSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPk9wdGltYWx0IHNwZW5uaW5nc25pdsOlPC90ZXh0Pjx0ZXh0IHg9IjIxMCIgeT0iNDkwIiBmb250LXNpemU9IjIxIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiID5Gb3IgbGl0ZTogbGF2IGVuZXJnaTwvdGV4dD48dGV4dCB4PSIxMTYwIiB5PSI0OTAiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJlbmQiID5Gb3IgbXllOiB0dW5uZWxzeW48L3RleHQ+PC9zdmc+" alt="En omvendt U-kurve. Prestasjonen øker med aktivering opp til et optimalt spenningsnivå i midten, og faller deretter. For lite aktivering gir lav energi, for mye gir tunnelsyn.">
+  <figcaption>Figur 3.1: Den omvendte U-kurven. Tegnet på nytt for denne versjonen.</figcaption>
+</figure>
+<p>Moderat aktivering styrker fokus og effektivitet, mens overaktivering kan føre til tunnelsyn, redusert kreativitet og feilvurderinger. Spenningsregulering blir dermed en avgjørende ferdighet. Individuelle teknikker som pust, tempojustering og mentale stopp-strategier reduserer overaktivering. Samtidig utfordres regulering i miljøer med vedvarende sosial trussel. Dette viser hvorfor kollektiv reguleringskapasitet er avgjørende.</p>
+
+<h3>3.7 Indre dialog og mønstre</h3>
+<p>Indre dialog spiller en sentral rolle i hvordan situasjoner tolkes. En indre dialog preget av selvkritikk og katastrofetenkning forsterker emosjonell aktivering, for eksempel: «De kommer til å se at jeg ikke er god nok.» PPP-teknikken (personlig, positiv, i presens) representerer et bevisst forsøk på å endre denne dialogen. Likevel påvirkes kvaliteten på indre dialog av organisasjonskultur. I miljøer hvor feil møtes med skyld eller latterliggjøring, vil negativ indre dialog lettere oppstå. Indre dialog blir ikke bare et individuelt fenomen, men indirekte påvirket av systemet.</p>
+
+<h3>3.8 Sinne og konflikt</h3>
+<p>Sinne er en aktiverende følelse som kan gi energi og tydelighet, men uten regulering kan det bidra til eskalering. I tekniske diskusjoner kan sinne oppstå når kritikk oppleves personlig, og fungere som en sekundærfølelse som dekker over skam eller frykt. Regulert kan den samme energien brukes konstruktivt – til å tydeliggjøre uenighet og forbedre løsninger.</p>
+
+<h3>3.9 Interferens i kontekst</h3>
+<p>I IT-organisasjoner skyldes interferens sjelden manglende kompetanse, men hvordan emosjonell aktivering og tankemønstre påvirker oss i situasjonen. Hvorfor håndterer noen team dette konstruktivt, mens andre utvikler taushet eller fastlåste mønstre? Forskning på psykologisk trygghet gir et mulig svar. I det følgende analyseres psykologisk trygghet som en kollektiv reguleringskapasitet – en kapasitet som reduseres når sosial trussel øker.</p>
+
+<h2 id="k4">4 Psykologisk trygghet som reguleringskapasitet</h2>
+<p>Som vist i kapittel 3 kommer skam og frykt i prestasjonsmiljøer ofte til uttrykk som taushet, defensivitet eller overforsiktighet. Disse reaksjonene kan forstås som uttrykk for høy sosial trussel, som igjen reduserer gruppens samlede reguleringskapasitet. Psykologisk trygghet analyseres her som en kollektiv reguleringskapasitet. Sammenhengen kan illustreres gjennom følgende modell:</p>
+<figure class="tall">
+  <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAwIDE0ODAiIHdpZHRoPSIxNDAwIiBoZWlnaHQ9IjE0ODAiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EsIEFyaWFsLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmIj4KPGRlZnM+CjxtYXJrZXIgaWQ9ImFoIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNhOGIxYTciLz48L21hcmtlcj4KPG1hcmtlciBpZD0iYWhnIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNjNGU0OWEiLz48L21hcmtlcj4KPG1hcmtlciBpZD0iYWhyIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNlM2EzN2YiLz48L21hcmtlcj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIxNDgwIiBmaWxsPSIjMTcxZTE5Ii8+Cjx0ZXh0IHg9IjgwIiB5PSI5MCIgZm9udC1zaXplPSI0MCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+UHN5a29sb2dpc2sgdHJ5Z2doZXQgc29tIHJlZ3VsZXJpbmdza2FwYXNpdGV0PC90ZXh0Pgo8dGV4dCB4PSI4MCIgeT0iMTM1IiBmb250LXNpemU9IjI0IiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiID5Idm9yZGFuIHNvc2lhbCBldmFsdWVyaW5nIGthbiBnaSB0YXVzaGV0IOKAkyBlbGxlciDDpXBlbmhldCBvZyBmbHl0PC90ZXh0Pgo8cmVjdCB4PSIzODAuMCIgeT0iMTkwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjExMiIgcng9IjE0IiBmaWxsPSIjMTcxZTE5IiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjcwMC4wIiB5PSIyMzciIGZvbnQtc2l6ZT0iMjkiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5QcmVzdGFzam9uc3NpdHVhc2pvbjwvdGV4dD4KPHRleHQgeD0iNzAwLjAiIHk9IjI3NCIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPk3DuHRlciwga29kZWdqZW5ub21nYW5nLCBiZXNsdXRuaW5nZXI8L3RleHQ+CjxsaW5lIHgxPSI3MDAuMCIgeTE9IjMwNiIgeDI9IjcwMC4wIiB5Mj0iMzUyIiBzdHJva2U9IiNhOGIxYTciIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaCkiLz4KPHJlY3QgeD0iMzgwLjAiIHk9IjM2MCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNCIgZmlsbD0iIzE3MWUxOSIgc3Ryb2tlPSIjM2E0YTNmIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSI3MDAuMCIgeT0iNDA3IiBmb250LXNpemU9IjI5IiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+U29zaWFsIGV2YWx1ZXJpbmc8L3RleHQ+Cjx0ZXh0IHg9IjcwMC4wIiB5PSI0NDQiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5BcmJlaWRldCBvZyB2dXJkZXJpbmdlbmUgdsOlcmUgYmxpciBzeW5saWdlPC90ZXh0Pgo8bGluZSB4MT0iNzAwLjAiIHkxPSI0NzYiIHgyPSI3MDAuMCIgeTI9IjUyMiIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWgpIi8+CjxyZWN0IHg9IjM4MC4wIiB5PSI1MzAiIHdpZHRoPSI2NDAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMxNzFlMTkiIHN0cm9rZT0iIzNhNGEzZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iNzAwLjAiIHk9IjU3NyIgZm9udC1zaXplPSIyOSIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkVtb3Nqb25lbGwgYWt0aXZlcmluZzwvdGV4dD4KPHRleHQgeD0iNzAwLjAiIHk9IjYxNCIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlVzaWtrZXJoZXQsIGZyeWt0LCBza2FtLCBpcnJpdGFzam9uPC90ZXh0Pgo8bGluZSB4MT0iNzAwLjAiIHkxPSI2NDYiIHgyPSI3MDAuMCIgeTI9IjY5MiIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWgpIi8+CjxyZWN0IHg9IjM4MC4wIiB5PSI3MDAiIHdpZHRoPSI2NDAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMyMjMwMjAiIHN0cm9rZT0iI2M0ZTQ5YSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iNzAwLjAiIHk9Ijc0NyIgZm9udC1zaXplPSIyOSIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlJlZ3VsZXJpbmc8L3RleHQ+Cjx0ZXh0IHg9IjcwMC4wIiB5PSI3ODQiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Idm9yZGFuIGFrdGl2ZXJpbmdlbiBibGlyIGjDpW5kdGVydCDigJMgYWxlbmUgb2cgc2FtbWVuPC90ZXh0Pgo8cGF0aCBkPSJNNzAwLjAsODE2IEw3MDAuMCw4NDggTDM2MCw4NDggTDM2MCw5MTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2UzYTM3ZiIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2FocikiLz4KPHBhdGggZD0iTTcwMC4wLDg0OCBMMTA0MCw4NDggTDEwNDAsOTE0IiBmaWxsPSJub25lIiBzdHJva2U9IiNjNGU0OWEiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaGcpIi8+CjxyZWN0IHg9IjEwMC4wIiB5PSI5MjIiIHdpZHRoPSI1MjAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMyZTIzMWQiIHN0cm9rZT0iI2UzYTM3ZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iMzYwIiB5PSI5NjkiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Iw7h5IHNvc2lhbCB0cnVzc2VsPC90ZXh0Pgo8dGV4dCB4PSIzNjAiIHk9IjEwMDYiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5UYXVzaGV0LCBkZWZlbnNpdml0ZXQsIG92ZXJmb3JzaWt0aWdoZXQ8L3RleHQ+CjxsaW5lIHgxPSIzNjAiIHkxPSIxMDM4IiB4Mj0iMzYwIiB5Mj0iMTA4NCIgc3Ryb2tlPSIjZTNhMzdmIiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWhyKSIvPgo8cmVjdCB4PSIxMDAuMCIgeT0iMTA5MiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNCIgZmlsbD0iIzJlMjMxZCIgc3Ryb2tlPSIjZTNhMzdmIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSIzNjAiIHk9IjExMzkiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID7DmGt0IGludGVyZmVyZW5zPC90ZXh0Pgo8dGV4dCB4PSIzNjAiIHk9IjExNzYiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5UdW5uZWxzeW4sIHN0cmVzcywgbWluZHJlIGRlbGluZzwvdGV4dD4KPGxpbmUgeDE9IjM2MCIgeTE9IjEyMDgiIHgyPSIzNjAiIHkyPSIxMjU0IiBzdHJva2U9IiNlM2EzN2YiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaHIpIi8+CjxyZWN0IHg9IjEwMC4wIiB5PSIxMjYyIiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjExMiIgcng9IjE0IiBmaWxsPSIjZTNhMzdmIiBzdHJva2U9IiNlM2EzN2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjM2MCIgeT0iMTMwOSIgZm9udC1zaXplPSIyOCIgZmlsbD0iIzE4MjIxNiIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkxhdmVyZSBwcmVzdGFzam9uPC90ZXh0Pgo8dGV4dCB4PSIzNjAiIHk9IjEzNDYiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiMyYzNhMjYiIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Lb21wZXRhbnNlbiBibGlyIG1pbmRyZSB0aWxnamVuZ2VsaWc8L3RleHQ+CjxyZWN0IHg9Ijc4MC4wIiB5PSI5MjIiIHdpZHRoPSI1MjAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMyMjMwMjAiIHN0cm9rZT0iI2M0ZTQ5YSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iMTA0MCIgeT0iOTY5IiBmb250LXNpemU9IjI4IiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+UHN5a29sb2dpc2sgdHJ5Z2doZXQ8L3RleHQ+Cjx0ZXh0IHg9IjEwNDAiIHk9IjEwMDYiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID7DhXBlbmhldCwgbnlzZ2plcnJpZ2hldCwgc3TDuHR0ZTwvdGV4dD4KPGxpbmUgeDE9IjEwNDAiIHkxPSIxMDM4IiB4Mj0iMTA0MCIgeTI9IjEwODQiIHN0cm9rZT0iI2M0ZTQ5YSIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2FoZykiLz4KPHJlY3QgeD0iNzgwLjAiIHk9IjEwOTIiIHdpZHRoPSI1MjAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMyMjMwMjAiIHN0cm9rZT0iI2M0ZTQ5YSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iMTA0MCIgeT0iMTEzOSIgZm9udC1zaXplPSIyOCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlJlZHVzZXJ0IGludGVyZmVyZW5zPC90ZXh0Pgo8dGV4dCB4PSIxMDQwIiB5PSIxMTc2IiBmb250LXNpemU9IjIxIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+S2xhcmhldCwgZmxla3NpYmVsIHRlbmtuaW5nLCBmbHl0PC90ZXh0Pgo8bGluZSB4MT0iMTA0MCIgeTE9IjEyMDgiIHgyPSIxMDQwIiB5Mj0iMTI1NCIgc3Ryb2tlPSIjYzRlNDlhIiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWhnKSIvPgo8cmVjdCB4PSI3ODAuMCIgeT0iMTI2MiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNCIgZmlsbD0iI2M0ZTQ5YSIgc3Ryb2tlPSIjYzRlNDlhIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSIxMDQwIiB5PSIxMzA5IiBmb250LXNpemU9IjI4IiBmaWxsPSIjMTgyMjE2IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+QmVkcmUgcHJlc3Rhc2pvbjwvdGV4dD4KPHRleHQgeD0iMTA0MCIgeT0iMTM0NiIgZm9udC1zaXplPSIyMSIgZmlsbD0iIzJjM2EyNiIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPk1lciBhdiBrb21wZXRhbnNlbiBibGlyIGJydWt0PC90ZXh0Pgo8dGV4dCB4PSI4MCIgeT0iMTQzMCIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiBmb250LXN0eWxlPSJpdGFsaWMiPlByZXN0YXNqb24gPSBwb3RlbnNpYWwg4oiSIGludGVyZmVyZW5zLiBUcnlnZ2hldCBlbmRyZXIgaWtrZSBwb3RlbnNpYWxldCwgbWVuIGh2b3IgbXllIGF2IGRldCBzb20gYmxpciB0aWxnamVuZ2VsaWcuPC90ZXh0Pgo8L3N2Zz4=" alt="Flytdiagram: En prestasjonssituasjon fører til sosial evaluering, deretter emosjonell aktivering og regulering. Ved høy sosial trussel følger taushet og defensivitet, økt interferens og lavere prestasjon. Ved psykologisk trygghet følger åpenhet og støtte, redusert interferens og bedre prestasjon.">
+  <figcaption>Figur 4.1: Psykologisk trygghet som reguleringskapasitet i prestasjonssituasjoner.</figcaption>
+</figure>
+<p>Modellen viser hvordan sosial evaluering påvirker emosjonell aktivering, regulering og videre handling. Høy sosial trussel kan føre til defensivitet, taushet og økt interferens, mens psykologisk trygghet kan redusere sosial trussel og dermed legge til rette for mer hensiktsmessig regulering og bedre prestasjon. De sentrale elementene utdypes videre, med særlig vekt på hvordan psykologisk trygghet påvirker reguleringskapasitet i team.</p>
+
+<h3>4.1 Fra trygghet til regulering</h3>
+<p>Psykologisk trygghet forstås tradisjonelt som et relasjonelt klima – en delt opplevelse av at det er trygt å ta mellommenneskelig risiko i en gruppe, slik Amy Edmondson beskriver (Edmondson, udatert). Der Edmondson beskriver trygghet som relasjonelt klima, forstås det her som en reguleringskapasitet – en kapasitet som påvirker emosjonell aktivering og dermed prestasjon.</p>
+<p>Ellers kan begrepet bli stående på et beskrivende nivå: «Her er det trygt» eller «Her er det ikke trygt». En slik forståelse sier lite om hva som faktisk gjør at trygghet påvirker prestasjon. Psykologisk trygghet kan mer presist forstås som en kontekst som reduserer sosial trussel og muliggjør regulering.</p>
+<p>Når sosial trussel reduseres, reduseres også aktivering av skam og frykt. Dette har direkte konsekvenser for kognitiv fleksibilitet, informasjonsdeling og læring. Trygghet blir dermed ikke primært et følelsesmessig klima, men en reguleringsbetingelse.</p>
+
+<h3>4.2 Sosial trussel og interferens</h3>
+<p>I prestasjonsmiljøer er sosial evaluering en konstant faktor. Når ansatte opplever høy sosial trussel, aktiveres trusselresponsen. Dette fører til at man trekker seg tilbake fra diskusjoner, går i forsvar, deler mindre av feil og usikkerhet, og blir mer forsiktig og mindre villig til å ta initiativ. Fra et prestasjonsperspektiv representerer dette betydelig interferens. Psykologisk trygghet reduserer sosial trussel og dermed interferens. Dette gjør det lettere å delta, dele usikkerhet og håndtere utfordringer.</p>
+
+<h3>4.3 Regulering som noe vi skaper sammen</h3>
+<p>Individuell regulering er en ferdighet. Men regulering skjer ikke isolert; den påvirkes av kontekst – blant annet normer, ledelse og feedback. Kollektiv reguleringskapasitet innebærer at teamet som helhet kan håndtere emosjonell aktivering uten at det eskalerer til defensivitet eller taushet. Dette kommer til uttrykk gjennom hvordan teamet håndterer uenighet, feil og usikkerhet. Samtidig kan sterke følelser rommes uten at retning og fremdrift går tapt. På denne måten blir emosjonell intelligens en kollektiv ressurs, ikke bare en individuell.</p>
+
+<h3>4.4 Trygghet ≠ komfort</h3>
+<p>En sentral misforståelse er at psykologisk trygghet innebærer fravær av ubehag. I prestasjonsmiljøer er ubehag uunngåelig. Kompleks problemløsning, innovasjon og kvalitetssikring krever friksjon. Forskjellen mellom komfort og trygghet kan forstås som et skille i både risiko og aktivering. Komfort innebærer lav risiko og lite friksjon, mens trygghet innebærer å kunne stå i ubehag uten å miste regulering. Trygghet handler dermed ikke om å unngå ubehag, men om å kunne stå i det uten å miste reguleringskapasitet. Dette gjør det mulig å kombinere høye krav med læring.</p>
+
+<h3>4.5 Trygghet og prestasjon (P = P − I)</h3>
+<p>Ved å koble psykologisk trygghet til prestasjonsformelen blir mekanismen tydelig. I IT-organisasjoner er potensialet ofte høyt, både i form av kompetanse, erfaring og problemløsningsevne. Samtidig kan interferensen være betydelig, blant annet gjennom frykt, skam og negative tankemønstre. Psykologisk trygghet kan redusere denne interferensen ved å dempe sosial trussel. Dermed kan prestasjonen øke uten at potensialet nødvendigvis endres. Dette innebærer at prestasjon kan økes ved å redusere interferens.</p>
+
+<h3>4.6 Trygghet og indre motivasjon</h3>
+<p>Selvbestemmelsesteorien fremhever behovene for autonomi, mestring og tilhørighet. Psykologisk trygghet støtter særlig behovet for mestring og tilhørighet. Når ansatte kan delta uten frykt, øker ansvar og bidrag. Dette styrker indre motivasjon, som igjen påvirker vedvarende innsats og kvalitet.</p>
+<p>Så langt har oppgaven belyst hvordan emosjonell aktivering kan påvirke handling, oppmerksomhet og samspill, og hvordan ulike mentale teknikker kan støtte regulering. For å samle disse perspektivene kan det være nyttig å ta utgangspunkt i et rammeverk som viser hvordan regulering bygges opp gjennom flere nivåer.</p>
+
+<h3>4.7 RAW-modellen</h3>
+<p>RAW-modellen kan brukes som et rammeverk for å forstå hvordan reguleringskapasitet utvikles over tid. Den synliggjør at evnen til å håndtere emosjonell aktivering ikke oppstår spontant i krevende situasjoner, men bygger på et samspill mellom grunnleggende forståelse, konkrete teknikker og utviklede ferdigheter (Myhre, 2024).</p>
+<div class="example"><span class="kicker">RAW-modellen kort fortalt</span>
+<p>Modellen (© C. Ystenes, Raw Performance) er bygget i lag, nedenfra og opp:</p>
+<ul>
+<li><strong>Filosofi</strong> som grunnmur.</li>
+<li><strong>Mentale basisteknikker:</strong> målsetting, visualisering, indre dialog og avspenning.</li>
+<li><strong>Mentale ferdigheter:</strong> selvtillit, spenningsregulering, fokus, viljestyrke og motivasjon.</li>
+<li><strong>Selvregulering</strong> på arenaen, ut fra situasjonens behov.</li>
+<li><strong>Prestasjoner</strong> og øverst <strong>resultater</strong>.</li>
+</ul>
+<p>Emosjoner og coachingverktøy går langs hele modellen. Originalfiguren er ikke gjengitt i denne versjonen.</p></div>
+<p>I denne oppgaven er modellen særlig relevant fordi den tydeliggjør at regulering ikke kun er en individuell kapasitet. Selv om teknikker som indre dialog, spenningsregulering og målsetting kan styrke individets evne til å håndtere press, vil tilgjengeligheten av disse ferdighetene påvirkes av konteksten de anvendes i.</p>
+<p>I miljøer preget av høy sosial trussel kan aktiveringsnivået bli så høyt at tilgangen til egne reguleringsressurser reduseres. Omvendt kan et miljø med høy psykologisk trygghet støtte opp under regulering ved å redusere unødig aktivering og gi større handlingsrom. Modellen kan dermed forstås som en bro mellom individuell mental trening og kollektiv reguleringskapasitet. Den illustrerer hvordan indre ressurser bygges opp, men også hvorfor disse ikke kan forstås uavhengig av det organisatoriske miljøet de inngår i. Dette understreker at regulering ikke bare handler om hva individet kan gjøre, men om hvilke betingelser organisasjonen skaper for at regulering faktisk skal være mulig.</p>
+
+<h3>4.8 Definisjon</h3>
+<p class="pull">Psykologisk trygghet kan dermed defineres som en kollektiv kapasitet til å regulere emosjonell aktivering under prestasjonspress.</p>
+<p>Forstått på denne måten blir psykologisk trygghet ikke bare et relasjonelt klima, men en reguleringsbetingelse i organisasjonen. Den påvirker hvor tilgjengelig selvregulering faktisk er i situasjoner preget av sosial eksponering, usikkerhet og risiko.</p>
+
+<h2 id="k5">5 Ledelse og regulering</h2>
+<h3>5.1 Regulering som lederkompetanse</h3>
+<p>Emosjonell regulering blir ofte forstått som en individuell ferdighet. Analysen så langt har imidlertid vist at selvregulering i organisatoriske sammenhenger alltid formes av konteksten den skjer i. Den påvirkes av graden av sosial trussel, av relasjonelle mønstre og av hvilke reguleringsbetingelser miljøet stiller til rådighet. I dette perspektivet blir regulering også en sentral lederkompetanse. Ledere påvirker ikke bare egne reaksjoner, men også hvordan emosjonell aktivering utvikler seg i gruppen. Hvordan ledere reagerer på feil, kritikk og uenighet kan enten forsterke eller redusere sosial trussel i teamet.</p>
+<p>Når emosjonell aktivering eskalerer i en gruppe, kan dette føre til defensivitet, konflikt eller tilbaketrekning. Dersom ledere derimot evner å regulere både egen og gruppens aktivering, kan uenighet håndteres uten at relasjonen bryter sammen. Regulering blir dermed en forutsetning for å opprettholde refleksjon, læring og beslutningskvalitet i situasjoner med høy prestasjonsbelastning. I dette perspektivet kan regulering forstås som en profesjonell ferdighet i ledelse – en kompetanse som gjør det mulig å håndtere komplekse relasjonelle situasjoner uten at emosjonell aktivering reduserer gruppens samlede kapasitet.</p>
+
+<h3>5.2 Relasjonsledelse og regulering</h3>
+<p>Relasjonsledelse handler om hvordan ledere bygger og vedlikeholder relasjoner gjennom kommunikasjon, tilstedeværelse og tillit. I denne oppgaven forstås relasjonsledelse ikke primært som et trivselstiltak, men som en mekanisme som påvirker regulering i samhandling. Når mennesker opplever å bli lyttet til og forstått, reduseres opplevelsen av sosial trussel. Dette påvirker direkte hvordan emosjoner aktiveres og reguleres i en gruppe. Relasjonelle ferdigheter kan derfor forstås som praktiske verktøy for regulering. Eksempler på slike ferdigheter er:</p>
+<ul>
+<li><strong>Fokusert lytting.</strong> Når ledere lytter med reell oppmerksomhet, signaliserer de respekt og interesse. Dette kan redusere defensivitet og åpne for mer nyansert dialog.</li>
+<li><strong>Åpne og utforskende spørsmål.</strong> Spørsmål som inviterer til refleksjon fremfor forsvar kan bidra til å stabilisere emosjonell aktivering i diskusjoner.</li>
+<li><strong>Parafrasering og oppsummering.</strong> Ved å gjengi det andre har sagt med egne ord kan ledere bidra til felles forståelse og redusere misforståelser.</li>
+<li><strong>Perspektivtaking.</strong> Evnen til å forsøke å forstå situasjonen fra andres perspektiv kan redusere risikoen for feilaktige tolkninger og eskalering av konflikt.</li>
+</ul>
+<p>Gjennom slike relasjonelle ferdigheter kan ledere påvirke hvordan emosjonell aktivering utvikler seg i samhandling. Relasjonsledelse kan derfor forstås som en form for reguleringskompetanse i praksis.</p>
+
+<h3>5.3 Lederens rolle</h3>
+<p>Dersom psykologisk trygghet forstås som kollektiv reguleringskapasitet, innebærer det at ledere spiller en sentral rolle i å forme reguleringsnivået i en gruppe. Dette skjer gjennom små, men betydningsfulle handlinger i hverdagen, særlig i situasjoner som innebærer sosial evaluering. Typiske eksempler er når en medarbeider gjør en feil, når beslutninger utfordres, når det oppstår uenighet i møter, eller når noen uttrykker usikkerhet. I slike situasjoner kan lederens respons enten øke eller redusere sosial trussel.</p>
+<p>En leder som reagerer med irritasjon eller avvisning kan forsterke emosjonell aktivering i gruppen. En leder som derimot møter situasjonen med nysgjerrighet og ro, kan bidra til å stabilisere samhandlingen. Kollektiv reguleringskapasitet utvikles derfor ikke primært gjennom strukturerte tiltak, men gjennom hvordan ledere håndterer relasjonelle situasjoner i det daglige arbeidet.</p>
+
+<h3>5.4 HR og reguleringsmiljø</h3>
+<p>Selv om regulering i stor grad utøves gjennom ledelse, kan HR spille en viktig rolle i å utvikle strukturer og praksiser som støtter reguleringskapasitet i organisasjonen. Dette kan for eksempel innebære å utvikle lederkompetanse, etablere arenaer for refleksjon, utvikle et språk for læring og feil, samt bidra til mer balanserte målstrukturer. I denne sammenhengen blir HR ikke primært en støttefunksjon for trivsel, men en aktør som bidrar til å utvikle organisatoriske rammer for regulering.</p>
+<p>Samtidig er det viktig å understreke at psykologisk trygghet ikke kan skapes gjennom HR-tiltak alene. Den utvikles i stor grad gjennom lederes daglige samhandling med medarbeidere. HRs rolle kan derfor forstås som å legge til rette for at ledere har kompetanse, strukturer og støtte til å utøve reguleringskompetanse i praksis. HR påvirker blant annet:</p>
+<ol>
+<li><strong>Hvordan prestasjon defineres.</strong> Hvis prestasjon utelukkende måles gjennom resultatmål, kan sosial trussel øke. En balansert bruk av drømmemål, resultatmål, prestasjonsmål og prosessmål kan redusere unødvendig press og fremme læring.</li>
+<li><strong>Feedback-praksis.</strong> Feedback-sandwich kan redusere skamaktivering ved å ramme inn forbedringsområder konstruktivt.</li>
+<li><strong>Lederutvikling.</strong> Opplæring i emosjonell intelligens og reguleringsverktøy styrker lederes evne til å romme andres følelser uten å miste retning.</li>
+<li><strong>Onboarding.</strong> Nye ansatte kan introduseres for organisasjonens reguleringsnormer og språk for emosjoner.</li>
+<li><strong>Struktur for refleksjon.</strong> «Styremøte med seg selv» og strukturerte refleksjonsmøter kan integreres i prestasjonsdialoger.</li>
+</ol>
+<p>Gjennom disse mekanismene påvirker HR graden av kollektiv interferens.</p>
+
+<h3>5.5 Regulering som del av lederrollen</h3>
+<p>I mange tekniske miljøer forbindes profesjonalitet først og fremst med rasjonalitet og faglig kompetanse. Emosjoner kan i slike sammenhenger bli sett på som noe privat eller irrelevant for arbeid. Denne oppgaven argumenterer for et annet perspektiv. I komplekse kunnskapsorganisasjoner er evnen til å håndtere emosjonell aktivering en viktig del av profesjonell kompetanse. Ledere som evner å regulere både egne og andres reaksjoner kan bidra til mer stabile beslutningsprosesser, bedre samarbeid og høyere læringskapasitet.</p>
+<p>Relasjonskompetanse kan derfor forstås som en sentral del av moderne ledelse. Ikke fordi relasjoner i seg selv er målet, men fordi kvaliteten på relasjonene påvirker hvordan mennesker tenker, lærer og presterer under press. Når regulering integreres som en del av profesjonell lederstandard, kan psykologisk trygghet utvikles som en naturlig konsekvens av hvordan organisasjonen arbeider – snarere enn som et separat kulturinitiativ.</p>
+
+<h2 id="k6">6 Drøfting</h2>
+<h3>6.1 Kan regulering bli nytt prestasjonspress?</h3>
+<p>En mulig kritikk av denne oppgaven er at den risikerer å gjøre emosjonsregulering til et nytt prestasjonskrav. Dersom regulering forstås som en ferdighet som forventes av alle, kan det oppstå en implisitt norm om at man alltid skal håndtere egne følelser profesjonelt og effektivt. Dette kan føre til en mer skjult form for emosjonelt prestasjonspress, der sterke reaksjoner oppfattes som uprofesjonelle eller lite ønskelige. I et slikt perspektiv kan mental trening bli et verktøy for tilpasning til systemet, fremfor en støtte for utvikling. For å unngå dette må regulering forstås som kapasitet, ikke som konstant kontroll. Emosjonell regulering innebærer ikke undertrykking av følelser, men bevissthet og fleksibilitet. Det må også være rom for feilregulering og læring.</p>
+
+<h3>6.2 Individualisering av ansvar</h3>
+<p>En sentral utfordring gjelder hvordan ansvaret for regulering forstås. Dersom psykologisk trygghet beskrives som reguleringskapasitet, kan ansvaret lett forskyves mot individet: «Du må regulere deg selv.» Dette er særlig problematisk i miljøer preget av vedvarende høy sosial trussel, for eksempel gjennom utydelig ledelse, inkonsekvent feedback eller uforutsigbare reaksjoner. I slike kontekster er det ikke primært individets ferdigheter som svikter, men betingelsene for regulering.</p>
+<p>Emosjonsregulering skjer ikke uavhengig av kontekst. Vedvarende høy aktivering kan redusere evnen til fleksibel regulering, selv hos kompetente medarbeidere. Oppgaven argumenterer derfor for at regulering ikke bør individualiseres, men forstås som et systemansvar. HR kan i denne sammenhengen bidra ved å redusere kollektiv interferens gjennom strukturer, språk og normer.</p>
+
+<h3>6.3 Risiko for for lavt prestasjonspress</h3>
+<p>En annen innvending kan være at sterk vektlegging av trygghet og emosjoner kan føre til lavere krav og redusert prestasjonsfokus. Dette forutsetter imidlertid at trygghet og krav står i motsetning til hverandre. Analysen i denne oppgaven viser det motsatte: Uten reguleringskapasitet vil høye krav øke interferens og redusere kvalitet. Trygghet må derfor forstås som en betingelse for å kunne opprettholde høye standarder over tid. Regulering muliggjør konfrontasjon, tydelig feedback og ambisiøse mål uten eskalering.</p>
+
+<h3>6.4 Makt og hierarki</h3>
+<p>Psykologisk trygghet påvirkes av maktforhold. I hierarkiske strukturer kan det være større risiko knyttet til å uttrykke usikkerhet eller uenighet. Reguleringskapasitet må derfor modelleres av ledere. Dersom ledere selv reagerer defensivt, vil sosial trussel øke uavhengig av uttalte verdier. HRs rolle blir her å tydeliggjøre forventninger til lederatferd og utvikle emosjonell intelligens som del av lederkompetanse.</p>
+
+<h3>6.5 Begrensninger ved mental trening i organisasjon</h3>
+<p>Mental trening har sterke røtter i individfokus. Overføring til organisasjonsnivå krever varsomhet. Organisasjoner er komplekse systemer påvirket av økonomiske rammer, strategi, ressursfordeling og kulturhistorie. Regulering kan ikke kompensere for strukturelle mangler. Det er derfor viktig å forstå mental trening som et supplement til, ikke en erstatning for, tydelig strategi og struktur.</p>
+
+<h3>6.6 Bærekraftig prestasjon</h3>
+<p>Et sentralt poeng i denne oppgaven er at reguleringskapasitet ikke bare påvirker kortsiktig ytelse, men også bærekraft over tid. Vedvarende høy sosial trussel kan over tid føre til emosjonell utmattelse, redusert motivasjon, mindre fleksibel tenkning og økt turnover. En reguleringskultur kan derimot bidra til å stabilisere spenningsnivået og støtte indre motivasjon, blant annet gjennom opplevelse av mestring og tilhørighet.</p>
+
+<h3>6.7 Oppsummering av drøfting</h3>
+<p>Drøftingen viser at regulering ikke må bli et nytt prestasjonspress, og at ansvaret må balanseres mellom individ og system. Psykologisk trygghet må kombineres med tydelige krav, og ledelse fremstår som avgjørende for hvordan regulering faktisk utøves i praksis. Samtidig har oppgaven vist at mental trening har klare begrensninger, særlig i kontekster preget av vedvarende sosial trussel.</p>
+<p>Til tross for disse utfordringene gir dette perspektivet et nyttig utgangspunkt for å forstå hvordan emosjoner og prestasjon henger sammen i kunnskapsorganisasjoner. Oppgaven har vist at regulering ikke er et universalmiddel, og at strukturelle forhold og maktforhold setter grenser for hva mental trening kan kompensere for. Samtidig peker analysen på at organisasjoner kan påvirke prestasjon ikke bare gjennom kompetanseutvikling, men ved å redusere interferens. I dette perspektivet forstås psykologisk trygghet ikke primært som et relasjonelt klima, men som en kollektiv kapasitet til å regulere emosjonell aktivering i situasjoner preget av sosial evaluering. I kunnskapsorganisasjoner, hvor prestasjon ofte skjer i sosialt eksponerte situasjoner, kan slik reguleringskapasitet bidra til bedre utnyttelse av eksisterende kompetanse.</p>
+
+<h2 id="k7">7 Avslutning</h2>
+<p>Prestasjon i kunnskapsintensive organisasjoner avgjøres ikke utelukkende av individuell kompetanse, men av systemets evne til å håndtere emosjonell aktivering under press. Oppgaven har vist hvordan emosjoner, og særlig regulering av disse, er avgjørende for prestasjon i kunnskapsorganisasjoner.</p>
+<p>Et sentralt funn er at denne reguleringskapasiteten i stor grad formes på øvre nivå i organisasjonen. Ledergrupper og styrer setter både eksplisitt og implisitt spenningsnivå, normer for feil og rammer for læring. Psykologisk trygghet kan derfor ikke forstås som et tiltak på individ- eller teamnivå alene, men som et systemansvar som må forankres i ledelse og styring.</p>
+<p>Mental trening gir effektive verktøy for individuell regulering, men først når disse integreres i strukturer, språk og forventninger på organisasjonsnivå, kan prestasjonspotensial realiseres over tid. HR får i denne sammenhengen en strategisk rolle som designer av reguleringsarkitektur – ikke som støttefunksjon, men som bidragsyter til bærekraftig prestasjonskultur.</p>
+<p class="closing-line">Spørsmålet er derfor ikke om organisasjoner har kompetanse, men om de klarer å skape betingelser som gjør den tilgjengelig når det gjelder.</p>
+</div>
+<section class="sources" aria-labelledby="kilder-tittel">
+<h2 id="kilder-tittel">Referanseliste</h2>
+<ul>
+<li>Edmondson, A. C. (udatert). <i>Psychological Safety.</i> amycedmondson.com/category/psychological-safety. Hentet 19. mars 2026.</li>
+<li>Gamlesanne, A.-H. (2026). Presentasjoner fra kurs i mentaltrening.</li>
+<li>Myhre, C. Y. (2018). <i>Mental styrketrening.</i> Aschehoug.</li>
+<li>Myhre, C. Y. (2024). Presentasjoner fra kurs i mentaltrening.</li>
+<li>Myhre, C. Y. &amp; Aas, K. A. (2025). <i>Prestasjonsledelse.</i> Aschehoug.</li>
+</ul>
+</section>
+    </article>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Illustrasjon i full størrelse">
+    <button type="button" aria-label="Lukk">×</button>
+    <img alt="">
+  </div>
+  <script>
+    (function () {
+      var box = document.getElementById('lightbox'), big = box.querySelector('img'), last = null;
+      function close() { box.classList.remove('open'); if (last) last.focus(); }
+      document.querySelectorAll('figure img').forEach(function (img) {
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
+        img.title = 'Klikk for å se i full størrelse';
+        function open() { last = img; big.src = img.src; big.alt = img.alt; box.classList.add('open'); box.querySelector('button').focus(); }
+        img.addEventListener('click', open);
+        img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+      });
+      box.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
+    })();
+  </script>
+
+  <footer>
+    <div class="wrap">
+      <span><span style="color:var(--text)">Camilla Karud</span> · Mennesker, teknologi og organisasjon</span>
+      <span><a href="https://www.linkedin.com/in/camilla-karud-91b32740/" target="_blank" rel="noopener">LinkedIn ↗</a> &nbsp;·&nbsp; <a href="../index.html#fordypning">← Tilbake til fordypning</a></span>
+    </div>
+  </footer>
+</body>
+</html>

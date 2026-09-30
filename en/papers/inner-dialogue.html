@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inner dialogue – Camilla Karud</title>
+  <meta name="description" content="A paper on impostor syndrome and inner dialogue, with practical tools from mental training: the three Ds, thought records, the STOP method, ABC-E and SMART goals.">
+  <meta name="theme-color" content="#111613">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Inner dialogue">
+  <meta property="og:description" content="A paper on impostor syndrome and inner dialogue, with practical tools from mental training: the three Ds, thought records, the STOP method, ABC-E and SMART goals.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23111613' stroke='%23c4e49a' stroke-width='2'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23c4e49a'%3ECK%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111613; --panel: #171e19; --text: #f1f2e9; --body: #d6dcd2; --muted: #a8b1a7; --faint: #8c968b;
+      --line: rgba(225,235,223,.13); --accent: #c4e49a;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.75 var(--sans); -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, p, ol, ul, blockquote, figure { margin: 0; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+    .skip { position: absolute; left: 20px; top: -100px; z-index: 10; padding: 10px 14px; color: var(--bg); background: var(--accent); }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .kicker { display: block; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top .wrap { min-height: 82px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding-block: 14px; }
+    .name { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 650; letter-spacing: -.02em; font-size: 16px; }
+    .name .mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(196,228,154,.55); border-radius: 50%; color: var(--accent); font: 13px var(--serif); }
+    .back { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .back:hover { color: var(--text); }
+    .head-right { display: inline-flex; align-items: center; gap: 18px; }
+    .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .lang-switch a, .lang-switch span { display: inline-grid; place-items: center; min-width: 38px; min-height: 30px; padding: 0 10px; border-radius: 999px; text-decoration: none; color: var(--muted); }
+    .lang-switch a:hover { color: var(--text); }
+    .lang-switch [aria-current] { background: var(--accent); color: #182216; }
+
+    .article { width: min(720px, calc(100% - 40px)); margin-inline: auto; padding-block: 88px 40px; }
+    .article header .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--muted); font-size: 13px; margin-top: 16px; }
+    .article h1 { margin-top: 22px; font: 400 clamp(40px, 6.4vw, 66px)/1.06 var(--serif); letter-spacing: -.04em; }
+    .article .dek { margin-top: 20px; color: var(--muted); font: italic 400 clamp(19px, 2.4vw, 23px)/1.45 var(--serif); }
+    .body { margin-top: 56px; color: var(--body); }
+    .body p + p, .body p + ul, .body ul + p { margin-top: 1.15em; }
+    .body h2 { margin: 2.4em 0 .8em; color: var(--text); font: 400 clamp(27px, 3.4vw, 34px)/1.2 var(--serif); letter-spacing: -.02em; }
+    .body strong { color: var(--text); font-weight: 600; }
+    .body em { color: var(--text); }
+    .lead { color: var(--text); font-size: 20px; }
+    .series-note { margin-top: 1.6em !important; padding: 16px 20px; border-left: 2px solid var(--accent); background: rgba(196,228,154,.045); color: var(--muted); font-size: 15px; }
+    .loop { margin: 1.3em 0 !important; color: var(--accent); font: 400 clamp(20px, 2.8vw, 26px)/1.4 var(--serif); text-align: center; }
+    .example { margin-top: 1.4em !important; padding: 22px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .example .kicker { margin-bottom: 8px; }
+    .example + p { margin-top: 1.15em; }
+    figure img { cursor: zoom-in; }
+    .lightbox { position: fixed; inset: 0; z-index: 20; display: none; place-items: center; padding: 24px; background: rgba(8,11,9,.92); cursor: zoom-out; }
+    .lightbox.open { display: grid; }
+    .lightbox img { max-width: min(1500px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 6px; }
+    .lightbox button { position: absolute; top: 16px; right: 16px; min-width: 44px; min-height: 44px; border: 1px solid var(--line); border-radius: 50%; background: var(--panel); color: var(--text); font-size: 20px; cursor: pointer; }
+    .pull { margin: 1.6em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: 400 clamp(22px, 3vw, 27px)/1.4 var(--serif); letter-spacing: -.01em; }
+    figure { margin: 2.4em 0 !important; }
+    @media (min-width: 1000px) { figure:not(.tall) { width: 940px; margin-left: calc((720px - 940px) / 2) !important; } }
+    figure.tall img { max-width: 720px; margin-inline: auto; }
+    figure.tall figcaption { text-align: center; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+    figcaption { margin-top: 10px; color: var(--faint); font-size: 14px; }
+    .questions { list-style: none; padding: 0; margin-top: 1.2em; counter-reset: q; border-top: 1px solid var(--line); }
+    .questions li { counter-increment: q; display: grid; grid-template-columns: 38px 1fr; gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--text); font: 400 21px/1.4 var(--serif); }
+    .questions li::before { content: counter(q); color: var(--accent); font: 400 21px/1.4 var(--serif); }
+    .closing-line { margin-top: 1.6em !important; color: var(--text); font: 400 clamp(24px, 3.4vw, 31px)/1.35 var(--serif); letter-spacing: -.015em; }
+
+    .body h3 { margin: 1.9em 0 .6em; color: var(--text); font: 600 19px/1.4 var(--sans); }
+    .body ul, .body ol { padding-left: 1.3em; }
+    .body li + li { margin-top: .45em; }
+    .body .example ul, .body .example ol { margin-top: .6em; }
+    .body .example p + p, .body .example p + ul { margin-top: .7em; }
+    .quote { margin: 1.4em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: italic 400 21px/1.45 var(--serif); }
+    .formula-line { text-align: center; color: var(--accent); font: 400 clamp(22px, 3vw, 28px)/1.3 var(--serif); }
+    .toc { margin-top: 2em; padding: 20px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .toc ol { margin-top: 10px; padding-left: 1.3em; font-size: 16px; }
+    .toc a { color: var(--text); text-underline-offset: 3px; text-decoration-color: rgba(196,228,154,.5); }
+    .toc a:hover { color: var(--accent); }
+    .next { margin-top: 64px; padding-top: 30px; border-top: 1px solid var(--line); }
+    .next a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-top: 12px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; }
+    .next a:hover { border-color: rgba(196,228,154,.43); }
+    .next b { font: 400 21px/1.35 var(--serif); }
+    .next i { color: var(--accent); font-style: normal; }
+    .body h2[id] { scroll-margin-top: 24px; }
+    .more { margin-top: 72px; padding-top: 34px; border-top: 1px solid var(--line); }
+    .more h2 { margin-top: 12px; font: 400 28px/1.2 var(--serif); }
+    .more ul { list-style: none; padding: 0; margin-top: 18px; display: grid; gap: 10px; }
+    .more a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; padding: 16px 18px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; transition: border-color .2s ease; }
+    .more a:hover { border-color: rgba(196,228,154,.43); }
+    .more a span { color: var(--muted); font-size: 14px; display: block; }
+    .more a b { font: 400 19px/1.35 var(--serif); }
+    .more a i { color: var(--accent); font-style: normal; }
+    .sources { margin-top: 56px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .sources h2 { color: var(--text); font: 600 14px/1.4 var(--sans); margin-bottom: 10px; }
+    .sources li + li { margin-top: 6px; }
+    .sources ul { padding-left: 18px; }
+
+    footer { border-top: 1px solid var(--line); margin-top: 80px; }
+    footer .wrap { min-height: 82px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; color: var(--faint); font-size: 13px; }
+    footer a { text-decoration: none; } footer a:hover { color: var(--accent); }
+    @media (max-width: 700px) {
+      body { font-size: 17px; }
+      .wrap { width: calc(100% - 34px); }
+      .article { padding-top: 60px; }
+      .questions li { font-size: 19px; grid-template-columns: 30px 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#innhold">Skip to content</a>
+  <header class="top" id="toppen">
+    <div class="wrap">
+      <a class="name" href="../index.html"><span class="mark" aria-hidden="true">CK</span><span>Camilla Karud</span></a>
+      <span class="head-right"><a class="back" href="../index.html#fordypning">← Back to deep dives</a><div class="lang-switch" aria-label="Language"><a href="../../fordypningsoppgaver/indre-dialog-niva-1.html" hreflang="no" lang="no">NO</a><span aria-current="true">EN</span></div></span>
+    </div>
+  </header>
+
+  <main id="innhold">
+    <article class="article">
+<header>
+  <span class="kicker">Deep dive · mental trainer level 1 · 2024</span>
+  <h1>Inner dialogue</h1>
+  <p class="dek">How can we use inner dialogue to overcome impostor syndrome?</p>
+  <div class="meta"><span>Camilla Karud</span><span>Raw Performance, Skøyen</span><span>Submitted 14 June 2024</span><span>Approx. 15 minute read</span></div>
+</header>
+<div class="body">
+<p class="series-note">This paper was written as part of my studies at Raw Performance in 2024. This does not mean that Raw Performance vouches for the methods used, the results obtained or the conclusions drawn. Translated from Norwegian.</p>
+
+<p class="lead">In today’s society, where comparing ourselves with others through social media is common and the pressure to perform in every area of life is high, it is easy to set unusually high standards for ourselves.</p>
+<p>Social media can reinforce a perfectionist culture with constant pressure to appear perfect. This can increase stress and anxiety about not being “good enough”, no matter how much success one achieves, which is the core of impostor syndrome.</p>
+<p>How can this be overcome? Mental training offers several good methods for improving the situation. In this paper, I explore what characterises someone with impostor syndrome, what inner dialogue is, and how we can use this technique to reduce negative thoughts and the feeling of being an impostor – and perhaps even remove it from our thinking altogether.</p>
+<p>By understanding the mechanisms behind impostor syndrome and applying effective techniques to improve our inner dialogue, we can all move towards better mental health and a more fulfilling life.</p>
+
+<h2>Characteristics of impostor syndrome</h2>
+<p>Impostor syndrome is a psychological condition in which a person, despite clear evidence of their competence and success, feels like a fraud. Most people experience some form of impostor syndrome with every change of status, whether at work, in a new position or in private life, for example when becoming a parent. This is entirely natural, because you are an “impostor” in the sense that you are a beginner who doesn’t yet know what you are doing (Peterson, 2022).</p>
+<blockquote class="quote">“All great men are play actors of their own ideal.” (Friedrich Nietzsche)</blockquote>
+<p>People with impostor syndrome tend to believe that their achievements are the result of luck or other external factors, rather than their own skill and effort. This sense of inadequacy leads to a constant fear of being exposed as incompetent or a fraud, even though they demonstrate their worth again and again. As a result, they often feel uncomfortable showing their achievements and successes, fearing that it will lead others to discover the “truth” about their supposed incompetence.</p>
+<p>Those who struggle most with impostor syndrome usually share some characteristic traits in their mental skills. Their self-confidence is often low, which leads them to undervalue their own abilities and achievements and to doubt whether they really deserve the success they achieve. Even after receiving positive feedback from others, the doubt about their own worth persists. Many are perfectionists and therefore place disproportionate weight on details, which can prevent them from seeing the bigger picture. The negative inner dialogue they experience also disrupts their focus on the task, as much of their mental energy goes into worrying about their perceived incompetence.</p>
+<p>Although they have strong willpower when it comes to working hard and reaching goals, they also feel exhausted and overwhelmed by the constant pressure to prove themselves. Many compensate by working extra hard to disprove their inner sense of inadequacy, which can lead to burnout. Their motivation is often driven by fear of being exposed as a fraud rather than by genuine inner drive. They may be more motivated by the wish to avoid mistakes than by the wish to succeed. Even after achieving something, they often don’t feel deep or lasting satisfaction, because they attribute the success to luck or external factors.</p>
+<p>Because of the constant inner pressure and self-criticism, people with impostor syndrome often find it very hard to relax. They feel a continuous urge to achieve more and rarely find full satisfaction in taking breaks. The persistent fear of being exposed can lead to higher levels of stress and anxiety, which further hinders their ability to unwind.</p>
+<p>There are, however, not only negative sides to experiencing impostor syndrome. A positive side is that the feeling often reflects a strong wish to do well and a deep respect for other people’s achievements. Feeling like an impostor can indicate that you care a great deal about the quality of your own work and value what others have accomplished. This can motivate continuous personal and professional growth.</p>
+<p>But what actually distinguishes these individuals from those who don’t experience the feeling to the same degree? We all have different starting points, but it is how we react to situations that really sets us apart. Successful people, those who often reach their goals, show a distinctive ability to separate their identity from the challenges they face. They attach themselves more to the process than to the results. They are not afraid to ask for help or to show that they are vulnerable or don’t know something. This pattern of thinking and acting is often called a growth mindset. They are more concerned with long-term learning and development than with immediate results. But what about those with more of a fixed mindset? By focusing on changing their inner dialogue and actively working to shift perspectives, even people with a fixed mindset can learn to embrace growth and improvement (Dweck).</p>
+
+<h2>Inner dialogue</h2>
+<p>By starting from your inner dialogue and working on it continuously, you can stand more steadily in future situations. Inner dialogue refers to the ongoing conversation we have with ourselves in our thoughts. It can be positive or negative, and it affects how we see ourselves and our surroundings. A positive inner dialogue can give us support and motivation, while a negative one can be destructive and lead to, among other things, increased stress and low self-confidence. By becoming aware of our own inner dialogue and actively working to change it, we can positively influence our mental health and improve how we experience ourselves when facing challenges (Myhre, 2018, p. 90).</p>
+
+<h2>Methods for improving inner dialogue</h2>
+<p>Working with inner dialogue is a powerful way to reduce the feeling of being an impostor. Below are several methods, each with an example of how it can be used.</p>
+
+<h3>The three Ds</h3>
+<p>The three Ds is one of the methods you can use. It consists of three steps: distraction, distancing and discussion (Myhre, 2023, p. 120).</p>
+<ol>
+<li><strong>Distraction:</strong> The aim is to shift focus from negative thoughts to positive distractions in order to break the negative thought pattern.</li>
+<li><strong>Distancing:</strong> Remind yourself that thoughts are just thoughts, not facts. You can shape and change your thoughts. By distancing yourself from negative thoughts, you can start to challenge them and see them more objectively.</li>
+<li><strong>Discussion:</strong> Engage in an inner dialogue to challenge the negative thoughts and replace them with more constructive ones.</li>
+</ol>
+<div class="example"><span class="kicker">Example</span>
+<p><strong>Situation:</strong> You are stuck on a task at work and need help from a colleague, but you don’t dare to ask.</p>
+<ul>
+<li><strong>Distraction:</strong> Feeling overwhelmed? Take a short break and walk around the building, listen to your favourite song or watch an inspiring video. This can break the negative thought pattern and give you some breathing space.</li>
+<li><strong>Distancing:</strong> When the thought “They’ll think I’m incompetent” comes up, remind yourself that it is a thought, not a fact. Picture the thought as a cloud drifting past. You don’t have to hold on to it.</li>
+<li><strong>Discussion:</strong> Challenge the negative thought by asking yourself questions like “What would I say to a colleague with the same problem?” or “What’s the worst that can happen?” Then formulate a more positive thought, such as “Asking for help shows that I’m engaged and want to learn.”</li>
+</ul></div>
+
+<h3>Thought record</h3>
+<p>In addition to this method, you can use a thought record (Myhre, 2024), which follows these steps:</p>
+<ol>
+<li><strong>Situation:</strong> Identify a specific event that triggers an unpleasant feeling, memory or physical symptoms.</li>
+<li><strong>Automatic thought:</strong> Write down the first thought that comes up just before the feeling arises.</li>
+<li><strong>Feeling:</strong> Rate the strength of the feeling you experience when the thought comes, from 0 to 100%.</li>
+<li><strong>Reassessment:</strong> Explore alternative and more realistic interpretations of the situation, and rate how much you believe them from 0 to 100%.</li>
+<li><strong>Outcome:</strong> Go back to your original thought. How much do you believe it now, and how strong is the feeling you are left with?</li>
+</ol>
+<div class="example"><span class="kicker">Example</span>
+<ul>
+<li><strong>Situation:</strong> You have recently been given an important project at work that you are going to present to management. You feel overwhelmed and start doubting your abilities.</li>
+<li><strong>Automatic thought:</strong> “I’m going to fail, and everyone will realise I’m not qualified for this job.”</li>
+<li><strong>Feeling:</strong> Strong feeling of anxiety and uncertainty. Rating: 85%.</li>
+<li><strong>Reassessment:</strong> “I was given this project because management believes in my abilities and competence” (80%). “I have succeeded with similar tasks before” (75%). “It’s natural to feel nervous before an important presentation, but that doesn’t mean I’m not qualified” (70%).</li>
+<li><strong>Outcome:</strong> How much do you believe the original thought now? 30%. The feeling of anxiety and uncertainty has been reduced. Rating: 40%.</li>
+</ul></div>
+<p>By using the thought record, you have gone from an intense feeling of anxiety and doubt (85%) to a significantly reduced feeling (40%). By exploring and reassessing your automatic thoughts with more realistic and positive perspectives, you can effectively challenge impostor syndrome and strengthen your self-confidence. The process helps you see that your original thought was unreasonable, and that there is strong evidence of your abilities and past successes.</p>
+
+<h3>The STOP method</h3>
+<p>If you are in a situation where you don’t have time to sit down and complete a full thought record, the STOP method (Myhre, 2024) can be a useful alternative. It consists of five steps:</p>
+<ol>
+<li>Stop</li>
+<li>Take a breath</li>
+<li>Observe</li>
+<li>Perspective</li>
+<li>Practise what works</li>
+</ol>
+<p>When you experience emotional activation, a short pause to collect your thoughts may be needed. The STOP method gives you a moment to look at the situation from different perspectives and act more rationally.</p>
+<div class="example"><span class="kicker">Example</span>
+<p><strong>Situation:</strong> You have been invited to give a presentation at a large conference. You feel nervous and unsure whether you can impress the audience.</p>
+<ul>
+<li><strong>Stop:</strong> When you feel the nervousness building, stop and pay attention to the feeling.</li>
+<li><strong>Take a breath:</strong> Take a few deep breaths to calm your nerves.</li>
+<li><strong>Observe:</strong> Notice your thoughts (“I’m not qualified”), your feelings (nervous, anxious) and your physical reactions (sweating, trembling, a racing heart). Notice also that you feel an urge to pull out.</li>
+<li><strong>Perspective:</strong> Remind yourself that you were chosen for this because of your skills and experience. Think about earlier presentations that went well. What would you say to a friend in this situation?</li>
+<li><strong>Practise what works:</strong> Keep preparing thoroughly, rehearse the presentation in front of a supportive audience, and use positive affirmations to strengthen your confidence.</li>
+</ul></div>
+<p>With the STOP method, you have managed to handle the immediate feeling of impostor syndrome linked to presenting at a conference. The method helps you pause, reflect on the situation, see it from another perspective and then act in a constructive and supportive way. This reduces anxiety and uncertainty and encourages a more positive and productive approach to the challenge.</p>
+
+<h3>The ABC-E method</h3>
+<p>Most people who experience impostor syndrome have strong negative beliefs that affect them deeply. These can show up as thoughts like “I’m not going to manage this”, “If I don’t do everything perfectly, people will think I’m incompetent”, “Everyone else is better than me” or “They’re only saying nice things to be polite. They don’t really mean it.” Learning to recognise these patterns also opens up the possibility of challenging them.</p>
+<p>An effective method for encouraging a more positive and constructive mindset in challenging situations is ABC-E (Myhre, 2023, p. 96). It has four steps:</p>
+<ul>
+<li><strong>A (Activating event):</strong> The situation or event that triggers a particular reaction or feeling.</li>
+<li><strong>B (Beliefs):</strong> The thoughts and beliefs you have about the activating event. They can be rational or irrational, and they affect how you feel and react.</li>
+<li><strong>C (Consequences):</strong> The results of your thoughts and beliefs. They can be emotional (such as anxiety, frustration or joy) and behavioural (such as avoiding the situation or acting with confidence). Negative thoughts can lead to stress and reduced performance, while positive or constructive thoughts can help you handle the situation better and perform better.</li>
+<li><strong>E (Evaluation):</strong> Evaluating and challenging the negative thoughts and beliefs. By asking yourself questions like “Is this a realistic thought?” or “What is the evidence for and against it?”, you can get a more balanced perspective. You also consider whether the thoughts are helpful and whether they help you reach your goals.</li>
+</ul>
+<div class="example"><span class="kicker">Example</span>
+<ul>
+<li><strong>A:</strong> You have been asked to lead a meeting with an important client.</li>
+<li><strong>B:</strong> “I’ve never led such an important meeting before. What if I can’t do it? They’ll think I’m not competent.”</li>
+<li><strong>C:</strong> Emotionally, you feel anxiety and stress. Behaviourally, you consider asking someone else to take over the meeting, or you over-prepare to the point where it becomes counterproductive.</li>
+<li><strong>E:</strong> Is this a realistic thought? “Have I really never led an important meeting? I have succeeded with similar tasks before.” Evidence for the thought: “I feel nervous and unsure because it’s a new situation.” Evidence against: “I was given this task because my managers trust my skills. I have led meetings before and received good feedback.” Is the thought helpful? “No, it only reinforces my uncertainty. It would be more constructive to focus on my past successes and use them as motivation.”</li>
+</ul></div>
+<p>By using ABC-E, you can identify and challenge the negative beliefs that often accompany impostor syndrome. By evaluating and restructuring these thoughts, you can develop a more realistic and positive self-image. This can help you handle challenging situations more constructively, reduce anxiety and increase your self-confidence and ability to perform.</p>
+
+<h3>SMART goals</h3>
+<p>Another technique that can be combined with inner dialogue is goal-setting. By using SMART goals (Myhre, 2018, p. 80), you can make success concrete and reduce the feeling that successes are random. SMART goals are a way of formulating goals so that they become more achievable and manageable, which can reduce the sense of inadequacy that often comes with impostor syndrome. The goals should be specific, measurable, attractive, relevant and time-bound. It is also important to evaluate and adjust them along the way.</p>
+
+<h3>Relaxation</h3>
+<p>When you are in situations where you feel inadequate, it is common to experience stress. Your pulse rises, nervousness sets in, and you may notice that your focus and memory fail you. This can also lead to other physical reactions. In such moments, it can help to use basic techniques to calm the body first, before continuing to work with your inner dialogue. These can include mindfulness, breathing exercises, visualisation or, if time allows, yoga, or shifting focus to other activities you enjoy (also known as the change method) (Myhre, 2018, p. 106).</p>
+<p>Breaking the pattern of tension lets you recover and regain energy. Relaxation improves concentration and memory, lowers the pulse, increases blood circulation and leads to deeper, calmer breathing. You will also feel more present and focused on what is happening around you.</p>
+
+<h3>Visualisation</h3>
+<p>Visualisation is also recommended as a way of influencing inner dialogue. By visualising success and desired outcomes, you can encourage positive thoughts and feelings that strengthen the inner dialogue. It also helps build self-confidence and reduce anxiety linked to performance (Myhre, 2018, p. 81).</p>
+
+<h2>Contribution to skill development</h2>
+<p>By using these techniques, people who experience strong impostor feelings can change their inner dialogue to become more supportive and encouraging, and so move towards better mental health and a more fulfilling life. It is important to be patient and to keep working with these strategies to create lasting change in how you see yourself and your achievements. Through this holistic approach, you can build a stronger sense of self-worth, greater self-confidence and a more realistic view of your own abilities, which can ultimately help you overcome impostor syndrome.</p>
+<ul>
+<li><strong>Self-confidence:</strong> Working with inner dialogue, SMART goals and ABC-E increases self-confidence by challenging negative thoughts and replacing them with positive and realistic assessments of your own skills and achievements.</li>
+<li><strong>Focus:</strong> Relaxation and visualisation improve focus by reducing stress and increasing presence, making it easier to concentrate on tasks and goals.</li>
+<li><strong>Motivation:</strong> Setting attractive and relevant SMART goals gives clear direction and meaning, which increases motivation to work towards them.</li>
+<li><strong>Willpower:</strong> Regular use of techniques such as discussion and evaluation strengthens willpower by encouraging continuous effort to overcome negative thoughts and maintain a positive inner dialogue.</li>
+<li><strong>Tension regulation:</strong> Methods such as STOP, mindfulness and breathing exercises help regulate the body’s stress level, making it easier to stay balanced and calm under pressure.</li>
+</ul>
+</div>
+<section class="sources" aria-labelledby="kilder-tittel">
+<h2 id="kilder-tittel">References</h2>
+<ul>
+<li>Dweck, C. S. <i>Carol Dweck: A Summary of Growth and Fixed Mindsets.</i> fs.blog/carol-dweck-mindset. Accessed 2 June 2024.</li>
+<li>Myhre, C. Y. (2018). <i>Mental styrketrening</i> [Mental strength training]. Aschehoug.</li>
+<li>Myhre, C. Y. (2023). <i>Stå støtt!</i> [Stand steady!]. Aschehoug.</li>
+<li>Myhre, C. Y. (2024). Presentations from course in mental training.</li>
+<li>Nietzsche, F. (1844–1900).</li>
+<li>Peterson, J. (2022). YouTube lecture. Accessed 2 June 2024.</li>
+</ul>
+</section>
+    </article>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Illustration in full size">
+    <button type="button" aria-label="Close">×</button>
+    <img alt="">
+  </div>
+  <script>
+    (function () {
+      var box = document.getElementById('lightbox'), big = box.querySelector('img'), last = null;
+      function close() { box.classList.remove('open'); if (last) last.focus(); }
+      document.querySelectorAll('figure img').forEach(function (img) {
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
+        img.title = 'Click to view full size';
+        function open() { last = img; big.src = img.src; big.alt = img.alt; box.classList.add('open'); box.querySelector('button').focus(); }
+        img.addEventListener('click', open);
+        img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+      });
+      box.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
+    })();
+  </script>
+
+  <footer>
+    <div class="wrap">
+      <span><span style="color:var(--text)">Camilla Karud</span> · People, technology and organisation</span>
+      <span><a href="https://www.linkedin.com/in/camilla-karud-91b32740/" target="_blank" rel="noopener">LinkedIn ↗</a> &nbsp;·&nbsp; <a href="../index.html#fordypning">← Back to deep dives</a></span>
+    </div>
+  </footer>
+</body>
+</html>

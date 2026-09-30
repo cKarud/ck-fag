@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Camilla Karud – when competence becomes value</title>
+  <meta name="description" content="Articles and essays on why skilled technology teams don't always get to use what they know, and what leaders, developers and leadership teams can do about it.">
+  <meta name="theme-color" content="#111613">
+
+  <!-- Sharing on LinkedIn, Slack and Teams -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="The competence is often already there. The question is whether it gets used.">
+  <meta property="og:description" content="Seven short articles on competence, safety, autonomy, AI and value in technology teams, with questions to bring to your next team meeting.">
+  <!-- Add a sharing image (1200 x 630 px) when you have one:
+  <meta property="og:image" content="https://DITT-DOMENE/delingsbilde.png"> -->
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23111613' stroke='%23c4e49a' stroke-width='2'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23c4e49a'%3ECK%3C/text%3E%3C/svg%3E">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111613;
+      --panel: #171e19;
+      --panel-2: #151b17;
+      --text: #f1f2e9;
+      --muted: #a8b1a7;
+      --faint: #8c968b;
+      --line: rgba(225, 235, 223, .13);
+      --accent: #c4e49a;
+      --accent-dark: #182216;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --measure: 38rem;
+      --wide: 1120px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 16px/1.65 var(--sans); -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, p, ol, ul, blockquote { margin: 0; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+
+    .wrap { width: min(var(--wide), calc(100% - 48px)); margin-inline: auto; }
+    .skip { position: absolute; left: 20px; top: -100px; z-index: 10; padding: 10px 14px; color: var(--bg); background: var(--accent); }
+    .skip:focus { top: 12px; }
+    .kicker { display: block; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+
+    /* Toppmeny */
+    .top { border-bottom: 1px solid var(--line); }
+    .top .wrap { min-height: 82px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding-block: 14px; }
+    .name { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 650; letter-spacing: -.02em; }
+    .name .mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(196,228,154,.55); border-radius: 50%; color: var(--accent); font: 13px var(--serif); }
+    .top nav ul { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 28px; }
+    .top nav a { color: var(--muted); text-decoration: none; font-size: 14px; transition: color .2s ease; }
+    .top nav a:hover { color: var(--text); }
+    .top .wrap > nav { margin-left: auto; }
+    .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .lang-switch a, .lang-switch span { display: inline-grid; place-items: center; min-width: 38px; min-height: 30px; padding: 0 10px; border-radius: 999px; text-decoration: none; color: var(--muted); }
+    .lang-switch a:hover { color: var(--text); }
+    .lang-switch [aria-current] { background: var(--accent); color: var(--accent-dark); }
+
+    /* Hero */
+    .hero { position: relative; overflow: hidden; }
+    .hero .wrap { padding-block: 106px 112px; position: relative; }
+    .hero::after { content: ""; width: 560px; height: 560px; border-radius: 50%; position: absolute; right: -180px; top: 10px; background: radial-gradient(circle, rgba(196,228,154,.11), rgba(196,228,154,0) 68%); pointer-events: none; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; color: var(--accent); text-transform: uppercase; letter-spacing: .16em; font-size: 11px; font-weight: 700; }
+    .eyebrow::before { content: ""; display: block; height: 1px; width: 28px; background: var(--accent); }
+    .hero h1 { max-width: none; margin: 26px 0; font: 400 clamp(40px, 5.8vw, 76px)/1.06 var(--serif); letter-spacing: -.045em; }
+    .hero h1 em { display: block; color: var(--accent); font-style: normal; }
+    .hero p { max-width: 610px; color: var(--muted); font-size: clamp(17px, 2vw, 20px); }
+    .links { display: flex; align-items: center; flex-wrap: wrap; gap: 16px 24px; margin-top: 34px; }
+    .btn { display: inline-flex; align-items: center; gap: 11px; min-height: 48px; padding: 0 19px; border: 1px solid var(--accent); border-radius: 4px; color: var(--accent-dark); background: var(--accent); text-decoration: none; font-size: 14px; font-weight: 700; transition: transform .2s ease, background .2s ease; }
+    .btn:hover { transform: translateY(-2px); background: #d3efad; }
+    .text-link { text-decoration: none; font-size: 14px; }
+    .text-link span { color: var(--accent); margin-left: 7px; }
+    .text-link:hover { color: var(--accent); }
+
+    .signal-row { border-block: 1px solid var(--line); }
+    .signals { padding-block: 21px; display: flex; flex-wrap: wrap; gap: 12px 34px; color: var(--muted); font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+    .signals span { display: inline-flex; align-items: center; gap: 10px; }
+    .signals span::before { content: ""; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+
+    /* Seksjoner */
+    section { scroll-margin-top: 30px; }
+    .section { padding-block: 100px; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 24px 48px; margin-bottom: 42px; }
+    .section-head h2 { margin-top: 12px; font: 400 clamp(34px, 5vw, 53px)/1.12 var(--serif); letter-spacing: -.03em; }
+    .section-head p { max-width: 400px; color: var(--muted); font-size: 15px; }
+
+    /* Formelen */
+    .formula { background: var(--panel-2); border-block: 1px solid var(--line); }
+    .equation { margin: 22px 0 56px; font: 400 clamp(34px, 5.6vw, 72px)/1.1 var(--serif); letter-spacing: -.035em; display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 .32em; }
+    .equation .op { color: var(--faint); }
+    .equation .term { white-space: nowrap; color: var(--accent); }
+    .formula-body { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px 80px; }
+    .formula-body > div:first-child { color: var(--muted); font-size: 16px; }
+    .formula-body > div:first-child p + p { margin-top: 16px; }
+    .formula-body > div:first-child strong { color: var(--text); font-weight: 550; }
+    .formula-body .source { color: var(--faint); font-size: 13px; }
+    .formula-body h3 { margin-bottom: 14px; }
+    .forms { list-style: none; padding: 0; border-top: 1px solid var(--line); }
+    .forms li { border-bottom: 1px solid var(--line); }
+    .forms a { display: grid; grid-template-columns: 28px 1fr auto; gap: 14px; align-items: baseline; padding: 14px 0; text-decoration: none; font-size: 15px; transition: color .2s ease; }
+    .forms .n { font: 15px var(--serif); color: var(--accent); }
+    .forms strong { font-weight: 600; }
+    .forms .d { color: var(--muted); }
+    .forms .arrow { color: var(--accent); opacity: 0; transition: opacity .2s ease; }
+    .forms a:hover .arrow, .forms a:focus-visible .arrow { opacity: 1; }
+    .forms a:hover strong { color: var(--accent); }
+    .forms-individual { margin-top: 22px; padding: 16px 18px; border-left: 2px solid var(--accent); background: rgba(196,228,154,.045); font-size: 14px; color: var(--muted); }
+    .forms-individual strong { display: block; margin-bottom: 4px; color: var(--text); font-weight: 600; font-size: 15px; }
+    .forms-individual a { color: var(--accent); text-decoration: none; font-weight: 600; }
+    .forms-individual a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .forms-next { margin-top: 16px; font-size: 14px; }
+    .forms-next a { color: var(--accent); text-decoration: none; }
+    .forms-next a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    /* Artikkelserien */
+    .series { list-style: none; padding: 0; display: grid; gap: 14px; }
+    .article { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); border: 1px solid var(--line); border-radius: 5px; background: linear-gradient(140deg, rgba(255,255,255,.025), transparent 70%); transition: border-color .2s ease; scroll-margin-top: 24px; }
+    .article:hover, .article:target { border-color: rgba(196,228,154,.43); }
+    .article .main { padding: 30px 32px 28px; display: flex; flex-direction: column; }
+    .article .meta { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 20px; color: var(--muted); font-size: 12px; }
+    .article .meta .type { color: var(--accent); }
+    .article h3 { max-width: 30ch; font: 400 clamp(23px, 2.6vw, 30px)/1.2 var(--serif); letter-spacing: -.018em; }
+    .article h3 a { text-decoration: none; }
+    .article h3 a:hover { color: var(--accent); }
+    .article .text { margin-top: 14px; max-width: var(--measure); color: var(--muted); font-size: 15px; }
+    .article .read { display: inline-flex; gap: 10px; margin-top: 22px; color: var(--accent); text-decoration: none; font-size: 13px; font-weight: 700; }
+    .article .read small { color: var(--faint); font-weight: 400; font-size: 12px; }
+    .article .read:hover { color: #e1f3c9; }
+    .ask { padding: 30px 32px; border-left: 1px solid var(--line); background: rgba(196,228,154,.045); display: flex; flex-direction: column; justify-content: center; }
+    .ask .kicker { font-size: 10px; }
+    .ask blockquote { margin-top: 14px; padding-left: 16px; border-left: 2px solid var(--accent); font: 400 21px/1.4 var(--serif); letter-spacing: -.01em; }
+
+    /* Hvor du kan begynne */
+    .start { background: var(--panel-2); border-block: 1px solid var(--line); }
+    .roles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; border: 1px solid var(--line); background: var(--line); }
+    .roles > div { padding: 26px 26px 28px; background: var(--panel-2); }
+    .roles h3 { font: 400 22px/1.25 var(--serif); color: var(--accent); }
+    .roles p { margin-top: 12px; color: var(--muted); font-size: 15px; }
+    .roles a { color: var(--text); text-underline-offset: 3px; text-decoration-color: rgba(196,228,154,.6); }
+    .roles a:hover { color: var(--accent); }
+
+    /* Fordypning */
+    .papers { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .paper { padding: 30px 30px 26px; border: 1px solid var(--line); border-radius: 5px; background: linear-gradient(140deg, rgba(196,228,154,.055), transparent 65%); display: flex; flex-direction: column; }
+    .paper .meta { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 20px; font-size: 12px; color: var(--accent); }
+    .paper .meta span + span { color: var(--muted); }
+    .paper h3 { font: 400 clamp(25px, 3vw, 34px)/1.14 var(--serif); letter-spacing: -.025em; }
+    .paper .sub { margin-top: 8px; color: #d4dbd0; font: italic 15px/1.5 var(--serif); }
+    .paper .text { margin: 16px 0 24px; color: var(--muted); font-size: 15px; }
+    .paper .read { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); color: var(--accent); text-decoration: none; font-size: 13px; font-weight: 700; }
+    .paper .read small { color: var(--faint); font-weight: 400; font-size: 12px; margin-left: 8px; }
+    .paper .read:hover { color: #e1f3c9; }
+    .note { margin-top: 18px; padding: 17px 20px; border-left: 2px solid var(--accent); color: var(--muted); background: rgba(196,228,154,.045); font-size: 14px; }
+
+    /* Om meg */
+    .about { background: var(--panel-2); border-block: 1px solid var(--line); }
+    .about-grid { display: grid; grid-template-columns: .8fr 1.2fr; gap: 40px 90px; align-items: start; }
+    .about-grid h2 { margin-top: 12px; font: 400 clamp(36px, 5vw, 56px)/1.1 var(--serif); letter-spacing: -.035em; }
+    .about-text { color: var(--muted); font-size: 16px; }
+    .about-text p { max-width: var(--measure); }
+    .about-text p + p { margin-top: 18px; }
+    .about-text strong { color: var(--text); font-weight: 550; }
+    .values { list-style: none; padding: 0; margin-top: 34px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; border: 1px solid var(--line); background: var(--line); }
+    .values li { padding: 20px; background: var(--panel-2); }
+    .values b { display: block; margin-bottom: 8px; color: var(--accent); font: 400 19px var(--serif); }
+    .values span { display: block; color: #a0aa9f; font-size: 14px; line-height: 1.55; }
+    .about-text .intent { margin-top: 26px; padding-left: 16px; border-left: 2px solid var(--accent); color: var(--text); font: 400 20px/1.45 var(--serif); }
+
+    /* Avslutning */
+    .closing .wrap { padding-block: 96px 100px; text-align: center; }
+    .closing h2 { max-width: 700px; margin: 18px auto 18px; font: 400 clamp(36px, 5vw, 59px)/1.12 var(--serif); letter-spacing: -.035em; }
+    .closing p { max-width: 560px; margin: 0 auto; color: var(--muted); font-size: 16px; }
+    .closing .links { justify-content: center; }
+
+    footer { border-top: 1px solid var(--line); }
+    footer .wrap { min-height: 82px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; color: var(--faint); font-size: 13px; }
+    footer .fname { color: var(--text); }
+    footer a { text-decoration: none; }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 900px) {
+      .article { grid-template-columns: 1fr; }
+      .ask { border-left: 0; border-top: 1px solid var(--line); }
+      .roles { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 700px) {
+      .wrap { width: min(var(--wide), calc(100% - 34px)); }
+      .top nav ul { gap: 6px 18px; }
+      .top nav { order: 3; width: 100%; margin-left: 0; }
+      .lang-switch { margin-left: auto; }
+      .top nav a { font-size: 13px; }
+      .hero .wrap { padding-block: 72px 78px; }
+      .hero::after { right: -330px; }
+      .section { padding-block: 72px; }
+      .section-head { display: block; }
+      .section-head p { margin-top: 18px; }
+      .equation { font-size: 40px; margin-bottom: 40px; }
+      .formula-body, .papers, .about-grid { grid-template-columns: 1fr; }
+      .article .main, .ask, .paper { padding: 24px 22px; }
+      .values { grid-template-columns: 1fr; }
+      .closing .wrap { padding-block: 72px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#innhold">Skip to content</a>
+
+  <header class="top" id="toppen">
+    <div class="wrap">
+      <a class="name" href="#toppen" aria-label="Camilla Karud, back to top"><span class="mark" aria-hidden="true">CK</span><span>Camilla Karud</span></a>
+      <nav aria-label="Main menu">
+        <ul>
+          <li><a href="#formelen">The formula</a></li>
+          <li><a href="#artikler">Articles</a></li>
+          <li><a href="#fordypning">Deep dives</a></li>
+          <li><a href="#om">About</a></li>
+          <li><a href="#kontakt">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="lang-switch" aria-label="Language"><a href="../index.html" hreflang="no" lang="no">NO</a><span aria-current="true">EN</span></div>
+    </div>
+  </header>
+
+  <main id="innhold">
+    <section class="hero" aria-labelledby="hero-tittel">
+      <div class="wrap">
+      <div class="eyebrow">People · technology · organisation</div>
+      <h1 id="hero-tittel">The competence is often already there. <em>The question is whether it gets used.</em></h1>
+      <p>I explore what makes people and technology teams succeed together, and how organisations can turn competence, collaboration and direction into better delivery.</p>
+      <div class="links">
+        <a class="btn" href="#artikler">Read the article series <span aria-hidden="true">↘</span></a>
+        <a class="text-link" href="#formelen">Start with the formula <span aria-hidden="true">→</span></a>
+      </div>
+      </div>
+    </section>
+
+    <div class="signal-row" aria-label="Topics">
+      <div class="signals wrap">
+        <span>Technology teams</span><span>Leadership and development</span><span>Psychological safety</span><span>Value in delivery</span>
+      </div>
+    </div>
+
+    <section class="section formula" id="formelen" aria-labelledby="formel-tittel">
+      <div class="wrap">
+        <h2 id="formel-tittel" class="kicker">A simple formula from mental training</h2>
+        <p class="equation" aria-label="Performance equals potential minus interference">
+          <span>Performance</span><span class="op" aria-hidden="true">=</span><span>potential</span><span class="term">− interference</span>
+        </p>
+        <div class="formula-body">
+          <div>
+            <p>In mental training, performance is often described with a simple formula. Potential is the competence, experience and skills we have. Interference is whatever makes them harder to use. For individuals, it is often doubt, pressure or an inner voice telling you that you are not good enough.</p>
+            <p>The formula is originally about the individual, but it is a useful picture for teams too. In technology organisations, the potential is often high. At the same time, the interference can be considerable, and much of it is social: the fear of being judged, the shame of a mistake, or uncertainty about what is safe to say. It does not only sit within the individual, but also in decision paths, relationships and culture.</p>
+            <p><strong>This means performance can improve without the potential changing. So the fastest route to better delivery is not always more people, but less standing in the way of the people who are already there.</strong></p>
+            <p class="source">The formula is taken from Myhre and Aas (2025), <i>Prestasjonsledelse</i> (Performance leadership).</p>
+          </div>
+          <div>
+            <h3 class="kicker">Obstacles the articles explore</h3>
+            <ol class="forms">
+              <li><a href="#artikkel-1"><span class="n">1</span><span><strong>Friction in the system.</strong> <span class="d">Waiting, unclear direction and technical debt that eat up capacity.</span></span><span class="arrow" aria-hidden="true">↓</span></a></li>
+              <li><a href="#artikkel-2"><span class="n">2</span><span><strong>Dependence.</strong> <span class="d">One experienced person everyone checks with first.</span></span><span class="arrow" aria-hidden="true">↓</span></a></li>
+              <li><a href="#artikkel-3"><span class="n">3</span><span><strong>Silence.</strong> <span class="d">Risks that are seen early but raised late.</span></span><span class="arrow" aria-hidden="true">↓</span></a></li>
+              <li><a href="#artikkel-4"><span class="n">4</span><span><strong>Self-protection.</strong> <span class="d">Capacity spent on not appearing inadequate.</span></span><span class="arrow" aria-hidden="true">↓</span></a></li>
+              <li><a href="#artikkel-5"><span class="n">5</span><span><strong>Hidden strain.</strong> <span class="d">When performance holds, but the cost of sustaining it keeps rising.</span></span><span class="arrow" aria-hidden="true">↓</span></a></li>
+            </ol>
+            <div class="forms-individual"><strong>And for the individual</strong>The paper on inner dialogue looks at how doubt and impostor feelings can get in the way of what you can do, with concrete tools for handling them. <a href="papers/inner-dialogue.html">Read about inner dialogue →</a></div>
+            <p class="forms-next"><a href="#artikkel-6">And what it takes for the team to spot and handle them itself <span aria-hidden="true">↓</span></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="artikler" aria-labelledby="artikler-tittel">
+      <div class="section-head">
+        <div><span class="kicker">Article series for Liflig</span><h2 id="artikler-tittel">When competence becomes value</h2></div>
+        <p>A seven-part series written for Liflig. The first five each look at one obstacle that can stand between competence and the value it should create. The sixth looks at what it takes for a team to spot and handle them on its own, and the seventh at what happens to collaboration when AI becomes part of the work. Each comes with a question to take with you.</p>
+      </div>
+
+      <ol class="series">
+        <li class="article" id="artikkel-1">
+          <div class="main">
+            <div class="meta"><span class="type">Friction in the system</span><span>01 / 07</span></div>
+            <h3><a href="articles/why-skilled-technology-teams-dont-always-create-enough-value.html">Why skilled technology teams don't always create enough value</a></h3>
+            <p class="text">When delivery pressure rises, it is tempting to add people. But what if the team is not short of people, but waiting for decisions made somewhere else? More hands do not remove the waiting. So where does your team's capacity actually go?</p>
+            <a class="read" href="articles/why-skilled-technology-teams-dont-always-create-enough-value.html">Read the article → <small>(approx. 4 minutes)</small></a>
+          </div>
+          <div class="ask">
+            <span class="kicker">Bring to your next team meeting</span>
+            <blockquote>What is stopping the people we already have from creating more value?</blockquote>
+          </div>
+        </li>
+
+        <li class="article" id="artikkel-2">
+          <div class="main">
+            <div class="meta"><span class="type">Dependence</span><span>02 / 07</span></div>
+            <h3><a href="articles/when-the-most-skilled-person-makes-the-team-worse.html">When the most skilled person makes the team worse</a></h3>
+            <p class="text">What happens to the rest of the team when every important judgement goes through the same experienced person? Nobody decided it, but the team quickly learns that it is safer to ask first. Could the independence you are missing have been trained away?</p>
+            <a class="read" href="articles/when-the-most-skilled-person-makes-the-team-worse.html">Read the article → <small>(approx. 4 minutes)</small></a>
+          </div>
+          <div class="ask">
+            <span class="kicker">Bring to your next team meeting</span>
+            <blockquote>Which decisions currently go through one and the same person, and what have the others stopped practising?</blockquote>
+          </div>
+        </li>
+
+        <li class="article" id="artikkel-3">
+          <div class="main">
+            <div class="meta"><span class="type">Silence</span><span>03 / 07</span></div>
+            <h3><a href="articles/psychological-safety-is-good-for-delivery.html">Psychological safety isn't just good for people. It's good for delivery.</a></h3>
+            <p class="text">On a Thursday, a developer notices that the team's technical direction may rest on a wrong assumption. Is it said that day, or two weeks later? The observation is the same, but the difference can be two weeks of development in the wrong direction. What decides how quickly important information surfaces in your team?</p>
+            <a class="read" href="articles/psychological-safety-is-good-for-delivery.html">Read the article → <small>(approx. 4 minutes)</small></a>
+          </div>
+          <div class="ask">
+            <span class="kicker">Bring to your next team meeting</span>
+            <blockquote>How long does it take from someone in the team seeing a risk until it is said out loud?</blockquote>
+          </div>
+        </li>
+
+        <li class="article" id="artikkel-4">
+          <div class="main">
+            <div class="meta"><span class="type">Self-protection</span><span>04 / 07</span></div>
+            <h3><a href="articles/you-have-the-competence-but-do-you-get-to-use-it.html">You have the competence. But do you get to use it?</a></h3>
+            <p class="text">The competence you lack is easy to see. But what about the competence you have but do not get to use? It does not show up in any accounts, and it can look like thoroughness and double-checking. What if it is really capacity spent on not appearing inadequate?</p>
+            <a class="read" href="articles/you-have-the-competence-but-do-you-get-to-use-it.html">Read the article → <small>(approx. 4 minutes)</small></a>
+          </div>
+          <div class="ask">
+            <span class="kicker">Bring to your next team meeting</span>
+            <blockquote>What would it take for people here to feel safe saying “I don’t know”?</blockquote>
+          </div>
+        </li>
+
+        <li class="article" id="artikkel-5">
+          <div class="main">
+            <div class="meta"><span class="type">Hidden strain</span><span>05 / 07</span></div>
+            <h3><a href="articles/the-limit-we-dont-see-until-weve-passed-it.html">The limit we don't see until we've passed it</a></h3>
+            <p class="text">How do you notice that someone is wearing themselves out when the work is still of high quality? Strong performance can hide strain rather than reveal it. And what if mental strength sometimes means stopping while you could still keep going?</p>
+            <a class="read" href="articles/the-limit-we-dont-see-until-weve-passed-it.html">Read the article → <small>(approx. 4 minutes)</small></a>
+          </div>
+          <div class="ask">
+            <span class="kicker">A question for yourself</span>
+            <blockquote>Is the way you work now getting easier or harder to sustain over time?</blockquote>
+          </div>
+        </li>
+        <li class="article" id="artikkel-6">
+          <div class="main">
+            <div class="meta"><span class="type">Self-regulation</span><span>06 / 07</span></div>
+            <h3><a href="articles/when-teams-learn-to-lead-themselves.html">When teams learn to lead themselves</a></h3>
+            <p class="text">Why do some teams need more steering than others, even when they have better conditions on paper? Perhaps autonomy is less about how much freedom a team has been given, and more about what it manages to do with it. And when does “we’ll fix it ourselves” actually become a risk?</p>
+            <a class="read" href="articles/when-teams-learn-to-lead-themselves.html">Read the article → <small>(approx. 8 minutes)</small></a>
+          </div>
+          <div class="ask">
+            <span class="kicker">Bring to your next team meeting</span>
+            <blockquote>What do we look like as a team when we are at our best under pressure?</blockquote>
+          </div>
+        </li>
+        <li class="article" id="artikkel-7">
+          <div class="main">
+            <div class="meta"><span class="type">AI and collaboration</span><span>07 / 07</span></div>
+            <h3><a href="articles/faster-alone-weaker-together.html">Faster alone, weaker together?</a></h3>
+            <p class="text">When everyone has their own AI assistant, a lot goes faster. But what happens to the stupid questions, the sparring and the learning that used to happen between us? And what happens to safety when nobody needs to ask anymore?</p>
+            <a class="read" href="articles/faster-alone-weaker-together.html">Read the article → <small>(approx. 8 minutes)</small></a>
+          </div>
+          <div class="ask">
+            <span class="kicker">Bring to your next team meeting</span>
+            <blockquote>What did we last learn from each other that we could not have learned from an AI?</blockquote>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section start" aria-labelledby="start-tittel">
+      <div class="wrap">
+        <div class="section-head">
+          <div><span class="kicker">For leaders, developers and leadership teams</span><h2 id="start-tittel">Where to begin</h2></div>
+          <p>The texts can be read in order, but they land a little differently depending on where you stand.</p>
+        </div>
+        <div class="roles">
+          <div>
+            <h3>If you lead a team</h3>
+            <p>Start with <a href="#artikkel-2">article 2</a> and <a href="#artikkel-3">3</a>, then read <a href="#artikkel-6">article 6</a> on the leader’s paradox. Look for where decisions pile up with one person. And notice how you react the next time someone says something is not going to plan. That reaction teaches the team more than any values poster.</p>
+          </div>
+          <div>
+            <h3>If you are a developer</h3>
+            <p>Start with <a href="#artikkel-3">article 3</a>, <a href="#artikkel-4">4</a> and <a href="#artikkel-7">7</a>. Think of the last code review where you held back a question, or spent an extra hour making something perfect before anyone else got to see it. What would have made it easier to share earlier? If you recognise yourself, the <a href="papers/inner-dialogue.html">deep dive on inner dialogue</a> offers concrete tools.</p>
+          </div>
+          <div>
+            <h3>If you are on a leadership team</h3>
+            <p>Start with <a href="#artikkel-1">article 1</a> and <a href="#artikkel-5">5</a>, then read <a href="#artikkel-6">article 6</a> on what it takes for teams to lead themselves. The <a href="papers/psychological-safety-as-regulation-capacity.html">deep dive on regulation capacity</a> goes further. A key point there is that the level of tension, the norms around mistakes and the room for learning are largely set at the top. That cannot be delegated to HR or to the teams.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="fordypning" aria-labelledby="fordypning-tittel">
+      <div class="section-head">
+        <div><span class="kicker">Deep dives</span><h2 id="fordypning-tittel">Where theory meets practice.</h2></div>
+        <p>Two papers from my mental trainer education at Raw Performance. They are longer and more theoretical than the articles, for those who want to go deeper.</p>
+      </div>
+      <div class="papers">
+        <article class="paper">
+          <div class="meta"><span>Mental trainer · level 2</span><span>2026</span></div>
+          <h3>Psychological safety as regulation capacity</h3>
+          <p class="sub">An analysis of emotional activation and regulation in performance-oriented knowledge organisations</p>
+          <p class="text">Amy Edmondson describes psychological safety as an interpersonal climate. The paper asks what it is about safety that actually affects performance, and argues that it reduces the social threat that makes it hard to think clearly in code reviews, decision meetings and after production incidents. It also discusses the pitfalls, including the risk that regulation becomes yet another performance demand on the individual.</p>
+          <a class="read" href="papers/psychological-safety-as-regulation-capacity.html"><span>Read the paper<small>approx. 35 minutes</small></span><span aria-hidden="true">→</span></a>
+        </article>
+        <article class="paper">
+          <div class="meta"><span>Mental trainer · level 1</span><span>2024</span></div>
+          <h3>Inner dialogue</h3>
+          <p class="sub">How can we use inner dialogue to overcome impostor syndrome?</p>
+          <p class="text">A practical walkthrough of how thought patterns can make competent people doubt their own competence. The paper presents concrete tools, such as thought records, the STOP method and ABC-E, with examples from working life: asking for help, presenting to management and leading an important client meeting.</p>
+          <a class="read" href="papers/inner-dialogue.html"><span>Read the paper<small>approx. 15 minutes</small></span><span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+      <p class="note">The papers were written as part of my studies and reflect my own professional judgement. Personal appendices have been removed from these versions.</p>
+    </section>
+
+    <section class="section about" id="om" aria-labelledby="om-tittel">
+      <div class="wrap about-grid">
+        <div><span class="kicker">About me</span><h2 id="om-tittel">From software development to people and organisations.</h2></div>
+        <div class="about-text">
+          <p>I have a background in software development, and have since worked with team coordination, leadership and HR in knowledge-intensive IT organisations. Today I lead HR at Liflig and am part of the leadership team.</p>
+          <p>I trained as a mental trainer at Raw Performance. It has given me a language for how thoughts, feelings and relationships affect what people achieve, <strong>not just on the sports field, but in an architecture discussion too</strong>.</p>
+          <p>What I write grows out of the meeting between those two worlds: between professional strength and relational safety, between individual and system, and between good intentions and actual impact.</p>
+          <ul class="values" aria-label="My values">
+            <li><b>Safety</b><span>The foundation. Safety is not about the absence of demands or challenges, but about an environment where there is room to be human, also when you are unsure or make mistakes. That makes it easier to be honest, ask questions and show vulnerability.</span></li>
+            <li><b>Courage</b><span>A precondition for growth. Growth often happens when we dare to stay with discomfort, try something new or move beyond the familiar. With safety around us, that courage becomes easier to find.</span></li>
+            <li><b>Authenticity</b><span>Meeting others genuinely and sincerely: being present, listening actively and being open to different perspectives and experiences. When we meet each other with honesty and curiosity, more people dare to be themselves.</span></li>
+          </ul>
+          <p class="intent">My intention is to help create safety, so that people dare to be themselves and dare to grow.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="kontakt" aria-labelledby="kontakt-tittel">
+      <div class="wrap">
+        <span class="kicker">A question I keep coming back to</span>
+        <h2 id="kontakt-tittel">What needs to be in place for people to bring the best of what they can do?</h2>
+        <p>It is the question beneath everything I write. If you have experiences, objections or an example from your own team, I would love to hear them.</p>
+        <div class="links">
+          <!-- To add email: <a class="text-link" href="mailto:YOUR-EMAIL">Send me an email</a> -->
+          <a class="btn" href="https://www.linkedin.com/in/camilla-karud-91b32740/" target="_blank" rel="noopener">Get in touch on LinkedIn <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span><span class="fname">Camilla Karud</span> · People, technology and organisation</span>
+      <span><a href="https://www.linkedin.com/in/camilla-karud-91b32740/" target="_blank" rel="noopener">LinkedIn ↗</a> &nbsp;·&nbsp; <a href="#toppen">Back to top ↑</a></span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1480" width="1400" height="1480" font-family="Helvetica, Arial, 'DejaVu Sans', sans-serif">
+<defs>
+<marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#a8b1a7"/></marker>
+<marker id="ahg" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#c4e49a"/></marker>
+<marker id="ahr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e3a37f"/></marker>
+</defs>
+<rect width="1400" height="1480" fill="#171e19"/>
+<text x="80" y="90" font-size="40" fill="#f1f2e9" font-weight="700" text-anchor="start" >Psychological safety as regulation capacity</text>
+<text x="80" y="135" font-size="24" fill="#a8b1a7" font-weight="400" text-anchor="start" >How social evaluation can lead to silence – or to openness and flow</text>
+<rect x="380.0" y="190" width="640" height="112" rx="14" fill="#171e19" stroke="#3a4a3f" stroke-width="2.5"/>
+<text x="700.0" y="237" font-size="29" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Performance situation</text>
+<text x="700.0" y="274" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Meetings, code reviews, decisions</text>
+<line x1="700.0" y1="306" x2="700.0" y2="352" stroke="#a8b1a7" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="380.0" y="360" width="640" height="112" rx="14" fill="#171e19" stroke="#3a4a3f" stroke-width="2.5"/>
+<text x="700.0" y="407" font-size="29" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Social evaluation</text>
+<text x="700.0" y="444" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Our work and judgement become visible</text>
+<line x1="700.0" y1="476" x2="700.0" y2="522" stroke="#a8b1a7" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="380.0" y="530" width="640" height="112" rx="14" fill="#171e19" stroke="#3a4a3f" stroke-width="2.5"/>
+<text x="700.0" y="577" font-size="29" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Emotional activation</text>
+<text x="700.0" y="614" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Uncertainty, fear, shame, irritation</text>
+<line x1="700.0" y1="646" x2="700.0" y2="692" stroke="#a8b1a7" stroke-width="3" marker-end="url(#ah)"/>
+<rect x="380.0" y="700" width="640" height="112" rx="14" fill="#223020" stroke="#c4e49a" stroke-width="2.5"/>
+<text x="700.0" y="747" font-size="29" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Regulation</text>
+<text x="700.0" y="784" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >How the activation is handled – alone and together</text>
+<path d="M700.0,816 L700.0,848 L360,848 L360,914" fill="none" stroke="#e3a37f" stroke-width="3" marker-end="url(#ahr)"/>
+<path d="M700.0,848 L1040,848 L1040,914" fill="none" stroke="#c4e49a" stroke-width="3" marker-end="url(#ahg)"/>
+<rect x="100.0" y="922" width="520" height="112" rx="14" fill="#2e231d" stroke="#e3a37f" stroke-width="2.5"/>
+<text x="360" y="969" font-size="28" fill="#f1f2e9" font-weight="700" text-anchor="middle" >High social threat</text>
+<text x="360" y="1006" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Silence, defensiveness, over-caution</text>
+<line x1="360" y1="1038" x2="360" y2="1084" stroke="#e3a37f" stroke-width="3" marker-end="url(#ahr)"/>
+<rect x="100.0" y="1092" width="520" height="112" rx="14" fill="#2e231d" stroke="#e3a37f" stroke-width="2.5"/>
+<text x="360" y="1139" font-size="28" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Increased interference</text>
+<text x="360" y="1176" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Tunnel vision, stress, less sharing</text>
+<line x1="360" y1="1208" x2="360" y2="1254" stroke="#e3a37f" stroke-width="3" marker-end="url(#ahr)"/>
+<rect x="100.0" y="1262" width="520" height="112" rx="14" fill="#e3a37f" stroke="#e3a37f" stroke-width="2.5"/>
+<text x="360" y="1309" font-size="28" fill="#182216" font-weight="700" text-anchor="middle" >Lower performance</text>
+<text x="360" y="1346" font-size="21" fill="#2c3a26" font-weight="400" text-anchor="middle" >Competence becomes less available</text>
+<rect x="780.0" y="922" width="520" height="112" rx="14" fill="#223020" stroke="#c4e49a" stroke-width="2.5"/>
+<text x="1040" y="969" font-size="28" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Psychological safety</text>
+<text x="1040" y="1006" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Openness, curiosity, support</text>
+<line x1="1040" y1="1038" x2="1040" y2="1084" stroke="#c4e49a" stroke-width="3" marker-end="url(#ahg)"/>
+<rect x="780.0" y="1092" width="520" height="112" rx="14" fill="#223020" stroke="#c4e49a" stroke-width="2.5"/>
+<text x="1040" y="1139" font-size="28" fill="#f1f2e9" font-weight="700" text-anchor="middle" >Reduced interference</text>
+<text x="1040" y="1176" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="middle" >Clarity, flexible thinking, flow</text>
+<line x1="1040" y1="1208" x2="1040" y2="1254" stroke="#c4e49a" stroke-width="3" marker-end="url(#ahg)"/>
+<rect x="780.0" y="1262" width="520" height="112" rx="14" fill="#c4e49a" stroke="#c4e49a" stroke-width="2.5"/>
+<text x="1040" y="1309" font-size="28" fill="#182216" font-weight="700" text-anchor="middle" >Better performance</text>
+<text x="1040" y="1346" font-size="21" fill="#2c3a26" font-weight="400" text-anchor="middle" >More of the competence gets used</text>
+<text x="80" y="1430" font-size="21" fill="#a8b1a7" font-weight="400" text-anchor="start" font-style="italic">Performance = potential − interference. Safety doesn't change the potential, only how much of it becomes available.</text>
+</svg>

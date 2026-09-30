@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>When teams learn to lead themselves – Camilla Karud</title>
+  <meta name="description" content="Why some teams develop real autonomy while others remain dependent on being steered. On self-regulating teams, psychological safety and the leader’s paradox.">
+  <meta name="theme-color" content="#111613">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="When teams learn to lead themselves">
+  <meta property="og:description" content="Why do some teams need more steering than others, even with better conditions? On self-regulating teams, safety and the leader’s paradox.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23111613' stroke='%23c4e49a' stroke-width='2'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23c4e49a'%3ECK%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111613; --panel: #171e19; --text: #f1f2e9; --body: #d6dcd2; --muted: #a8b1a7; --faint: #8c968b;
+      --line: rgba(225,235,223,.13); --accent: #c4e49a;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.75 var(--sans); -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, p, ol, ul, blockquote, figure { margin: 0; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+    .skip { position: absolute; left: 20px; top: -100px; z-index: 10; padding: 10px 14px; color: var(--bg); background: var(--accent); }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .kicker { display: block; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top .wrap { min-height: 82px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding-block: 14px; }
+    .name { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 650; letter-spacing: -.02em; font-size: 16px; }
+    .name .mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(196,228,154,.55); border-radius: 50%; color: var(--accent); font: 13px var(--serif); }
+    .back { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .back:hover { color: var(--text); }
+    .head-right { display: inline-flex; align-items: center; gap: 18px; }
+    .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .lang-switch a, .lang-switch span { display: inline-grid; place-items: center; min-width: 38px; min-height: 30px; padding: 0 10px; border-radius: 999px; text-decoration: none; color: var(--muted); }
+    .lang-switch a:hover { color: var(--text); }
+    .lang-switch [aria-current] { background: var(--accent); color: #182216; }
+
+    .article { width: min(720px, calc(100% - 40px)); margin-inline: auto; padding-block: 88px 40px; }
+    .article header .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--muted); font-size: 13px; margin-top: 16px; }
+    .article h1 { margin-top: 22px; font: 400 clamp(40px, 6.4vw, 66px)/1.06 var(--serif); letter-spacing: -.04em; }
+    .article .dek { margin-top: 20px; color: var(--muted); font: italic 400 clamp(19px, 2.4vw, 23px)/1.45 var(--serif); }
+    .body { margin-top: 56px; color: var(--body); }
+    .body p + p, .body p + ul, .body ul + p { margin-top: 1.15em; }
+    .body h2 { margin: 2.4em 0 .8em; color: var(--text); font: 400 clamp(27px, 3.4vw, 34px)/1.2 var(--serif); letter-spacing: -.02em; }
+    .body strong { color: var(--text); font-weight: 600; }
+    .body em { color: var(--text); }
+    .lead { color: var(--text); font-size: 20px; }
+    .series-note { margin-top: 1.6em !important; padding: 16px 20px; border-left: 2px solid var(--accent); background: rgba(196,228,154,.045); color: var(--muted); font-size: 15px; }
+    .loop { margin: 1.3em 0 !important; color: var(--accent); font: 400 clamp(20px, 2.8vw, 26px)/1.4 var(--serif); text-align: center; }
+    .example { margin-top: 1.4em !important; padding: 22px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .example .kicker { margin-bottom: 8px; }
+    .example + p { margin-top: 1.15em; }
+    figure img { cursor: zoom-in; }
+    .lightbox { position: fixed; inset: 0; z-index: 20; display: none; place-items: center; padding: 24px; background: rgba(8,11,9,.92); cursor: zoom-out; }
+    .lightbox.open { display: grid; }
+    .lightbox img { max-width: min(1500px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 6px; }
+    .lightbox button { position: absolute; top: 16px; right: 16px; min-width: 44px; min-height: 44px; border: 1px solid var(--line); border-radius: 50%; background: var(--panel); color: var(--text); font-size: 20px; cursor: pointer; }
+    .pull { margin: 1.6em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: 400 clamp(22px, 3vw, 27px)/1.4 var(--serif); letter-spacing: -.01em; }
+    figure { margin: 2.4em 0 !important; }
+    @media (min-width: 1000px) { figure:not(.tall) { width: 940px; margin-left: calc((720px - 940px) / 2) !important; } }
+    figure.tall img { max-width: 720px; margin-inline: auto; }
+    figure.tall figcaption { text-align: center; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+    figcaption { margin-top: 10px; color: var(--faint); font-size: 14px; }
+    .questions { list-style: none; padding: 0; margin-top: 1.2em; counter-reset: q; border-top: 1px solid var(--line); }
+    .questions li { counter-increment: q; display: grid; grid-template-columns: 38px 1fr; gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--text); font: 400 21px/1.4 var(--serif); }
+    .questions li::before { content: counter(q); color: var(--accent); font: 400 21px/1.4 var(--serif); }
+    .closing-line { margin-top: 1.6em !important; color: var(--text); font: 400 clamp(24px, 3.4vw, 31px)/1.35 var(--serif); letter-spacing: -.015em; }
+
+    .next { margin-top: 64px; padding-top: 30px; border-top: 1px solid var(--line); }
+    .next a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-top: 12px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; }
+    .next a:hover { border-color: rgba(196,228,154,.43); }
+    .next b { font: 400 21px/1.35 var(--serif); }
+    .next i { color: var(--accent); font-style: normal; }
+    .more { margin-top: 72px; padding-top: 34px; border-top: 1px solid var(--line); }
+    .more h2 { margin-top: 12px; font: 400 28px/1.2 var(--serif); }
+    .more ul { list-style: none; padding: 0; margin-top: 18px; display: grid; gap: 10px; }
+    .more a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; padding: 16px 18px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; transition: border-color .2s ease; }
+    .more a:hover { border-color: rgba(196,228,154,.43); }
+    .more a span { color: var(--muted); font-size: 14px; display: block; }
+    .more a b { font: 400 19px/1.35 var(--serif); }
+    .more a i { color: var(--accent); font-style: normal; }
+    .sources { margin-top: 56px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .sources h2 { color: var(--text); font: 600 14px/1.4 var(--sans); margin-bottom: 10px; }
+    .sources li + li { margin-top: 6px; }
+    .sources ul { padding-left: 18px; }
+
+    footer { border-top: 1px solid var(--line); margin-top: 80px; }
+    footer .wrap { min-height: 82px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; color: var(--faint); font-size: 13px; }
+    footer a { text-decoration: none; } footer a:hover { color: var(--accent); }
+    @media (max-width: 700px) {
+      body { font-size: 17px; }
+      .wrap { width: calc(100% - 34px); }
+      .article { padding-top: 60px; }
+      .questions li { font-size: 19px; grid-template-columns: 30px 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#innhold">Skip to content</a>
+  <header class="top" id="toppen">
+    <div class="wrap">
+      <a class="name" href="../index.html"><span class="mark" aria-hidden="true">CK</span><span>Camilla Karud</span></a>
+      <span class="head-right"><a class="back" href="../index.html#artikkel-6">← All articles</a><div class="lang-switch" aria-label="Language"><a href="../../artikler/nar-teamet-laerer-a-lede-seg-selv.html" hreflang="no" lang="no">NO</a><span aria-current="true">EN</span></div></span>
+    </div>
+  </header>
+
+  <main id="innhold">
+    <article class="article">
+      <header>
+        <span class="kicker">When competence becomes value · part 6</span>
+        <h1>When teams learn to lead themselves</h1>
+        <p class="dek">Why some teams develop real autonomy, while others remain dependent on being steered</p>
+        <div class="meta"><span>Camilla Karud</span><span>Approx. 8 minute read</span></div>
+      </header>
+
+      <div class="body">
+        <p class="lead">Some teams just seem to make it work. They juggle several clients, tight deadlines and limited budgets. The people in the team have different levels of experience and different life situations. Priorities shift, and things go wrong. Still, the team keeps moving forward.</p>
+        <p>They share responsibility, adjust when circumstances change and have the difficult conversations, without anyone from outside having to tell them what to do.</p>
+        <p>Other teams have better conditions on paper: more experience, more people, more room to act and closer follow-up from management. Yet they need more steering. Why?</p>
+        <p>Perhaps we are looking for the answer in the wrong place. Autonomy is not only about how skilled people are, or how much room they have been given. It is also about what happens between them, and about the team’s ability to regulate itself when reality doesn’t follow the plan.</p>
+        <p class="series-note">This article is part of the series “When competence becomes value”, which explores the people, relationships and systems behind good technology delivery.</p>
+
+        <h2>Autonomy is not the absence of leadership</h2>
+        <p>When we talk about autonomous teams, it is easy to think of freedom. The team is given a mandate, management steps back, and decisions move closer to those who understand the problem. But autonomy without direction is not necessarily autonomy. It may just as well be an absence of leadership.</p>
+        <p>Richard Hackman, one of the pioneers of team research, described autonomy as a question of which parts of the work the team itself controls. That can mean executing the task, monitoring and managing its own way of working, designing the team, or setting the direction. Researchers at SINTEF in Norway, together with colleagues in Sweden and Finland, applied this framework in two large software organisations in the telecom industry and found that the teams were only partly self-managing. That is not necessarily wrong, but it requires everyone to know where the boundaries are.</p>
+        <figure>
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNjAwIDk3MCIgd2lkdGg9IjE2MDAiIGhlaWdodD0iOTcwIiBmb250LWZhbWlseT0iSGVsdmV0aWNhLCBBcmlhbCwgJ0RlamFWdSBTYW5zJywgc2Fucy1zZXJpZiI+CjxkZWZzPgo8bWFya2VyIGlkPSJhaCIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8tc3RhcnQtcmV2ZXJzZSI+PHBhdGggZD0iTTAsMCBMMTAsNSBMMCwxMCB6IiBmaWxsPSIjYThiMWE3Ii8+PC9tYXJrZXI+CjxtYXJrZXIgaWQ9ImFoZyIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8tc3RhcnQtcmV2ZXJzZSI+PHBhdGggZD0iTTAsMCBMMTAsNSBMMCwxMCB6IiBmaWxsPSIjYzRlNDlhIi8+PC9tYXJrZXI+CjxtYXJrZXIgaWQ9ImFociIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI4IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iNyIgbWFya2VySGVpZ2h0PSI3IiBvcmllbnQ9ImF1dG8tc3RhcnQtcmV2ZXJzZSI+PHBhdGggZD0iTTAsMCBMMTAsNSBMMCwxMCB6IiBmaWxsPSIjZTNhMzdmIi8+PC9tYXJrZXI+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjE2MDAiIGhlaWdodD0iOTcwIiBmaWxsPSIjMTcxZTE5Ii8+Cjx0ZXh0IHg9IjgwIiB5PSI5MCIgZm9udC1zaXplPSI0MCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+V2hvIGlzIHJlc3BvbnNpYmxlIGZvciB3aGF0PzwvdGV4dD4KPHRleHQgeD0iODAiIHk9IjEzNSIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+Rm91ciBsZXZlbHMgb2YgdGVhbSBhdXRvbm9teSwgYWZ0ZXIgSGFja21hbiAoMjAwMik8L3RleHQ+Cjx0ZXh0IHg9IjU3MCIgeT0iMjY0LjAiIGZvbnQtc2l6ZT0iMjUiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI1MDAiIHRleHQtYW5jaG9yPSJlbmQiID5TZXR0aW5nIGRpcmVjdGlvbjwvdGV4dD4KPHJlY3QgeD0iNjAxIiB5PSIyMDEiIHdpZHRoPSIyMTYiIGhlaWdodD0iMTA4IiByeD0iMTAiIGZpbGw9IiMxYzI0MWYiIHN0cm9rZT0iIzNhNGEzZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSI3IDYiLz4KPHJlY3QgeD0iODMzIiB5PSIyMDEiIHdpZHRoPSIyMTYiIGhlaWdodD0iMTA4IiByeD0iMTAiIGZpbGw9IiMxYzI0MWYiIHN0cm9rZT0iIzNhNGEzZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSI3IDYiLz4KPHJlY3QgeD0iMTA2NSIgeT0iMjAxIiB3aWR0aD0iMjE2IiBoZWlnaHQ9IjEwOCIgcng9IjEwIiBmaWxsPSIjMWMyNDFmIiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWRhc2hhcnJheT0iNyA2Ii8+CjxyZWN0IHg9IjEyOTYiIHk9IjIwMCIgd2lkdGg9IjIxOCIgaGVpZ2h0PSIxMTAiIHJ4PSIxMCIgZmlsbD0iI2M0ZTQ5YSIvPgo8dGV4dCB4PSI1NzAiIHk9IjM4OC4wIiBmb250LXNpemU9IjI1IiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNTAwIiB0ZXh0LWFuY2hvcj0iZW5kIiA+RGVzaWduaW5nIHRoZSB0ZWFtIGFuZCBjb250ZXh0PC90ZXh0Pgo8cmVjdCB4PSI2MDEiIHk9IjMyNSIgd2lkdGg9IjIxNiIgaGVpZ2h0PSIxMDgiIHJ4PSIxMCIgZmlsbD0iIzFjMjQxZiIgc3Ryb2tlPSIjM2E0YTNmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjcgNiIvPgo8cmVjdCB4PSI4MzMiIHk9IjMyNSIgd2lkdGg9IjIxNiIgaGVpZ2h0PSIxMDgiIHJ4PSIxMCIgZmlsbD0iIzFjMjQxZiIgc3Ryb2tlPSIjM2E0YTNmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1kYXNoYXJyYXk9IjcgNiIvPgo8cmVjdCB4PSIxMDY0IiB5PSIzMjQiIHdpZHRoPSIyMTgiIGhlaWdodD0iMTEwIiByeD0iMTAiIGZpbGw9IiNjNGU0OWEiLz4KPHJlY3QgeD0iMTI5NiIgeT0iMzI0IiB3aWR0aD0iMjE4IiBoZWlnaHQ9IjExMCIgcng9IjEwIiBmaWxsPSIjYzRlNDlhIi8+Cjx0ZXh0IHg9IjU3MCIgeT0iNTEyLjAiIGZvbnQtc2l6ZT0iMjUiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI1MDAiIHRleHQtYW5jaG9yPSJlbmQiID5Nb25pdG9yaW5nIGFuZCBtYW5hZ2luZyB0aGUgd29yazwvdGV4dD4KPHJlY3QgeD0iNjAxIiB5PSI0NDkiIHdpZHRoPSIyMTYiIGhlaWdodD0iMTA4IiByeD0iMTAiIGZpbGw9IiMxYzI0MWYiIHN0cm9rZT0iIzNhNGEzZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSI3IDYiLz4KPHJlY3QgeD0iODMyIiB5PSI0NDgiIHdpZHRoPSIyMTgiIGhlaWdodD0iMTEwIiByeD0iMTAiIGZpbGw9IiNjNGU0OWEiLz4KPHJlY3QgeD0iMTA2NCIgeT0iNDQ4IiB3aWR0aD0iMjE4IiBoZWlnaHQ9IjExMCIgcng9IjEwIiBmaWxsPSIjYzRlNDlhIi8+CjxyZWN0IHg9IjEyOTYiIHk9IjQ0OCIgd2lkdGg9IjIxOCIgaGVpZ2h0PSIxMTAiIHJ4PSIxMCIgZmlsbD0iI2M0ZTQ5YSIvPgo8dGV4dCB4PSI1NzAiIHk9IjYzNi4wIiBmb250LXNpemU9IjI1IiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNTAwIiB0ZXh0LWFuY2hvcj0iZW5kIiA+RXhlY3V0aW5nIHRoZSB0YXNrPC90ZXh0Pgo8cmVjdCB4PSI2MDAiIHk9IjU3MiIgd2lkdGg9IjIxOCIgaGVpZ2h0PSIxMTAiIHJ4PSIxMCIgZmlsbD0iI2M0ZTQ5YSIvPgo8cmVjdCB4PSI4MzIiIHk9IjU3MiIgd2lkdGg9IjIxOCIgaGVpZ2h0PSIxMTAiIHJ4PSIxMCIgZmlsbD0iI2M0ZTQ5YSIvPgo8cmVjdCB4PSIxMDY0IiB5PSI1NzIiIHdpZHRoPSIyMTgiIGhlaWdodD0iMTEwIiByeD0iMTAiIGZpbGw9IiNjNGU0OWEiLz4KPHJlY3QgeD0iMTI5NiIgeT0iNTcyIiB3aWR0aD0iMjE4IiBoZWlnaHQ9IjExMCIgcng9IjEwIiBmaWxsPSIjYzRlNDlhIi8+Cjx0ZXh0IHg9IjcwOS4wIiB5PSI3MzAiIGZvbnQtc2l6ZT0iMjUiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5NYW5hZ2VyLWxlZDwvdGV4dD4KPHRleHQgeD0iNzA5LjAiIHk9Ijc2MiIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPnRlYW08L3RleHQ+Cjx0ZXh0IHg9Ijk0MS4wIiB5PSI3MzAiIGZvbnQtc2l6ZT0iMjUiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5TZWxmLW1hbmFnaW5nPC90ZXh0Pgo8dGV4dCB4PSI5NDEuMCIgeT0iNzYyIiBmb250LXNpemU9IjIxIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+dGVhbTwvdGV4dD4KPHRleHQgeD0iMTE3My4wIiB5PSI3MzAiIGZvbnQtc2l6ZT0iMjUiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5TZWxmLWRlc2lnbmluZzwvdGV4dD4KPHRleHQgeD0iMTE3My4wIiB5PSI3NjIiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID50ZWFtPC90ZXh0Pgo8dGV4dCB4PSIxNDA1LjAiIHk9IjczMCIgZm9udC1zaXplPSIyNSIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlNlbGYtZ292ZXJuaW5nPC90ZXh0Pgo8dGV4dCB4PSIxNDA1LjAiIHk9Ijc2MiIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPnRlYW08L3RleHQ+CjxsaW5lIHgxPSI2MDAiIHkxPSI4MDYiIHgyPSIxNTA4IiB5Mj0iODA2IiBzdHJva2U9IiNhOGIxYTciIHN0cm9rZS13aWR0aD0iMi41IiBtYXJrZXItZW5kPSJ1cmwoI2FoKSIvPgo8dGV4dCB4PSI2MDAiIHk9Ijg0MiIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+TW9yZSByZXNwb25zaWJpbGl0eSB3aXRoIHRoZSB0ZWFtPC90ZXh0Pgo8cmVjdCB4PSI4MCIgeT0iODgyIiB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHJ4PSI2IiBmaWxsPSIjYzRlNDlhIi8+Cjx0ZXh0IHg9IjEyNSIgeT0iOTA1IiBmb250LXNpemU9IjIzIiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiID5UaGUgdGVhbSBpcyByZXNwb25zaWJsZTwvdGV4dD4KPHJlY3QgeD0iNDIwIiB5PSI4ODIiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgcng9IjYiIGZpbGw9IiMxYzI0MWYiIHN0cm9rZT0iIzNhNGEzZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtZGFzaGFycmF5PSI1IDQiLz4KPHRleHQgeD0iNDY1IiB5PSI5MDUiIGZvbnQtc2l6ZT0iMjMiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJzdGFydCIgPk1hbmFnZW1lbnQgb3IgdGhlIG9yZ2FuaXNhdGlvbiBpcyByZXNwb25zaWJsZTwvdGV4dD4KPHRleHQgeD0iMTUxNCIgeT0iOTA1IiBmb250LXNpemU9IjI1IiBmaWxsPSIjYzRlNDlhIiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0iZW5kIiBmb250LXN0eWxlPSJpdGFsaWMiPldoZXJlIGRvZXMgeW91ciB0ZWFtIHN0YW5kPzwvdGV4dD4KPC9zdmc+" alt="Grid showing four levels of team autonomy after Hackman. A manager-led team is only responsible for executing the task. A self-managing team also monitors and manages its own work. A self-designing team also designs the team and its context. A self-governing team also sets the direction." width="1600" height="970">
+          <figcaption>Autonomy is rarely all or nothing. Many teams are responsible at some levels, but not at others.</figcaption>
+        </figure>
+        <p>What is interesting, then, is not only how much freedom a team has, but what it manages to do with that freedom. Two teams can be given roughly the same mandate. One starts making decisions, clarifying expectations and adjusting how it works as it learns. The other keeps asking: What should we prioritise? Is this really our responsibility? Can someone make a decision? Both have been given autonomy on paper. Only one has developed the capacity to use it.</p>
+
+        <h2>The self-regulating team</h2>
+        <p>Perhaps we should talk less about autonomous teams and more about self-regulating teams. A self-regulating team is not a team without problems, disagreement or busy periods. It is a team that manages to notice what is happening, understand what it means, say it out loud and adjust how it works, without someone from outside having to do it for them.</p>
+        <figure>
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTAwIDExMTAiIHdpZHRoPSIxNTAwIiBoZWlnaHQ9IjExMTAiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EsIEFyaWFsLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmIj4KPGRlZnM+CjxtYXJrZXIgaWQ9ImFoIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNhOGIxYTciLz48L21hcmtlcj4KPG1hcmtlciBpZD0iYWhnIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNjNGU0OWEiLz48L21hcmtlcj4KPG1hcmtlciBpZD0iYWhyIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNlM2EzN2YiLz48L21hcmtlcj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTUwMCIgaGVpZ2h0PSIxMTEwIiBmaWxsPSIjMTcxZTE5Ii8+Cjx0ZXh0IHg9IjgwIiB5PSI5MCIgZm9udC1zaXplPSI0MCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+VGhlIHNlbGYtcmVndWxhdGluZyB0ZWFtPC90ZXh0Pgo8dGV4dCB4PSI4MCIgeT0iMTM1IiBmb250LXNpemU9IjI0IiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiID5BIHNpbXBsZSBjeWNsZSBmb3IgaG93IHRlYW1zIGFkanVzdCB3aGVuIHJlYWxpdHkgZG9lc24ndCBmb2xsb3cgdGhlIHBsYW48L3RleHQ+CjxwYXRoIGQ9Ik05NDguNiwzMzYuNSBBMzMwLDMzMCAwIDAgMSAxMDY1LjYsNTAzLjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2E4YjFhNyIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2FoKSIvPgo8cGF0aCBkPSJNMTA2NS42LDY5Ni41IEEzMzAsMzMwIDAgMCAxIDk0OC42LDg2My41IiBmaWxsPSJub25lIiBzdHJva2U9IiNhOGIxYTciIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaCkiLz4KPHBhdGggZD0iTTU1MS40LDg2My41IEEzMzAsMzMwIDAgMCAxIDQzNC40LDY5Ni41IiBmaWxsPSJub25lIiBzdHJva2U9IiNhOGIxYTciIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaCkiLz4KPHBhdGggZD0iTTQzNC40LDUwMy41IEEzMzAsMzMwIDAgMCAxIDU1MS40LDMzNi41IiBmaWxsPSJub25lIiBzdHJva2U9IiNhOGIxYTciIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaCkiLz4KPHJlY3QgeD0iNTg1LjAiIHk9IjIwNi4wIiB3aWR0aD0iMzMwIiBoZWlnaHQ9IjEyOCIgcng9IjE2IiBmaWxsPSIjMTcxZTE5IiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9Ijc1MC4wIiB5PSIyNjIuMCIgZm9udC1zaXplPSIzMCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPjEuIE5vdGljZTwvdGV4dD4KPHRleHQgeD0iNzUwLjAiIHk9IjMwMi4wIiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXN0eWxlPSJpdGFsaWMiPldoYXQgaXMgaGFwcGVuaW5nIHRvIHVzPzwvdGV4dD4KPHJlY3QgeD0iOTE1LjAiIHk9IjUzNi4wIiB3aWR0aD0iMzMwIiBoZWlnaHQ9IjEyOCIgcng9IjE2IiBmaWxsPSIjMTcxZTE5IiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjEwODAuMCIgeT0iNTkyLjAiIGZvbnQtc2l6ZT0iMzAiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID4yLiBVbmRlcnN0YW5kPC90ZXh0Pgo8dGV4dCB4PSIxMDgwLjAiIHk9IjYzMi4wIiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXN0eWxlPSJpdGFsaWMiPldoYXQgZG9lcyBpdCBtZWFuPzwvdGV4dD4KPHJlY3QgeD0iNTg1LjAiIHk9Ijg2Ni4wIiB3aWR0aD0iMzMwIiBoZWlnaHQ9IjEyOCIgcng9IjE2IiBmaWxsPSIjYzRlNDlhIiBzdHJva2U9IiNjNGU0OWEiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9Ijc1MC4wIiB5PSI5MjIuMCIgZm9udC1zaXplPSIzMCIgZmlsbD0iIzE4MjIxNiIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPjMuIFNheSBpdCBvdXQgbG91ZDwvdGV4dD4KPHRleHQgeD0iNzUwLjAiIHk9Ijk2Mi4wIiBmb250LXNpemU9IjIyIiBmaWxsPSIjMmMzYTI2IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXN0eWxlPSJpdGFsaWMiPkNhbiB3ZSB0YWxrIGFib3V0IGl0PzwvdGV4dD4KPHJlY3QgeD0iNjAwLjAiIHk9IjEwMTIuMCIgd2lkdGg9IjMwMCIgaGVpZ2h0PSI0NCIgcng9IjIyIiBmaWxsPSIjMjIzMDIwIi8+Cjx0ZXh0IHg9Ijc1MC4wIiB5PSIxMDQxLjAiIGZvbnQtc2l6ZT0iMjAiIGZpbGw9IiNjNGU0OWEiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5SZXF1aXJlcyBwc3ljaG9sb2dpY2FsIHNhZmV0eTwvdGV4dD4KPHJlY3QgeD0iMjU1LjAiIHk9IjUzNi4wIiB3aWR0aD0iMzMwIiBoZWlnaHQ9IjEyOCIgcng9IjE2IiBmaWxsPSIjMTcxZTE5IiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjQyMC4wIiB5PSI1OTIuMCIgZm9udC1zaXplPSIzMCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPjQuIEFkanVzdDwvdGV4dD4KPHRleHQgeD0iNDIwLjAiIHk9IjYzMi4wIiBmb250LXNpemU9IjIyIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXN0eWxlPSJpdGFsaWMiPldoYXQgZG8gd2UgZG8gZGlmZmVyZW50bHk/PC90ZXh0Pgo8dGV4dCB4PSI3NTAiIHk9IjU5MiIgZm9udC1zaXplPSIzMiIgZmlsbD0iI2M0ZTQ5YSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlNlbGYtcmVndWxhdGluZzwvdGV4dD4KPHRleHQgeD0iNzUwIiB5PSI2MzIiIGZvbnQtc2l6ZT0iMzIiIGZpbGw9IiNjNGU0OWEiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID50ZWFtPC90ZXh0Pgo8L3N2Zz4=" alt="A cycle with four steps: 1. Notice – what is happening to us? 2. Understand – what does it mean? 3. Say it out loud – can we talk about it? This step is highlighted and marked as requiring psychological safety. 4. Adjust – what do we do differently? Then the cycle starts again." width="1500" height="1110">
+          <figcaption>Notice, understand, say it out loud and adjust – and then start again.</figcaption>
+        </figure>
+        <p>This is not an established research model, but a simple way of describing something I have seen in well-functioning teams. Research does, however, have a closely related concept: <em>team reflexivity</em>, the extent to which a team regularly talks about how it actually works together. A Norwegian study of 43 software teams found that autonomy strengthened psychological safety in the teams. Safety in turn was positively linked to the teams’ reflexivity and directly linked to their performance. Autonomy, safety and the ability to reflect on one’s own practice seem to reinforce each other.</p>
+        <div class="example">
+          <span class="kicker">A composite example</span>
+          <p>A team had taken on a little too much, and a deadline was approaching. Two people started working longer hours. One became quieter in meetings. Another grew irritated that responsibility felt unevenly shared. The team delivered, and the client was happy. When the period was over, everyone agreed it had been hectic. Then they carried on as before.</p>
+        </div>
+        <p>On the surface it looked like an autonomous team, since no manager had to step in. But the team did not manage to regulate what was happening. The signals were noticed, but nobody said them out loud, and nothing was adjusted.</p>
+
+        <h2>Safety as something we regulate together</h2>
+        <p>In mental training, performance is often described with a simple formula: performance is potential minus interference. Potential is the competence, experience and skills. Interference is what gets in the way, such as doubt, fear and an inner dialogue pulling in the wrong direction. In teams, much of that interference is social. It can be the fear of being judged in a code review, the shame after a production incident, or the irritation when a technical discussion becomes personal.</p>
+        <p>Individuals can train themselves to regulate reactions like these. But regulation never happens in a vacuum. How easy it is to think clearly and say what you see depends on how much social threat you experience in the situation. In my own work in mental training, I have therefore described psychological safety as a <em>collective regulation capacity</em>: the team’s ability to handle pressure without it ending in silence, defensiveness or entrenched positions.</p>
+        <p class="pull">It is safety that allows the team to keep noticing, understanding and speaking up when the pressure rises.</p>
+        <figure class="tall">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNDAwIDE0ODAiIHdpZHRoPSIxNDAwIiBoZWlnaHQ9IjE0ODAiIGZvbnQtZmFtaWx5PSJIZWx2ZXRpY2EsIEFyaWFsLCAnRGVqYVZ1IFNhbnMnLCBzYW5zLXNlcmlmIj4KPGRlZnM+CjxtYXJrZXIgaWQ9ImFoIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNhOGIxYTciLz48L21hcmtlcj4KPG1hcmtlciBpZD0iYWhnIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNjNGU0OWEiLz48L21hcmtlcj4KPG1hcmtlciBpZD0iYWhyIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjgiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI3IiBtYXJrZXJIZWlnaHQ9IjciIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj48cGF0aCBkPSJNMCwwIEwxMCw1IEwwLDEwIHoiIGZpbGw9IiNlM2EzN2YiLz48L21hcmtlcj4KPC9kZWZzPgo8cmVjdCB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIxNDgwIiBmaWxsPSIjMTcxZTE5Ii8+Cjx0ZXh0IHg9IjgwIiB5PSI5MCIgZm9udC1zaXplPSI0MCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+UHN5Y2hvbG9naWNhbCBzYWZldHkgYXMgcmVndWxhdGlvbiBjYXBhY2l0eTwvdGV4dD4KPHRleHQgeD0iODAiIHk9IjEzNSIgZm9udC1zaXplPSIyNCIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9InN0YXJ0IiA+SG93IHNvY2lhbCBldmFsdWF0aW9uIGNhbiBsZWFkIHRvIHNpbGVuY2Ug4oCTIG9yIHRvIG9wZW5uZXNzIGFuZCBmbG93PC90ZXh0Pgo8cmVjdCB4PSIzODAuMCIgeT0iMTkwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjExMiIgcng9IjE0IiBmaWxsPSIjMTcxZTE5IiBzdHJva2U9IiMzYTRhM2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjcwMC4wIiB5PSIyMzciIGZvbnQtc2l6ZT0iMjkiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5QZXJmb3JtYW5jZSBzaXR1YXRpb248L3RleHQ+Cjx0ZXh0IHg9IjcwMC4wIiB5PSIyNzQiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5NZWV0aW5ncywgY29kZSByZXZpZXdzLCBkZWNpc2lvbnM8L3RleHQ+CjxsaW5lIHgxPSI3MDAuMCIgeTE9IjMwNiIgeDI9IjcwMC4wIiB5Mj0iMzUyIiBzdHJva2U9IiNhOGIxYTciIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaCkiLz4KPHJlY3QgeD0iMzgwLjAiIHk9IjM2MCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNCIgZmlsbD0iIzE3MWUxOSIgc3Ryb2tlPSIjM2E0YTNmIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSI3MDAuMCIgeT0iNDA3IiBmb250LXNpemU9IjI5IiBmaWxsPSIjZjFmMmU5IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+U29jaWFsIGV2YWx1YXRpb248L3RleHQ+Cjx0ZXh0IHg9IjcwMC4wIiB5PSI0NDQiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5PdXIgd29yayBhbmQganVkZ2VtZW50IGJlY29tZSB2aXNpYmxlPC90ZXh0Pgo8bGluZSB4MT0iNzAwLjAiIHkxPSI0NzYiIHgyPSI3MDAuMCIgeTI9IjUyMiIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWgpIi8+CjxyZWN0IHg9IjM4MC4wIiB5PSI1MzAiIHdpZHRoPSI2NDAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMxNzFlMTkiIHN0cm9rZT0iIzNhNGEzZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iNzAwLjAiIHk9IjU3NyIgZm9udC1zaXplPSIyOSIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkVtb3Rpb25hbCBhY3RpdmF0aW9uPC90ZXh0Pgo8dGV4dCB4PSI3MDAuMCIgeT0iNjE0IiBmb250LXNpemU9IjIxIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+VW5jZXJ0YWludHksIGZlYXIsIHNoYW1lLCBpcnJpdGF0aW9uPC90ZXh0Pgo8bGluZSB4MT0iNzAwLjAiIHkxPSI2NDYiIHgyPSI3MDAuMCIgeTI9IjY5MiIgc3Ryb2tlPSIjYThiMWE3IiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWgpIi8+CjxyZWN0IHg9IjM4MC4wIiB5PSI3MDAiIHdpZHRoPSI2NDAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMyMjMwMjAiIHN0cm9rZT0iI2M0ZTQ5YSIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iNzAwLjAiIHk9Ijc0NyIgZm9udC1zaXplPSIyOSIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlJlZ3VsYXRpb248L3RleHQ+Cjx0ZXh0IHg9IjcwMC4wIiB5PSI3ODQiIGZvbnQtc2l6ZT0iMjEiIGZpbGw9IiNhOGIxYTciIGZvbnQtd2VpZ2h0PSI0MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Ib3cgdGhlIGFjdGl2YXRpb24gaXMgaGFuZGxlZCDigJMgYWxvbmUgYW5kIHRvZ2V0aGVyPC90ZXh0Pgo8cGF0aCBkPSJNNzAwLjAsODE2IEw3MDAuMCw4NDggTDM2MCw4NDggTDM2MCw5MTQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2UzYTM3ZiIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2FocikiLz4KPHBhdGggZD0iTTcwMC4wLDg0OCBMMTA0MCw4NDggTDEwNDAsOTE0IiBmaWxsPSJub25lIiBzdHJva2U9IiNjNGU0OWEiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaGcpIi8+CjxyZWN0IHg9IjEwMC4wIiB5PSI5MjIiIHdpZHRoPSI1MjAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiMyZTIzMWQiIHN0cm9rZT0iI2UzYTM3ZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iMzYwIiB5PSI5NjkiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5IaWdoIHNvY2lhbCB0aHJlYXQ8L3RleHQ+Cjx0ZXh0IHg9IjM2MCIgeT0iMTAwNiIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlNpbGVuY2UsIGRlZmVuc2l2ZW5lc3MsIG92ZXItY2F1dGlvbjwvdGV4dD4KPGxpbmUgeDE9IjM2MCIgeTE9IjEwMzgiIHgyPSIzNjAiIHkyPSIxMDg0IiBzdHJva2U9IiNlM2EzN2YiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaHIpIi8+CjxyZWN0IHg9IjEwMC4wIiB5PSIxMDkyIiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjExMiIgcng9IjE0IiBmaWxsPSIjMmUyMzFkIiBzdHJva2U9IiNlM2EzN2YiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjM2MCIgeT0iMTEzOSIgZm9udC1zaXplPSIyOCIgZmlsbD0iI2YxZjJlOSIgZm9udC13ZWlnaHQ9IjcwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkluY3JlYXNlZCBpbnRlcmZlcmVuY2U8L3RleHQ+Cjx0ZXh0IHg9IjM2MCIgeT0iMTE3NiIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPlR1bm5lbCB2aXNpb24sIHN0cmVzcywgbGVzcyBzaGFyaW5nPC90ZXh0Pgo8bGluZSB4MT0iMzYwIiB5MT0iMTIwOCIgeDI9IjM2MCIgeTI9IjEyNTQiIHN0cm9rZT0iI2UzYTM3ZiIgc3Ryb2tlLXdpZHRoPSIzIiBtYXJrZXItZW5kPSJ1cmwoI2FocikiLz4KPHJlY3QgeD0iMTAwLjAiIHk9IjEyNjIiIHdpZHRoPSI1MjAiIGhlaWdodD0iMTEyIiByeD0iMTQiIGZpbGw9IiNlM2EzN2YiIHN0cm9rZT0iI2UzYTM3ZiIgc3Ryb2tlLXdpZHRoPSIyLjUiLz4KPHRleHQgeD0iMzYwIiB5PSIxMzA5IiBmb250LXNpemU9IjI4IiBmaWxsPSIjMTgyMjE2IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+TG93ZXIgcGVyZm9ybWFuY2U8L3RleHQ+Cjx0ZXh0IHg9IjM2MCIgeT0iMTM0NiIgZm9udC1zaXplPSIyMSIgZmlsbD0iIzJjM2EyNiIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkNvbXBldGVuY2UgYmVjb21lcyBsZXNzIGF2YWlsYWJsZTwvdGV4dD4KPHJlY3QgeD0iNzgwLjAiIHk9IjkyMiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNCIgZmlsbD0iIzIyMzAyMCIgc3Ryb2tlPSIjYzRlNDlhIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSIxMDQwIiB5PSI5NjkiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5Qc3ljaG9sb2dpY2FsIHNhZmV0eTwvdGV4dD4KPHRleHQgeD0iMTA0MCIgeT0iMTAwNiIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPk9wZW5uZXNzLCBjdXJpb3NpdHksIHN1cHBvcnQ8L3RleHQ+CjxsaW5lIHgxPSIxMDQwIiB5MT0iMTAzOCIgeDI9IjEwNDAiIHkyPSIxMDg0IiBzdHJva2U9IiNjNGU0OWEiIHN0cm9rZS13aWR0aD0iMyIgbWFya2VyLWVuZD0idXJsKCNhaGcpIi8+CjxyZWN0IHg9Ijc4MC4wIiB5PSIxMDkyIiB3aWR0aD0iNTIwIiBoZWlnaHQ9IjExMiIgcng9IjE0IiBmaWxsPSIjMjIzMDIwIiBzdHJva2U9IiNjNGU0OWEiIHN0cm9rZS13aWR0aD0iMi41Ii8+Cjx0ZXh0IHg9IjEwNDAiIHk9IjExMzkiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IiNmMWYyZTkiIGZvbnQtd2VpZ2h0PSI3MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiID5SZWR1Y2VkIGludGVyZmVyZW5jZTwvdGV4dD4KPHRleHQgeD0iMTA0MCIgeT0iMTE3NiIgZm9udC1zaXplPSIyMSIgZmlsbD0iI2E4YjFhNyIgZm9udC13ZWlnaHQ9IjQwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgPkNsYXJpdHksIGZsZXhpYmxlIHRoaW5raW5nLCBmbG93PC90ZXh0Pgo8bGluZSB4MT0iMTA0MCIgeTE9IjEyMDgiIHgyPSIxMDQwIiB5Mj0iMTI1NCIgc3Ryb2tlPSIjYzRlNDlhIiBzdHJva2Utd2lkdGg9IjMiIG1hcmtlci1lbmQ9InVybCgjYWhnKSIvPgo8cmVjdCB4PSI3ODAuMCIgeT0iMTI2MiIgd2lkdGg9IjUyMCIgaGVpZ2h0PSIxMTIiIHJ4PSIxNCIgZmlsbD0iI2M0ZTQ5YSIgc3Ryb2tlPSIjYzRlNDlhIiBzdHJva2Utd2lkdGg9IjIuNSIvPgo8dGV4dCB4PSIxMDQwIiB5PSIxMzA5IiBmb250LXNpemU9IjI4IiBmaWxsPSIjMTgyMjE2IiBmb250LXdlaWdodD0iNzAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+QmV0dGVyIHBlcmZvcm1hbmNlPC90ZXh0Pgo8dGV4dCB4PSIxMDQwIiB5PSIxMzQ2IiBmb250LXNpemU9IjIxIiBmaWxsPSIjMmMzYTI2IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiA+TW9yZSBvZiB0aGUgY29tcGV0ZW5jZSBnZXRzIHVzZWQ8L3RleHQ+Cjx0ZXh0IHg9IjgwIiB5PSIxNDMwIiBmb250LXNpemU9IjIxIiBmaWxsPSIjYThiMWE3IiBmb250LXdlaWdodD0iNDAwIiB0ZXh0LWFuY2hvcj0ic3RhcnQiIGZvbnQtc3R5bGU9Iml0YWxpYyI+UGVyZm9ybWFuY2UgPSBwb3RlbnRpYWwg4oiSIGludGVyZmVyZW5jZS4gU2FmZXR5IGRvZXNuJ3QgY2hhbmdlIHRoZSBwb3RlbnRpYWwsIG9ubHkgaG93IG11Y2ggb2YgaXQgYmVjb21lcyBhdmFpbGFibGUuPC90ZXh0Pgo8L3N2Zz4=" alt="Flow diagram: A performance situation leads to social evaluation, then emotional activation and regulation. With high social threat, the result is silence and defensiveness, increased interference and lower performance. With psychological safety, the result is openness and support, reduced interference and better performance." width="1400" height="1480">
+          <figcaption>Based on figure 4.1 in the paper “Psykologisk trygghet som reguleringskapasitet” (Karud, 2026).</figcaption>
+        </figure>
+        <p>Safety is not the same as comfort, though. A team can have a good atmosphere and warm relationships and still be poor at challenging each other. Self-regulation requires both safety and friction. We need to be able to disagree without the relationship being threatened, and to challenge a decision without challenging the person behind it.</p>
+        <p>One simple step is to make the pause a shared one. When it becomes normal for someone to say “can we stop for a moment and look at what is happening to us right now?”, regulation moves from being an individual skill to a shared practice.</p>
+        <p>At the same time, there is a pitfall here. If the answer to a team under pressure is that each person needs to get better at handling stress, we have moved the responsibility to the wrong place. Regulation must not become yet another performance demand on the individual. It has to be understood as a shared responsibility, and to a large extent as the responsibility of those who set the conditions.</p>
+
+        <h2>From “my task” to “our responsibility”</h2>
+        <p>In some teams, the whole is in practice a collection of individual areas of responsibility. I do mine, you do yours, and when everyone has done their job, the team has delivered. That can work well when the world is predictable. But when someone falls ill, a client changes priorities or a task turns out to be much harder than expected, the weakness becomes visible.</p>
+        <p>This is also one of the clearest findings in Norwegian research on self-managing development teams. In a long-term field study, weak team orientation, unclear leadership and poor coordination, together with highly specialised skills and correspondingly divided work, were among the most important barriers to effective teams. The researchers emphasised that moving to self-managing teams requires a change in orientation both among developers and among management.</p>
+        <p>In self-regulating teams, members keep an eye on the whole. That does not mean everyone should do everything, as clear areas of responsibility still matter. But the question changes from “Have I done what I’m supposed to?” to “Do we have what we need to succeed?”.</p>
+
+        <h2>When “we’ll fix it” becomes a risk</h2>
+        <p>A team that takes collective responsibility can become very robust. When someone has less capacity, others take on more. When the schedule slips, the team mobilises. Management sees a team that works, and the client sees a team that delivers.</p>
+        <p class="pull">But when is self-regulation really collective over-adaptation?</p>
+        <p>Teams can compensate for poor conditions long before the consequences become visible from the outside. Each individual decision can be reasonable. Someone works a little longer, a break gets skipped, something internal is postponed. The problem arises when the exceptions gradually become the norm. The same ability that makes the team robust can lead it to tolerate an unhelpful situation for too long.</p>
+        <p>A mature team must therefore also be able to say that this is not possible within these constraints, that something has to be deprioritised, or that the workload is not sustainable. Escalating a problem can be an expression of autonomy, when the team itself has spotted the problem, assessed its room to act and understood that the solution lies outside its mandate. Autonomy does not mean managing everything yourselves. It also means knowing what you should not try to solve alone.</p>
+
+        <h2>The leader’s paradox</h2>
+        <p>What do we do as leaders when a team is struggling? We help. We have experience, perhaps see the solution quickly, make a decision and clear an obstacle out of the way. The problem disappears. At the same time, we may have taken away an opportunity for the team to learn to solve exactly this kind of problem itself.</p>
+        <p>Over time, this can create a pattern. When something is unclear, the team asks the leader. The leader becomes efficient and the team gets quick answers, but it also learns where decisions really belong. Then the leader feels the team needs close follow-up, and responds with even closer follow-up. Perhaps the team partly needs that follow-up because we have taught it to need it.</p>
+        <p>Leaders also affect the team’s regulation capacity more directly, through small moments in everyday work. When someone makes a mistake, when a decision is challenged, when disagreement arises in a meeting, or when someone says they are unsure. If those moments are met with irritation, the social threat increases. If they are met with curiosity and calm, it becomes easier for the team to keep thinking. The level of tension in a team is largely set from above, even when that is not the intention.</p>
+        <p>This does not mean leaders should sit back and watch teams fail, especially not when a client is waiting or finances are tight. But we need to distinguish between supporting the team and taking over the team’s regulation. Sometimes the most important question a leader can ask is: “What do you think we should do?” Not to avoid responsibility, but as an expression of the expectation that the team will also assess and own.</p>
+        <p>Responsibility goes both ways. Management must create real room to act, and the team must use it.</p>
+
+        <h2>Autonomy has to be trained</h2>
+        <p>In mental training, we don’t expect a skill to develop just because someone has been told to have it. We train, under gradually more demanding conditions, and we evaluate and adjust along the way. Team autonomy works the same way.</p>
+        <p>If conflicts are always handled by the leader, the team gets little practice in conflict. If priorities always come from above, the team develops little ability to prioritise. And if someone steps in every time the team is heading for a mistake, it loses the chance to experience, reflect and adjust. Autonomy is therefore not just a mandate. It is a capacity developed through experience, and experience means that not every decision will be perfect.</p>
+
+        <h2>Five questions for your own team</h2>
+        <ol class="questions">
+          <li>What do we handle ourselves today that we used to need help with?</li>
+          <li>Which problems keep coming back without us changing how we work?</li>
+          <li>What do we not talk about, even though most of us notice it?</li>
+          <li>What happens to us when the pressure rises?</li>
+          <li>What do we actually need from management, and what should we stop asking others to solve for us?</li>
+        </ol>
+
+        <h2>Teams that gradually get better at leading themselves</h2>
+        <p>At Liflig, our teams often work closely with clients, and their room to act is shaped both by us and by the client. We believe the best delivery comes from teams that keep an eye on the whole, speak up early when the constraints don’t hold, and ask for help before the workload becomes too heavy. That is why we care about building teams that get better at leading themselves over time, not just teams that deliver.</p>
+        <p class="closing-line">Perhaps the most autonomous team is not the one that never needs help, but the one that knows when it can find the way itself, when it needs to change course, and when it is time to ask someone else for help.</p>
+      </div>
+
+      <nav class="next" aria-label="Next"><span class="kicker">Next in the series · Part 7</span><a href="faster-alone-weaker-together.html"><b>Faster alone, weaker together?</b><i aria-hidden="true">→</i></a></nav>
+
+      <section class="more" aria-labelledby="mer-tittel">
+        <span class="kicker">Want to read more?</span>
+        <h2 id="mer-tittel">Go deeper</h2>
+        <ul>
+          <li><a href="psychological-safety-is-good-for-delivery.html"><div><span>Why safety affects how quickly risk becomes visible</span><b>Psychological safety isn’t just good for people. It’s good for delivery.</b></div><i aria-hidden="true">→</i></a></li>
+          <li><a href="when-the-most-skilled-person-makes-the-team-worse.html"><div><span>What happens when one person becomes the team’s hub</span><b>When the most skilled person makes the team worse</b></div><i aria-hidden="true">→</i></a></li>
+          <li><a href="the-limit-we-dont-see-until-weve-passed-it.html"><div><span>Strain hidden by strong performance</span><b>The limit we don’t see until we’ve passed it</b></div><i aria-hidden="true">→</i></a></li>
+          <li><a href="../papers/psychological-safety-as-regulation-capacity.html"><div><span>Paper with a more thorough theoretical discussion</span><b>Psychological safety as regulation capacity</b></div><i aria-hidden="true">→</i></a></li>
+        </ul>
+      </section>
+
+      <section class="sources" aria-labelledby="kilder-tittel">
+        <h2 id="kilder-tittel">Sources</h2>
+        <ul>
+          <li>Hackman, J. R. (2002). <i>Leading Teams: Setting the Stage for Great Performances.</i> Harvard Business School Press.</li>
+          <li>Karud, C. (2026). <i>Psykologisk trygghet som reguleringskapasitet</i> [Psychological safety as regulation capacity]. Paper, Raw Performance.</li>
+          <li>Moe, N. B., Dingsøyr, T. &amp; Dybå, T. (2010). A teamwork model for understanding an agile team: A case study of a Scrum project. <i>Information and Software Technology, 52</i>, 480–491.</li>
+          <li>Moe, N. B., Šmite, D., Paasivaara, M. &amp; Lassenius, C. (2021). Finding the sweet spot for organizational control and team autonomy in large-scale agile software development. <i>Empirical Software Engineering, 26</i>(5).</li>
+          <!-- Add the authors of the HICSS study before publishing -->
+          <li>Psychological Safety in Agile Software Development Teams: Work Design Antecedents and Performance Consequences (2022). <i>Proceedings of the 55th Hawaii International Conference on System Sciences.</i> SINTEF.</li>
+          <li>Myhre, C. Y. &amp; Aas, K. A. (2025). <i>Prestasjonsledelse</i> [Performance leadership]. Aschehoug.</li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Illustration in full size">
+    <button type="button" aria-label="Close">×</button>
+    <img alt="">
+  </div>
+  <script>
+    (function () {
+      var box = document.getElementById('lightbox'), big = box.querySelector('img'), last = null;
+      function close() { box.classList.remove('open'); if (last) last.focus(); }
+      document.querySelectorAll('figure img').forEach(function (img) {
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
+        img.title = 'Click to view full size';
+        function open() { last = img; big.src = img.src; big.alt = img.alt; box.classList.add('open'); box.querySelector('button').focus(); }
+        img.addEventListener('click', open);
+        img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+      });
+      box.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
+    })();
+  </script>
+
+  <footer>
+    <div class="wrap">
+      <span><span style="color:var(--text)">Camilla Karud</span> · People, technology and organisation</span>
+      <span><a href="https://www.linkedin.com/in/camilla-karud-91b32740/" target="_blank" rel="noopener">LinkedIn ↗</a> &nbsp;·&nbsp; <a href="../index.html#artikler">← Back to the article series</a></span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Faster alone, weaker together? – Camilla Karud</title>
+  <meta name="description" content="What happens to learning, collaboration and safety in teams when everyone has their own AI assistant?">
+  <meta name="theme-color" content="#111613">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Faster alone, weaker together?">
+  <meta property="og:description" content="What happens to learning, collaboration and safety in teams when everyone has their own AI assistant?">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23111613' stroke='%23c4e49a' stroke-width='2'/%3E%3Ctext x='32' y='41' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23c4e49a'%3ECK%3C/text%3E%3C/svg%3E">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111613; --panel: #171e19; --text: #f1f2e9; --body: #d6dcd2; --muted: #a8b1a7; --faint: #8c968b;
+      --line: rgba(225,235,223,.13); --accent: #c4e49a;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 400 18px/1.75 var(--sans); -webkit-font-smoothing: antialiased; }
+    h1, h2, h3, p, ol, ul, blockquote, figure { margin: 0; }
+    a { color: inherit; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; border-radius: 3px; }
+    .skip { position: absolute; left: 20px; top: -100px; z-index: 10; padding: 10px 14px; color: var(--bg); background: var(--accent); }
+    .skip:focus { top: 12px; }
+    .wrap { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+    .kicker { display: block; color: var(--accent); font-size: 11px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+
+    .top { border-bottom: 1px solid var(--line); }
+    .top .wrap { min-height: 82px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; padding-block: 14px; }
+    .name { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 650; letter-spacing: -.02em; font-size: 16px; }
+    .name .mark { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid rgba(196,228,154,.55); border-radius: 50%; color: var(--accent); font: 13px var(--serif); }
+    .back { color: var(--muted); text-decoration: none; font-size: 14px; }
+    .back:hover { color: var(--text); }
+    .head-right { display: inline-flex; align-items: center; gap: 18px; }
+    .lang-switch { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; font-size: 12px; font-weight: 700; letter-spacing: .08em; }
+    .lang-switch a, .lang-switch span { display: inline-grid; place-items: center; min-width: 38px; min-height: 30px; padding: 0 10px; border-radius: 999px; text-decoration: none; color: var(--muted); }
+    .lang-switch a:hover { color: var(--text); }
+    .lang-switch [aria-current] { background: var(--accent); color: #182216; }
+
+    .article { width: min(720px, calc(100% - 40px)); margin-inline: auto; padding-block: 88px 40px; }
+    .article header .meta { display: flex; flex-wrap: wrap; gap: 8px 22px; color: var(--muted); font-size: 13px; margin-top: 16px; }
+    .article h1 { margin-top: 22px; font: 400 clamp(40px, 6.4vw, 66px)/1.06 var(--serif); letter-spacing: -.04em; }
+    .article .dek { margin-top: 20px; color: var(--muted); font: italic 400 clamp(19px, 2.4vw, 23px)/1.45 var(--serif); }
+    .body { margin-top: 56px; color: var(--body); }
+    .body p + p, .body p + ul, .body ul + p { margin-top: 1.15em; }
+    .body h2 { margin: 2.4em 0 .8em; color: var(--text); font: 400 clamp(27px, 3.4vw, 34px)/1.2 var(--serif); letter-spacing: -.02em; }
+    .body strong { color: var(--text); font-weight: 600; }
+    .body em { color: var(--text); }
+    .lead { color: var(--text); font-size: 20px; }
+    .series-note { margin-top: 1.6em !important; padding: 16px 20px; border-left: 2px solid var(--accent); background: rgba(196,228,154,.045); color: var(--muted); font-size: 15px; }
+    .loop { margin: 1.3em 0 !important; color: var(--accent); font: 400 clamp(20px, 2.8vw, 26px)/1.4 var(--serif); text-align: center; }
+    .example { margin-top: 1.4em !important; padding: 22px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .example .kicker { margin-bottom: 8px; }
+    .example + p { margin-top: 1.15em; }
+    figure img { cursor: zoom-in; }
+    .lightbox { position: fixed; inset: 0; z-index: 20; display: none; place-items: center; padding: 24px; background: rgba(8,11,9,.92); cursor: zoom-out; }
+    .lightbox.open { display: grid; }
+    .lightbox img { max-width: min(1500px, 100%); max-height: 100%; width: auto; height: auto; border-radius: 6px; }
+    .lightbox button { position: absolute; top: 16px; right: 16px; min-width: 44px; min-height: 44px; border: 1px solid var(--line); border-radius: 50%; background: var(--panel); color: var(--text); font-size: 20px; cursor: pointer; }
+    .pull { margin: 1.6em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: 400 clamp(22px, 3vw, 27px)/1.4 var(--serif); letter-spacing: -.01em; }
+    figure { margin: 2.4em 0 !important; }
+    @media (min-width: 1000px) { figure:not(.tall) { width: 940px; margin-left: calc((720px - 940px) / 2) !important; } }
+    figure.tall img { max-width: 720px; margin-inline: auto; }
+    figure.tall figcaption { text-align: center; }
+    figure img { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 6px; }
+    figcaption { margin-top: 10px; color: var(--faint); font-size: 14px; }
+    .questions { list-style: none; padding: 0; margin-top: 1.2em; counter-reset: q; border-top: 1px solid var(--line); }
+    .questions li { counter-increment: q; display: grid; grid-template-columns: 38px 1fr; gap: 10px; padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--text); font: 400 21px/1.4 var(--serif); }
+    .questions li::before { content: counter(q); color: var(--accent); font: 400 21px/1.4 var(--serif); }
+    .closing-line { margin-top: 1.6em !important; color: var(--text); font: 400 clamp(24px, 3.4vw, 31px)/1.35 var(--serif); letter-spacing: -.015em; }
+
+    .body h3 { margin: 1.9em 0 .6em; color: var(--text); font: 600 19px/1.4 var(--sans); }
+    .body ul, .body ol { padding-left: 1.3em; }
+    .body li + li { margin-top: .45em; }
+    .body .example ul, .body .example ol { margin-top: .6em; }
+    .body .example p + p, .body .example p + ul { margin-top: .7em; }
+    .quote { margin: 1.4em 0 !important; padding-left: 20px; border-left: 2px solid var(--accent); color: var(--text); font: italic 400 21px/1.45 var(--serif); }
+    .formula-line { text-align: center; color: var(--accent); font: 400 clamp(22px, 3vw, 28px)/1.3 var(--serif); }
+    .toc { margin-top: 2em; padding: 20px 24px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); }
+    .toc ol { margin-top: 10px; padding-left: 1.3em; font-size: 16px; }
+    .toc a { color: var(--text); text-underline-offset: 3px; text-decoration-color: rgba(196,228,154,.5); }
+    .toc a:hover { color: var(--accent); }
+    .next { margin-top: 64px; padding-top: 30px; border-top: 1px solid var(--line); }
+    .next a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; margin-top: 12px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; }
+    .next a:hover { border-color: rgba(196,228,154,.43); }
+    .next b { font: 400 21px/1.35 var(--serif); }
+    .next i { color: var(--accent); font-style: normal; }
+    .body h2[id] { scroll-margin-top: 24px; }
+    .more { margin-top: 72px; padding-top: 34px; border-top: 1px solid var(--line); }
+    .more h2 { margin-top: 12px; font: 400 28px/1.2 var(--serif); }
+    .more ul { list-style: none; padding: 0; margin-top: 18px; display: grid; gap: 10px; }
+    .more a { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; padding: 16px 18px; border: 1px solid var(--line); border-radius: 5px; text-decoration: none; transition: border-color .2s ease; }
+    .more a:hover { border-color: rgba(196,228,154,.43); }
+    .more a span { color: var(--muted); font-size: 14px; display: block; }
+    .more a b { font: 400 19px/1.35 var(--serif); }
+    .more a i { color: var(--accent); font-style: normal; }
+    .sources { margin-top: 56px; color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .sources h2 { color: var(--text); font: 600 14px/1.4 var(--sans); margin-bottom: 10px; }
+    .sources li + li { margin-top: 6px; }
+    .sources ul { padding-left: 18px; }
+
+    footer { border-top: 1px solid var(--line); margin-top: 80px; }
+    footer .wrap { min-height: 82px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 18px; color: var(--faint); font-size: 13px; }
+    footer a { text-decoration: none; } footer a:hover { color: var(--accent); }
+    @media (max-width: 700px) {
+      body { font-size: 17px; }
+      .wrap { width: calc(100% - 34px); }
+      .article { padding-top: 60px; }
+      .questions li { font-size: 19px; grid-template-columns: 30px 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#innhold">Skip to content</a>
+  <header class="top" id="toppen">
+    <div class="wrap">
+      <a class="name" href="../index.html"><span class="mark" aria-hidden="true">CK</span><span>Camilla Karud</span></a>
+      <span class="head-right"><a class="back" href="../index.html#artikkel-7">← All articles</a><div class="lang-switch" aria-label="Language"><a href="../../artikler/raskere-hver-for-oss-svakere-sammen.html" hreflang="no" lang="no">NO</a><span aria-current="true">EN</span></div></span>
+    </div>
+  </header>
+
+  <main id="innhold">
+    <article class="article"><header>
+        <span class="kicker">When competence becomes value · part 7</span>
+        <h1>Faster alone, weaker together?</h1>
+        <p class="dek">On what happens to learning, collaboration and safety in teams when everyone has their own AI assistant</p>
+        <div class="meta"><span>Camilla Karud</span><span>Approx. 8 minute read</span></div>
+      </header>
+<div class="body">
+<p class="lead">Many teams are delivering faster than ever. Code gets written more quickly, documentation takes minutes, and questions that used to need a colleague are answered in seconds.</p>
+<p>At the same time, some people notice a different change. The channels are quieter. Fewer people ask out loud. Pair programming has become rarer, and at the morning stand-up everyone has most things under control.</p>
+<p>Is that efficiency, or is it something else?</p>
+<p class="series-note">This article is part of the series “When competence becomes value”, which explores the people, relationships and systems behind good technology delivery.</p>
+
+<h2>The stupid question that disappeared</h2>
+<p>Asking an AI carries no interpersonal risk at all. Nobody sees that you don’t know. Nobody judges your question, and nobody remembers it at the next meeting. For many, that is a relief. For someone new to the team, or someone who struggles with impostor feelings, it can lower the threshold for getting started.</p>
+<p>But the “stupid” questions were never just questions. They were signals of what the team did not understand together. They were opportunities for an experienced colleague to share context that isn’t written down anywhere. And they were small, repeated exercises in daring not to know, in front of others.</p>
+<p>When questions move from the team to a private conversation with an assistant, the individual may feel safer in the moment. But the team loses some of what builds safety over time: the experience that it is fine to show that you don’t know everything.</p>
+<p class="pull">AI can lower the social threshold for the individual, while the team gets fewer chances to build safety together.</p>
+
+<h2>Knowledge moving from shared to private</h2>
+<p>We see this beyond individual teams too. After ChatGPT was released, activity on Stack Overflow, one of developers’ most important open knowledge communities, fell by around a quarter within six months. The researchers behind the study believe the questions did not disappear. They were asked privately instead, where nobody else can see the answers and learn from them.</p>
+<p>Another finding is perhaps even more interesting. A different study found no similar decline in developer communities on Reddit, and explained the difference by the social ties there. Where the community was about more than information, people stayed.</p>
+<p>That is a reminder for teams too. If collaboration is mainly about exchanging information, AI can replace much of it. If it is also about relationships, trust and learning from each other, it is far harder to replace.</p>
+<p>And the cost is not always visible in the speed. It can lie in code nobody in the team fully understands, in knowledge that only exists in one person’s chat history, or in decisions the team never discussed.</p>
+
+<h2>Shortcut or sparring partner?</h2>
+<p>Perhaps the most important cost is learning. In a study from Anthropic, developers were asked to learn a new programming library, with and without an AI assistant. Those who used AI were not significantly faster, but they scored clearly lower on a test of understanding afterwards, especially on debugging.</p>
+<p>What is interesting is that it depended on how AI was used. Those who used the assistant to ask questions and understand the concepts learned well. Those who let it write the code for them learned the least.</p>
+<p>The same is probably true for teams. AI can be a shortcut around thinking, or a sparring partner that makes thinking better. The difference rarely lies in the tool, but in the habits around it.</p>
+<div class="example"><span class="kicker">A composite example</span><p>A newly hired developer quickly became productive. Tasks were delivered and code reviews went smoothly. A few months later, a production incident occurred in a part of the system they had written much of. It turned out that much of the understanding had never been built. Nobody had noticed, because there had never been any need to ask anyone.</p></div>
+
+<h2>The joy of solving it yourself</h2>
+<p>There is also a cost that is rarely mentioned when we talk about productivity: the joy of the work itself. For many developers, it is exactly the puzzling over a problem that makes the job meaningful. Turning a problem over in your head, trying an idea that doesn’t work, discarding it and finally finding a solution that is simple and elegant. The feeling of having created something yourself.</p>
+<p>Self-determination theory points to three basic needs behind intrinsic motivation: autonomy, competence and relatedness. AI can strengthen all three. But it can also weaken them, if it takes over the most interesting parts of the work, if we stop feeling that we were the ones who found the solution, and if sparring with colleagues disappears.</p>
+<p>A series of studies with more than 3,500 participants found exactly this tension. Working with AI produced better results on the task. But when participants then had to work without AI, their intrinsic motivation dropped and boredom increased.</p>
+<p>This doesn’t mean AI has to take away the joy. Used well, it can take over the repetitive parts and give more time for the problems that are actually interesting. The question is which parts of the work we hand over, and whether we do it deliberately.</p>
+<p class="pull">Sometimes the most valuable thing is not reaching the answer fastest, but being the one who found it.</p>
+
+<h2>AI can also make the team better</h2>
+<p>It would be too simple to conclude that AI isolates us. In a large field experiment at Procter &amp; Gamble, individuals with AI performed about as well as teams without AI. AI could replace some of what a team usually provides. But the very best solutions came from teams using AI together.</p>
+<p>The point is therefore not to use less AI, but to be deliberate about what we use it for. AI can help a team think more broadly, challenge assumptions and get started faster. It cannot replace the shared understanding that emerges when people actually solve problems together.</p>
+
+<h2>Autonomy for the individual – but for the team?</h2>
+<p>AI gives the individual more autonomy. You get further on your own, solve more problems yourself and wait less for others. In many cases, that is good.</p>
+<p>But a self-regulating team needs more than autonomous individuals. It needs someone to notice what is happening, a shared understanding of it, someone to say it out loud and a team that adjusts. If everyone works fast on their own, the team can lose exactly the small signals that make self-regulation possible: the question that reveals a misunderstanding, the uncertainty that shows something is unclear, or the sparring that means more people own the solution.</p>
+<p>It is also worth being curious about how this feels for people. Working more with a machine than with colleagues can be efficient, but it does not necessarily give a sense of belonging.</p>
+
+<h2>What good teams do</h2>
+<p>Some teams seem to get the best of both. They use AI to get started faster, but talk together about the solutions. They share what they have learned from AI, instead of leaving it in a private conversation. They protect time for pair programming, sparring and code reviews where the purpose is learning, not just control. And they make it normal to say: “I got this suggestion, but I don’t fully understand it. Can we look at it together?”</p>
+<p>This doesn’t necessarily require new rules. It requires the team to talk about how they want to use AI, and to notice what happens to collaboration along the way.</p>
+
+<h2>Questions for your next team meeting</h2>
+<ol class="questions">
+<li>What did we last learn from each other that we could not have learned from an AI?</li>
+<li>Which questions do we now ask AI that we used to ask each other, and what have we gained and lost?</li>
+<li>Where in our work do we want to protect time for thinking together?</li>
+<li>How do we share what we learn, so that it becomes the team’s knowledge and not just mine?</li>
+<li>Which parts of the work do we still want to puzzle over ourselves?</li>
+</ol>
+
+<h2>Faster, but also wiser together</h2>
+<p>At Liflig, we care about technology making people better, not just faster. That applies to AI too. We want teams that use the tools to get further, but who still learn from each other, spar and build shared understanding. Because it is in collaboration that competence becomes value over time.</p>
+<p class="closing-line">AI can make us faster on our own. The question is whether we make sure we still grow wiser together.</p>
+</div>
+<section class="more" aria-labelledby="mer-tittel">
+  <span class="kicker">Want to read more?</span>
+  <h2 id="mer-tittel">Go deeper</h2>
+  <ul>
+    <li><a href="psychological-safety-is-good-for-delivery.html"><div><span>Why safety affects how quickly risk becomes visible</span><b>Psychological safety isn’t just good for people. It’s good for delivery.</b></div><i aria-hidden="true">→</i></a></li>
+    <li><a href="you-have-the-competence-but-do-you-get-to-use-it.html"><div><span>Competence that exists but isn’t used</span><b>You have the competence. But do you get to use it?</b></div><i aria-hidden="true">→</i></a></li>
+    <li><a href="when-teams-learn-to-lead-themselves.html"><div><span>Self-regulating teams and the leader’s paradox</span><b>When teams learn to lead themselves</b></div><i aria-hidden="true">→</i></a></li>
+    <li><a href="../papers/psychological-safety-as-regulation-capacity.html"><div><span>Paper with a more thorough theoretical discussion</span><b>Psychological safety as regulation capacity</b></div><i aria-hidden="true">→</i></a></li>
+  </ul>
+</section>
+<section class="sources" aria-labelledby="kilder-tittel">
+  <h2 id="kilder-tittel">Sources</h2>
+  <ul>
+    <li>Burtch, G., Lee, D. &amp; Chen, Z. (2024). The consequences of generative AI for online knowledge communities. <i>Scientific Reports, 14</i>, 10413.</li>
+    <li>del Rio-Chanona, R. M., Laurentsyeva, N. &amp; Wachs, J. (2024). Large language models reduce public knowledge sharing on online Q&amp;A platforms. <i>PNAS Nexus.</i></li>
+    <li>Dell’Acqua, F., Ayoubi, C., Lifshitz, H., Sadun, R., Mollick, E., Mollick, L., Han, Y., Goldman, J., Nair, H., Taub, S. &amp; Lakhani, K. R. (2026). The Cybernetic Teammate: A Field Experiment on Generative AI and Teamwork. <i>Organization Science.</i></li>
+    <li>Ryan, R. M. &amp; Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being. <i>American Psychologist, 55</i>(1), 68–78.</li>
+    <!-- Check author list -->
+    <li>Wu, S., Liu, Y., Ruan, M., Chen, S. &amp; Xie, X.-Y. (2025). Human–generative AI collaboration enhances task performance but undermines human’s intrinsic motivation. <i>Scientific Reports.</i></li>
+    <li>Shen, J. H. &amp; Tamkin, A. (2026). <i>How AI assistance impacts the formation of coding skills.</i> Anthropic.</li>
+  </ul>
+</section>
+    </article>
+  </main>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Illustration in full size">
+    <button type="button" aria-label="Close">×</button>
+    <img alt="">
+  </div>
+  <script>
+    (function () {
+      var box = document.getElementById('lightbox'), big = box.querySelector('img'), last = null;
+      function close() { box.classList.remove('open'); if (last) last.focus(); }
+      document.querySelectorAll('figure img').forEach(function (img) {
+        img.tabIndex = 0;
+        img.setAttribute('role', 'button');
+        img.title = 'Click to view full size';
+        function open() { last = img; big.src = img.src; big.alt = img.alt; box.classList.add('open'); box.querySelector('button').focus(); }
+        img.addEventListener('click', open);
+        img.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+      });
+      box.addEventListener('click', close);
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && box.classList.contains('open')) close(); });
+    })();
+  </script>
+
+  <footer>
+    <div class="wrap">
+      <span><span style="color:var(--text)">Camilla Karud</span> · People, technology and organisation</span>
+      <span><a href="https://www.linkedin.com/in/camilla-karud-91b32740/" target="_blank" rel="noopener">LinkedIn ↗</a> &nbsp;·&nbsp; <a href="../index.html#artikkel-7">← All articles</a></span>
+    </div>
+  </footer>
+</body>
+</html>
